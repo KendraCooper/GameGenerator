@@ -1,5 +1,7 @@
 package edu.utdallas.gamegenerator.LearningObjective.Prop;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * User: clocke
  * Date: 2/17/13
@@ -14,6 +16,7 @@ public class GameText {
         return textType;
     }
 
+    @XmlElement(name = "TextType")
     public void setTextType(TextType textType) {
         this.textType = textType;
     }
@@ -22,6 +25,7 @@ public class GameText {
         return text;
     }
 
+    @XmlElement(name = "Text")
     public void setText(String text) {
         this.text = text;
     }
@@ -30,6 +34,7 @@ public class GameText {
         return timer;
     }
 
+    @XmlElement(name = "Timer")
     public void setTimer(int timer) {
         this.timer = timer;
     }

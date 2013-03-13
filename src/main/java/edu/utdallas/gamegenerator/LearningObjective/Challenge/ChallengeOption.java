@@ -3,6 +3,7 @@ package edu.utdallas.gamegenerator.LearningObjective.Challenge;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveScreen;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 
+import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
 /**
@@ -32,6 +33,7 @@ public class ChallengeOption {
         return challengeOptionType;
     }
 
+    @XmlElement(name = "ChallengeOptionType")
     public void setChallengeOptionType(ChallengeOptionType challengeOptionType) {
         this.challengeOptionType = challengeOptionType;
     }
@@ -40,6 +42,7 @@ public class ChallengeOption {
         return text;
     }
 
+    @XmlElement(name = "Text")
     public void setText(String text) {
         this.text = text;
     }
@@ -48,6 +51,7 @@ public class ChallengeOption {
         return reward;
     }
 
+    @XmlElement(name = "Reward")
     public void setReward(Reward reward) {
         this.reward = reward;
     }
@@ -56,6 +60,7 @@ public class ChallengeOption {
         return transitionType;
     }
 
+    @XmlElement(name = "TransitionType")
     public void setTransitionType(TransitionType transitionType) {
         this.transitionType = transitionType;
     }
@@ -64,6 +69,7 @@ public class ChallengeOption {
         return additionalScreens;
     }
 
+    @XmlElement(name = "AdditionalScreens")
     public void setAdditionalScreens(List<LearningObjectiveScreen> additionalScreens) {
         this.additionalScreens = additionalScreens;
     }

@@ -24,6 +24,7 @@ public class Theme {
     private NPCCharacter npcCharacters;
     private List<ThemeScreen> introScreens;
     private List<ThemeScreen> outroScreens;
+    private List<ThemeStory> themeStories;
 
     public List<ScreenNode> getIntro() {
         return (introScreens != null ? getScreens(introScreens) : new ArrayList<ScreenNode>());
@@ -103,5 +104,13 @@ public class Theme {
 
     public void setOutroScreens(List<ThemeScreen> outroScreens) {
         this.outroScreens = outroScreens;
+    }
+
+    public List<ThemeStory> getThemeStories() {
+        return themeStories;
+    }
+
+    public void setThemeStories(List<ThemeStory> themeStories) {
+        this.themeStories = themeStories;
     }
 }

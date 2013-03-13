@@ -1,12 +1,18 @@
 package edu.utdallas.gamegenerator;
 
 import edu.utdallas.gamegenerator.Characters.NPCCharacter;
+import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
+import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
+import edu.utdallas.gamegenerator.Locale.ObjectMovementType;
+import edu.utdallas.gamegenerator.Structure.Scene;
+import edu.utdallas.gamegenerator.Structure.Screen;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,20 +28,57 @@ public class Test {
         List<ScreenNode> blah2 = testObjects.getTheme().getOutro();
 
         try {
-            File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
-            JAXBContext jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
-            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            NPCCharacter npcCharacter = (NPCCharacter) unmarshaller.unmarshal(file);
-            System.out.println(npcCharacter);
-
-            file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter2.xml");
-            Marshaller marshaller = jaxbContext.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            marshaller.marshal(testObjects.getNpcCharacter(), System.out);
+            createXml(testObjects);
+//            test();
         } catch (JAXBException e) {
             e.printStackTrace();
         }
 
         System.out.println();
+    }
+
+    private static void test() throws JAXBException {
+        Scene scene = new Scene();
+        List<Screen> screens = new ArrayList<Screen>();
+        Screen screen = new Screen();
+        screen.setA(7);
+        screen.setObjectMovementType(ObjectMovementType.WALK);
+        screens.add(screen);
+        screen = new Screen();
+        screen.setA(8);
+        screen.setObjectMovementType(ObjectMovementType.JUMP);
+        screens.add(screen);
+        scene.setScreens(screens);
+
+        JAXBContext jaxbContext = JAXBContext.newInstance(Scene.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Scene.xml");
+        marshaller.marshal(scene, file);
+
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Scene.xml");
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        Scene scene2 = (Scene) unmarshaller.unmarshal(file);
+        System.out.println(scene2);
+    }
+
+    private static void createXml(TestObjects testObjects) throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
+        marshaller.marshal(testObjects.getNpcCharacter(), file);
+
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
+        jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
+        marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(testObjects.getPlayerCharacter(), file);
+
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjective.xml");
+        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
+        marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(testObjects.getLearningObjective(), file);
     }
 }

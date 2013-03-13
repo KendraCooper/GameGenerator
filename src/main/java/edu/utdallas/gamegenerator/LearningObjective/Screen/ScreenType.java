@@ -6,5 +6,11 @@ package edu.utdallas.gamegenerator.LearningObjective.Screen;
  * Time: 9:45 PM
  */
 public enum ScreenType {
-    LESSON, CHALLENGE, FAILURE, SUCCESS, NEUTRAL
+    LESSON,
+    CHALLENGE,
+    FAILURE,
+    SUCCESS,
+    NEUTRAL,
+    LESSON_STORY_INTRO,
+    LESSON_STORY_OUTRO
 }

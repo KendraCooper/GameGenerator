@@ -2,6 +2,7 @@ package edu.utdallas.gamegenerator;
 
 import edu.utdallas.gamegenerator.Characters.NPCCharacter;
 import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
+import edu.utdallas.gamegenerator.Characters.GameCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOption;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOptionType;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.Reward;
@@ -111,8 +112,12 @@ public class TestObjects {
         challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "option 1", new Reward(), TransitionType.NEXT_ACT, null));
         challenge.setChallengeOptions(challengeOptions);
         challenges.add(challenge);
+        challenges.add(challenge);
         lesson.setLessonChallenges(challenges);
+        lessons.add(lesson);
+        lessons.add(lesson);
         learningObjective.setLessons(lessons);
+
     }
 
     private void createTheme() {
@@ -156,19 +161,19 @@ public class TestObjects {
 
     private void createNPC() {
         npcCharacter = new NPCCharacter();
-        edu.utdallas.gamegenerator.Characters.GameCharacter hero = new edu.utdallas.gamegenerator.Characters.GameCharacter();
+        GameCharacter hero = new GameCharacter();
         hero.setName("Sir Solvesalot");
         hero.setDirectory("character_22");
         hero.setPrefix("char22");
         hero.setCharacterAssets(buildCharacterAssets());
 
-        edu.utdallas.gamegenerator.Characters.GameCharacter villian = new edu.utdallas.gamegenerator.Characters.GameCharacter();
+        GameCharacter villian = new GameCharacter();
         villian.setName("Calcatron");
         villian.setDirectory("character_21");
         villian.setPrefix("char21");
         villian.setCharacterAssets(buildCharacterAssets());
 
-        edu.utdallas.gamegenerator.Characters.GameCharacter alt = new edu.utdallas.gamegenerator.Characters.GameCharacter();
+        GameCharacter alt = new GameCharacter();
         alt.setName("TI-83+");
         alt.setDirectory("character_15");
         alt.setPrefix("char15");
