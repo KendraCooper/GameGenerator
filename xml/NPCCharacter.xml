@@ -1,0 +1,13 @@
+<NPCCharacter>
+    <Hero>
+        <Directory>C:\test\</Directory>
+        <Prefix>char1</Prefix>
+        <CharacterAssets>
+            <entry>
+                <key xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">walkleft2</key>
+                <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">WalkLOpen.png</value>
+            </entry>
+        </CharacterAssets>
+        <Name>Sir Solvesalot</Name>
+    </Hero>
+</NPCCharacter>
