@@ -11,8 +11,6 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ObjectMovementType")
 @XmlEnum
 public enum ObjectMovementType {
-    WALK,
-    RUN,
-    JUMP,
-    SIT;
+    WALK_ONTO_SCREEN,
+    WALK_OFF_SCREEN;
 }

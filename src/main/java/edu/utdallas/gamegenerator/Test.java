@@ -25,7 +25,7 @@ public class Test {
     public static void main(String[] args) {
         TestObjects testObjects = new TestObjects();
         testObjects.getTheme().getIntro();
-        List<ScreenNode> blah2 = testObjects.getTheme().getOutro();
+        List<ScreenNode> blah2 = testObjects.getTheme().getIntro();
 
         try {
             createXml(testObjects);
@@ -42,11 +42,11 @@ public class Test {
         List<Screen> screens = new ArrayList<Screen>();
         Screen screen = new Screen();
         screen.setA(7);
-        screen.setObjectMovementType(ObjectMovementType.WALK);
+        screen.setObjectMovementType(ObjectMovementType.WALK_OFF_SCREEN);
         screens.add(screen);
         screen = new Screen();
         screen.setA(8);
-        screen.setObjectMovementType(ObjectMovementType.JUMP);
+        screen.setObjectMovementType(ObjectMovementType.WALK_ONTO_SCREEN);
         screens.add(screen);
         scene.setScreens(screens);
 

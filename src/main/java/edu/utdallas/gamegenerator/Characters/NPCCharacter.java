@@ -1,5 +1,7 @@
 package edu.utdallas.gamegenerator.Characters;
 
+import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -16,6 +18,20 @@ public class NPCCharacter {
 
     public GameCharacter getHero() {
         return hero;
+    }
+
+    public GameCharacter getCharacter(LearningObjectiveCharacterType characterType) {
+        switch (characterType) {
+            case HERO:
+                return hero;
+            case ALT:
+                return alt;
+            case VILLIAN:
+                return villain;
+            default:
+                break;
+        }
+        return null;
     }
 
     @XmlElement(name = "Hero")

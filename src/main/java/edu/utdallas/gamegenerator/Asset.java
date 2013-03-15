@@ -1,5 +1,9 @@
 package edu.utdallas.gamegenerator;
 
+import edu.utdallas.gamegenerator.Characters.GameCharacter;
+import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
+import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
+import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
 import edu.utdallas.gamegenerator.Shared.*;
 
@@ -52,7 +56,8 @@ public class Asset {
         displayImage = gameObject.getPathToAsset();
     }
 
-    public Asset(SharedCharacter character) {
+    public Asset(SharedCharacter character, GameCharacter gameCharacter,
+                 LearningObjectiveCharacter learningObjectiveCharacter) {
         id = UUID.randomUUID();
         type = "CharacterAsset";
         locX = character.getLocX();
@@ -61,10 +66,12 @@ public class Asset {
         height = character.getHeight();
         locX2 = locX + width;
         locY2 = locY + height;
-        displayImage = character.getPathToAsset();
+        displayImage = gameCharacter.getCharacterAsset(character.getCharacterAssetType());
         behaviors = new ArrayList<Behavior>();
         for(ObjectMovement movement : character.getMovements()) {
-            behaviors.add(new Behavior(movement));
+            if(learningObjectiveCharacter.getMovementType() == movement.getMovementType()) {
+                behaviors.add(new Behavior(movement));
+            }
         }
     }
 
@@ -72,12 +79,24 @@ public class Asset {
         this((GameObject)button);
         this.name = button.getName();
         type = "ButtonAsset";
+        this.behaviors = new ArrayList<Behavior>();
+        this.behaviors.add(button.getBehavior());
     }
 
     public Asset(SharedInformationBox informationBox) {
         this((GameObject)informationBox);
         this.name = informationBox.getName();
         type = "InformationBoxAsset";
+    }
+
+    public Asset(SharedInformationBox informationBox, GameText gameText) {
+        this(informationBox);
+        this.name = gameText.getText();
+    }
+
+    public Asset(SharedButton sharedButton, GameButton gameButton) {
+        this(sharedButton);
+        this.name = gameButton.getText();
     }
 
     public String getType() {

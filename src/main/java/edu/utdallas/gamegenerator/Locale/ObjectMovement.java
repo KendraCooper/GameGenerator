@@ -1,5 +1,9 @@
 package edu.utdallas.gamegenerator.Locale;
 
+import edu.utdallas.gamegenerator.Characters.CharacterAssetType;
+
+import java.util.List;
+
 /**
  * User: clocke
  * Date: 2/17/13
@@ -12,6 +16,7 @@ public class ObjectMovement {
     private double endX;
     private double endY;
     private double speed;
+    private List<CharacterAssetType> animationSequence;
 
     public ObjectMovement() {
     }
@@ -71,5 +76,13 @@ public class ObjectMovement {
 
     public void setSpeed(double speed) {
         this.speed = speed;
+    }
+
+    public List<CharacterAssetType> getAnimationSequence() {
+        return animationSequence;
+    }
+
+    public void setAnimationSequence(List<CharacterAssetType> animationSequence) {
+        this.animationSequence = animationSequence;
     }
 }

@@ -1,5 +1,6 @@
 package edu.utdallas.gamegenerator.Shared;
 
+import edu.utdallas.gamegenerator.Characters.CharacterAssetType;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
 
@@ -13,6 +14,7 @@ import java.util.List;
 public class SharedCharacter extends GameObject {
     private LearningObjectiveCharacterType characterType;
     private List<ObjectMovement> movements;
+    private CharacterAssetType characterAssetType;
 
     public SharedCharacter() {
         super();
@@ -38,5 +40,13 @@ public class SharedCharacter extends GameObject {
 
     public void setMovements(List<ObjectMovement> movements) {
         this.movements = movements;
+    }
+
+    public CharacterAssetType getCharacterAssetType() {
+        return characterAssetType;
+    }
+
+    public void setCharacterAssetType(CharacterAssetType characterAssetType) {
+        this.characterAssetType = characterAssetType;
     }
 }

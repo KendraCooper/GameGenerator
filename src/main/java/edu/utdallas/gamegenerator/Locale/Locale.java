@@ -1,13 +1,18 @@
 package edu.utdallas.gamegenerator.Locale;
 
+import edu.utdallas.gamegenerator.Asset;
 import edu.utdallas.gamegenerator.Characters.NPCCharacter;
 import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
+import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
+import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
+import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
+import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
+import edu.utdallas.gamegenerator.LearningObjective.Prop.TextType;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveScreen;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.ScreenType;
 import edu.utdallas.gamegenerator.ScreenNode;
-import edu.utdallas.gamegenerator.Shared.GameObject;
-import edu.utdallas.gamegenerator.Shared.SharedCharacter;
+import edu.utdallas.gamegenerator.Shared.*;
 import edu.utdallas.gamegenerator.Theme.Theme;
 import edu.utdallas.gamegenerator.Theme.ThemeStory;
 
@@ -27,8 +32,9 @@ public class Locale {
     private Theme theme;
     private Map<ScreenType, String> backgrounds;
     private Map<ScreenType, List<GameObject>> gameObjects;
-    private Map<ScreenType, Map<String, SharedCharacter>> localeCharacters;
-    private Map<ScreenType, Map<String, GameObject>> buttons;
+    private Map<ScreenType, Map<LearningObjectiveCharacterType, SharedCharacter>> localeCharacters;
+    private Map<ScreenType, Map<TextType, SharedInformationBox>> informationBoxes;
+    private Map<ScreenType, Map<ButtonLocationType, SharedButton>> buttons;
 
     public List<LearningObjective> getLearningObjectives() {
         return learningObjectives;
@@ -78,11 +84,11 @@ public class Locale {
         this.gameObjects = gameObjects;
     }
 
-    public Map<ScreenType, Map<String, SharedCharacter>> getLocaleCharacters() {
+    public Map<ScreenType, Map<LearningObjectiveCharacterType, SharedCharacter>> getLocaleCharacters() {
         return localeCharacters;
     }
 
-    public void setLocaleCharacters(Map<ScreenType, Map<String, SharedCharacter>> localeCharacters) {
+    public void setLocaleCharacters(Map<ScreenType, Map<LearningObjectiveCharacterType, SharedCharacter>> localeCharacters) {
         this.localeCharacters = localeCharacters;
     }
 
@@ -112,17 +118,58 @@ public class Locale {
         screenNode.setBackground(backgrounds.get(screenType));
         screenNode.setName("LESSON_" + learningObjective + " - " + screenType);
 
+        List<Asset> assets = new ArrayList<Asset>();
+        List<GameObject> localeObjects = gameObjects.get(screenType);
+        if(localeObjects != null) {
+            for(GameObject object : localeObjects) {
+                assets.add(new Asset(object));
+            }
+        }
+        List<LearningObjectiveCharacter> themeCharacters = themeStoryScreen.getCharacters();
+        if(themeCharacters != null) {
+            for(LearningObjectiveCharacter themeCharacter : themeCharacters) {
+                LearningObjectiveCharacterType characterType = themeCharacter.getCharacterType();
+                SharedCharacter localeCharacter = localeCharacters.get(screenType).get(characterType);
+                assets.add(new Asset(localeCharacter, npcCharacters.getCharacter(characterType),
+                        themeCharacter));
+            }
+        }
+
+        List<GameText> themeGameTexts = themeStoryScreen.getTexts();
+        Map<TextType, SharedInformationBox> screenInformationBoxes = informationBoxes.get(screenType);
+        if(themeGameTexts != null) {
+            for(GameText gameText : themeGameTexts) {
+                assets.add(new Asset(screenInformationBoxes.get(gameText.getTextType()), gameText));
+            }
+        }
+
+        List<GameButton> themeGameButtons = themeStoryScreen.getButtons();
+        Map<ButtonLocationType, SharedButton> localeButtons = buttons.get(screenType);
+        if(themeGameButtons != null) {
+            for(GameButton gameButton : themeGameButtons) {
+                assets.add(new Asset(localeButtons.get(gameButton.getButtonLocationType()), gameButton));
+            }
+        }
 
 
 
-        return null;
+
+        return screenNode;
     }
 
-    public Map<ScreenType, Map<String, GameObject>> getButtons() {
+    public Map<ScreenType, Map<ButtonLocationType, SharedButton>> getButtons() {
         return buttons;
     }
 
-    public void setButtons(Map<ScreenType, Map<String, GameObject>> buttons) {
+    public void setButtons(Map<ScreenType, Map<ButtonLocationType, SharedButton>> buttons) {
         this.buttons = buttons;
+    }
+
+    public Map<ScreenType, Map<TextType, SharedInformationBox>> getInformationBoxes() {
+        return informationBoxes;
+    }
+
+    public void setInformationBoxes(Map<ScreenType, Map<TextType, SharedInformationBox>> informationBoxes) {
+        this.informationBoxes = informationBoxes;
     }
 }

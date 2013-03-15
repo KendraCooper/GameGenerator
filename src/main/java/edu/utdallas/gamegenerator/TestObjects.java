@@ -1,5 +1,6 @@
 package edu.utdallas.gamegenerator;
 
+import edu.utdallas.gamegenerator.Characters.CharacterAssetType;
 import edu.utdallas.gamegenerator.Characters.NPCCharacter;
 import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
 import edu.utdallas.gamegenerator.Characters.GameCharacter;
@@ -13,6 +14,7 @@ import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveChal
 import edu.utdallas.gamegenerator.LearningObjective.Screen.ScreenType;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Locale.*;
+import edu.utdallas.gamegenerator.Shared.ButtonLocationType;
 import edu.utdallas.gamegenerator.Shared.SharedButton;
 import edu.utdallas.gamegenerator.Shared.SharedCharacter;
 import edu.utdallas.gamegenerator.Shared.GameObject;
@@ -60,9 +62,9 @@ public class TestObjects {
         backgrounds.put(ScreenType.SUCCESS, "");
         locale.setBackgrounds(backgrounds);
 
-        Map<ScreenType, Map<String, GameObject>> buttons = new HashMap<ScreenType, Map<String, GameObject>>();
-        Map<String, GameObject> buttonButtons = new HashMap<String, GameObject>();
-        buttonButtons.put("option1", new GameObject(10,10,10,10,""));
+        Map<ScreenType, Map<ButtonLocationType, SharedButton>> buttons = new HashMap<ScreenType, Map<ButtonLocationType, SharedButton>>();
+        Map<ButtonLocationType, SharedButton> buttonButtons = new HashMap<ButtonLocationType, SharedButton>();
+        buttonButtons.put(ButtonLocationType.NEXT, new SharedButton("",10,10,10,10,""));
         buttons.put(ScreenType.CHALLENGE, buttonButtons);
         locale.setButtons(buttons);
         Map<ScreenType, List<GameObject>> gameObjectsMap = new HashMap<ScreenType, List<GameObject>>();
@@ -77,18 +79,18 @@ public class TestObjects {
         learningObjectives.add(learningObjective);
         locale.setLearningObjectives(learningObjectives);
 
-        Map<ScreenType, Map<String, SharedCharacter>> localeCharactersMap = new HashMap<ScreenType, Map<String, SharedCharacter>>();
+        Map<ScreenType, Map<LearningObjectiveCharacterType, SharedCharacter>> localeCharactersMap = new HashMap<ScreenType, Map<LearningObjectiveCharacterType, SharedCharacter>>();
         Map<String, SharedCharacter> localeCharacters = new HashMap<String, SharedCharacter>();
         List<ObjectMovement> movements = new ArrayList<ObjectMovement>();
-        movements.add(new ObjectMovement(ObjectMovementType.WALK, 1, 1, 5, 5));
+        movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
         localeCharacters.put("hero", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
-        movements.add(new ObjectMovement(ObjectMovementType.WALK, 1, 1, 5, 5));
+        movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
         localeCharacters.put("villian", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
-        movements.add(new ObjectMovement(ObjectMovementType.WALK, 1, 1, 5, 5));
+        movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
         localeCharacters.put("alt", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         locale.setLocaleCharacters(localeCharactersMap);
@@ -109,7 +111,7 @@ public class TestObjects {
         challenge.setTexts(null);
         challenge.setTimer(0);
         List<ChallengeOption> challengeOptions = new ArrayList<ChallengeOption>();
-        challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "option 1", new Reward(), TransitionType.NEXT_ACT, null));
+        challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "option 1", new Reward(), TransitionType.ADDITIONAL, null));
         challenge.setChallengeOptions(challengeOptions);
         challenges.add(challenge);
         challenges.add(challenge);
@@ -125,23 +127,24 @@ public class TestObjects {
         List<ThemeScreen> themeScreens = new ArrayList<ThemeScreen>();
         ThemeScreen screen = new ThemeScreen();
         screen.setBackground("");
-        Map<String,SharedButton> buttons = new HashMap<String, SharedButton>();
-        buttons.put("intro1_next", new SharedButton("button intro 1",10, 30, 350, 350, ""));
+        Map<ButtonLocationType, SharedButton> buttons = new HashMap<ButtonLocationType, SharedButton>();
+        Behavior behavior = new Behavior();
+        buttons.put(ButtonLocationType.NEXT, new SharedButton("button intro 1",10, 30, 350, 350, new Behavior()));
         screen.setButtons(buttons);
         List<GameObject> gameObjects = new ArrayList<GameObject>();
         gameObjects.add(new GameObject(100, 100, 100, 100, ""));
         screen.setGameObjects(gameObjects);
         Map<String, SharedCharacter> themeCharacters = new HashMap<String, SharedCharacter>();
         List<ObjectMovement> movements = new ArrayList<ObjectMovement>();
-        movements.add(new ObjectMovement(ObjectMovementType.WALK, 1, 1, 5, 5));
+        movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
         themeCharacters.put("hero", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
-        movements.add(new ObjectMovement(ObjectMovementType.WALK, 1, 1, 5, 5));
+        movements.add(new ObjectMovement(ObjectMovementType.WALK_OFF_SCREEN, 1, 1, 5, 5));
         themeCharacters.put("villian", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
-        movements.add(new ObjectMovement(ObjectMovementType.WALK, 1, 1, 5, 5));
+        movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
         themeCharacters.put("alt", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         screen.setThemeCharacters(themeCharacters);
@@ -165,33 +168,23 @@ public class TestObjects {
         hero.setName("Sir Solvesalot");
         hero.setDirectory("character_22");
         hero.setPrefix("char22");
-        hero.setCharacterAssets(buildCharacterAssets());
+        hero.getCharacterAsset(CharacterAssetType.STAND_SMILE_CLOSED);
 
         GameCharacter villian = new GameCharacter();
         villian.setName("Calcatron");
         villian.setDirectory("character_21");
         villian.setPrefix("char21");
-        villian.setCharacterAssets(buildCharacterAssets());
+        villian.getCharacterAsset(CharacterAssetType.STAND_SMILE_CLOSED);
 
         GameCharacter alt = new GameCharacter();
         alt.setName("TI-83+");
         alt.setDirectory("character_15");
         alt.setPrefix("char15");
-        alt.setCharacterAssets(buildCharacterAssets());
+        alt.getCharacterAsset(CharacterAssetType.STAND_SMILE_CLOSED);
 
         npcCharacter.setHero(hero);
         npcCharacter.setVillain(villian);
         npcCharacter.setAlt(alt);
-    }
-
-    private Map<String, String> buildCharacterAssets() {
-        Map<String, String> characterAssets = new HashMap<String, String>();
-        characterAssets.put("standing", "REvil.png");
-        characterAssets.put("walkright1", "WalkLBehind.png");
-        characterAssets.put("walkright2", "WalkROpen.png");
-        characterAssets.put("walkleft1", "WalkRBehind.png");
-        characterAssets.put("walkleft2", "WalkLOpen.png");
-        return characterAssets;
     }
 
     private void createPlayer() {
@@ -199,7 +192,7 @@ public class TestObjects {
         playerCharacter.setName("Ric");
         playerCharacter.setDirectory("character_1");
         playerCharacter.setPrefix("char1");
-        playerCharacter.setCharacterAssets(buildCharacterAssets());
+        playerCharacter.getCharacterAsset(CharacterAssetType.STAND_SMILE_CLOSED);
     }
 
     private void createSubject() {

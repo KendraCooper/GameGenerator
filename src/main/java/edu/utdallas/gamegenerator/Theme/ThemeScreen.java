@@ -1,9 +1,6 @@
 package edu.utdallas.gamegenerator.Theme;
 
-import edu.utdallas.gamegenerator.Shared.SharedButton;
-import edu.utdallas.gamegenerator.Shared.SharedCharacter;
-import edu.utdallas.gamegenerator.Shared.GameObject;
-import edu.utdallas.gamegenerator.Shared.SharedInformationBox;
+import edu.utdallas.gamegenerator.Shared.*;
 
 import java.util.List;
 import java.util.Map;
@@ -17,7 +14,7 @@ public class ThemeScreen {
     private String background;
     private Map<String, SharedCharacter> themeCharacters;
     private List<GameObject> gameObjects;
-    private Map<String, SharedButton> buttons;
+    private Map<ButtonLocationType, SharedButton> buttons;
     private List<SharedInformationBox> informationBoxes;
 
     public String getBackground() {
@@ -44,11 +41,11 @@ public class ThemeScreen {
         this.gameObjects = gameObjects;
     }
 
-    public Map<String, SharedButton> getButtons() {
+    public Map<ButtonLocationType, SharedButton> getButtons() {
         return buttons;
     }
 
-    public void setButtons(Map<String, SharedButton> buttons) {
+    public void setButtons(Map<ButtonLocationType, SharedButton> buttons) {
         this.buttons = buttons;
     }
 

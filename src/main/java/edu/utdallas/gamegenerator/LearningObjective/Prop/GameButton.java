@@ -1,6 +1,7 @@
 package edu.utdallas.gamegenerator.LearningObjective.Prop;
 
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
+import edu.utdallas.gamegenerator.Shared.ButtonLocationType;
 
 /**
  * User: clocke
@@ -8,9 +9,18 @@ import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
  * Time: 3:55 PM
  */
 public class GameButton {
+    private ButtonLocationType buttonLocationType;
     private String text;
     private int timer;
     private TransitionType type;
+
+    public ButtonLocationType getButtonLocationType() {
+        return buttonLocationType;
+    }
+
+    public void setButtonLocationType(ButtonLocationType buttonLocationType) {
+        this.buttonLocationType = buttonLocationType;
+    }
 
     public String getText() {
         return text;

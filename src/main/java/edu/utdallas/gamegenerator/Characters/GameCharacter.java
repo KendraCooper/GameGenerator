@@ -1,9 +1,8 @@
 package edu.utdallas.gamegenerator.Characters;
 
-import com.bluelotussoftware.jaxb.adapter.XmlGenericMapAdapter;
-
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlTransient;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -14,15 +13,29 @@ import java.util.Map;
 public class GameCharacter {
     private String directory;
     private String prefix;
-    private Map<String, String> characterAssets;
+    private Map<CharacterAssetType, String> characterAssets;
     private String name;
 
     public GameCharacter() {
-        //Populate hash map
     }
 
-    public String getCharacter(String characterAction) {
-        return characterAssets.get(characterAction);
+    private void buildCharacterAssets() {
+        characterAssets = new HashMap<CharacterAssetType, String>();
+        for(CharacterAssetType characterAssetType : CharacterAssetType.values()) {
+            characterAssets.put(characterAssetType,
+                    buildCharacterAsset(characterAssetType));
+        }
+    }
+
+    private String buildCharacterAsset(CharacterAssetType characterAssetType) {
+        return directory + "\\" + prefix + "_" + characterAssetType.toString() + ".png";
+    }
+
+    public String getCharacterAsset(CharacterAssetType characterAssetType) {
+        if(characterAssets == null) {
+            buildCharacterAssets();
+        }
+        return characterAssets.get(characterAssetType);
     }
 
     public String getDirectory() {
@@ -43,13 +56,12 @@ public class GameCharacter {
         this.prefix = prefix;
     }
 
-    public Map<String, String> getCharacterAssets() {
+    public Map<CharacterAssetType, String> getCharacterAssets() {
         return characterAssets;
     }
 
-    @XmlElement(name = "CharacterAssets")
-    @XmlJavaTypeAdapter(XmlGenericMapAdapter.class)
-    public void setCharacterAssets(Map<String, String> characterAssets) {
+    @XmlTransient
+    public void setCharacterAssets(Map<CharacterAssetType, String> characterAssets) {
         this.characterAssets = characterAssets;
     }
 
