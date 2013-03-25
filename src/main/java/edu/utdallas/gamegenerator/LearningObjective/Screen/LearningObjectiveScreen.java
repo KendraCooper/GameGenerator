@@ -11,17 +11,17 @@ import java.util.List;
  * Date: 2/17/13
  * Time: 3:46 PM
  */
-public abstract class LearningObjectiveScreen {
-    private List<GameText> texts;
+public abstract class LearningObjectiveScreen implements Cloneable {
+    private List<GameText> informationBoxes;
     private List<GameButton> buttons;
     private List<LearningObjectiveCharacter> characters;
 
-    public List<GameText> getTexts() {
-        return texts;
+    public List<GameText> getInformationBoxes() {
+        return informationBoxes;
     }
 
-    public void setTexts(List<GameText> texts) {
-        this.texts = texts;
+    public void setInformationBoxes(List<GameText> informationBoxes) {
+        this.informationBoxes = informationBoxes;
     }
 
     public List<GameButton> getButtons() {
@@ -41,4 +41,13 @@ public abstract class LearningObjectiveScreen {
     }
 
     public abstract ScreenType getType();
+
+    public LearningObjectiveScreen clone() {
+        try {
+            return (LearningObjectiveScreen) super.clone();
+        } catch (CloneNotSupportedException e) {
+
+        }
+        return null;
+    }
 }

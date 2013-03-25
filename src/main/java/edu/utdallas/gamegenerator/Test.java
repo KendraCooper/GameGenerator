@@ -26,6 +26,7 @@ public class Test {
         TestObjects testObjects = new TestObjects();
         testObjects.getTheme().getIntro();
         List<ScreenNode> blah2 = testObjects.getTheme().getIntro();
+        testObjects.getLocale().getAct(0);
 
         try {
             createXml(testObjects);

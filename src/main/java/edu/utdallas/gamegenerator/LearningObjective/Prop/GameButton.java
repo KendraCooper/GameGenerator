@@ -1,5 +1,6 @@
 package edu.utdallas.gamegenerator.LearningObjective.Prop;
 
+import edu.utdallas.gamegenerator.LearningObjective.Challenge.Reward;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Shared.ButtonLocationType;
 
@@ -13,6 +14,7 @@ public class GameButton {
     private String text;
     private int timer;
     private TransitionType type;
+    private Reward reward;
 
     public ButtonLocationType getButtonLocationType() {
         return buttonLocationType;
@@ -38,11 +40,19 @@ public class GameButton {
         this.timer = timer;
     }
 
-    public TransitionType getType() {
+    public TransitionType getTransitionType() {
         return type;
     }
 
-    public void setType(TransitionType type) {
+    public void setTransitionType(TransitionType type) {
         this.type = type;
+    }
+
+    public Reward getReward() {
+        return reward;
+    }
+
+    public void setReward(Reward reward) {
+        this.reward = reward;
     }
 }

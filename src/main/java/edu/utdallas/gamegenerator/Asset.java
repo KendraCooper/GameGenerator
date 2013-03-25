@@ -97,6 +97,18 @@ public class Asset {
     public Asset(SharedButton sharedButton, GameButton gameButton) {
         this(sharedButton);
         this.name = gameButton.getText();
+        behaviors = new ArrayList<Behavior>();
+        if(gameButton.getReward() != null) {
+            Behavior behavior = new Behavior();
+            behavior.setBehaviorType(BehaviorType.REWARD_BEHAVIOR);
+            behavior.setPoints(gameButton.getReward().getPoints());
+            behaviors.add(behavior);
+        }
+        if(gameButton.getTransitionType() != null) {
+            Behavior behavior = new Behavior();
+            behavior.setBehaviorType(BehaviorType.TRANSITION_BEHAVIOR);
+            behaviors.add(behavior);
+        }
     }
 
     public String getType() {

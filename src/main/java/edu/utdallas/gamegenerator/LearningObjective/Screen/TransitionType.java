@@ -15,4 +15,5 @@ public enum TransitionType {
     BEGINNING_OF_CHALLENGE,
     END_OF_STORY,
     ADDITIONAL,
+    NEXT_SCREEN;
 }

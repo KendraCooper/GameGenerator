@@ -10,6 +10,7 @@ import java.util.UUID;
  * Time: 8:59 PM
  */
 public class Behavior {
+    private BehaviorType behaviorType;
     private String trigger;
     private int time;
     private String displayName;
@@ -35,6 +36,14 @@ public class Behavior {
         endLocationY = movement.getEndY();
         speed = movement.getSpeed();
         transition = movement.getMovementType().toString();
+    }
+
+    public BehaviorType getBehaviorType() {
+        return behaviorType;
+    }
+
+    public void setBehaviorType(BehaviorType behaviorType) {
+        this.behaviorType = behaviorType;
     }
 
     public String getTrigger() {

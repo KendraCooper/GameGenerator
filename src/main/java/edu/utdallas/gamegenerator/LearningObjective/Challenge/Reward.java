@@ -6,4 +6,20 @@ package edu.utdallas.gamegenerator.LearningObjective.Challenge;
  * Time: 3:30 PM
  */
 public class Reward {
+    private int points;
+
+    public Reward() {
+    }
+
+    public Reward(int points) {
+        this.points = points;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
 }
