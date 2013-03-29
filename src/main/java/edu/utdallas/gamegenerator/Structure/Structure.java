@@ -16,6 +16,7 @@ public class Structure {
     private List<Act> acts;
 
     public Game createGame() {
+
         return null;
     }
 

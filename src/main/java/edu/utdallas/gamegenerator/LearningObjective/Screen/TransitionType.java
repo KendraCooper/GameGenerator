@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.XmlType;
 public enum TransitionType {
     BEGINNING_OF_LESSON,
     BEGINNING_OF_CHALLENGE,
+    CURRENT_CHALLENGE,
+    NEXT_CHALLENGE,
     END_OF_STORY,
     ADDITIONAL,
     NEXT_SCREEN;

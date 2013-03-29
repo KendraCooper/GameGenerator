@@ -22,10 +22,7 @@ import edu.utdallas.gamegenerator.Locale.ObjectMovementType;
 import edu.utdallas.gamegenerator.Shared.*;
 import edu.utdallas.gamegenerator.Structure.Structure;
 import edu.utdallas.gamegenerator.Subject.Subject;
-import edu.utdallas.gamegenerator.Theme.Theme;
-import edu.utdallas.gamegenerator.Theme.ThemeScreen;
-import edu.utdallas.gamegenerator.Theme.ThemeStory;
-import edu.utdallas.gamegenerator.Theme.ThemeStoryScreenIntro;
+import edu.utdallas.gamegenerator.Theme.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -59,7 +56,9 @@ public class TestObjects {
     private void createLocale() {
         Map<ScreenType, LocaleScreen> localeScreenMap = new HashMap<ScreenType, LocaleScreen>();
         LocaleScreen localeScreen = new LocaleScreen();
+
         localeScreenMap.put(ScreenType.LESSON_STORY_INTRO, localeScreen);
+        localeScreenMap.put(ScreenType.LESSON_STORY_OUTRO, localeScreen);
         localeScreenMap.put(ScreenType.LESSON, localeScreen);
         localeScreenMap.put(ScreenType.CHALLENGE, localeScreen);
         localeScreenMap.put(ScreenType.FAILURE, localeScreen);
@@ -162,7 +161,7 @@ public class TestObjects {
         List<LearningObjectiveScreen> learningObjectiveScreens1 = new ArrayList<LearningObjectiveScreen>();
         learningObjectiveScreens1.add(screen);
         LearningObjectiveScreen screen1 = screen.clone();
-        screen1.getButtons().get(0).setTransitionType(TransitionType.BEGINNING_OF_LESSON);
+        screen1.getButtons().get(0).setTransitionType(TransitionType.NEXT_CHALLENGE);
         learningObjectiveScreens1.add(screen);
         List<GameButton> challengeOptions = new ArrayList<GameButton>();
         challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "additional screens", new Reward(), TransitionType.ADDITIONAL, learningObjectiveScreens1, ButtonLocationType.CHALLENGE_1));
@@ -220,9 +219,18 @@ public class TestObjects {
         themeStoryScreenIntros.add(screenIntro);
         themeStory.setIntro(themeStoryScreenIntros);
 
+        List<ThemeStoryScreenOutro> themeStoryScreenOutros = new ArrayList<ThemeStoryScreenOutro>();
+        ThemeStoryScreenOutro themeStoryScreenOutro = new ThemeStoryScreenOutro();
+        themeStoryScreenOutro.setCharacters(learningObjectiveCharacters);
+        themeStoryScreenOutro.setButtons(gameButtons);
+        themeStoryScreenOutro.setInformationBoxes(gameTexts);
+        themeStoryScreenOutros.add(themeStoryScreenOutro);
+        themeStory.setOutro(themeStoryScreenOutros);
+
         themeStories.add(themeStory);
         theme.setThemeStories(themeStories);
         theme.setIntroScreens(themeScreens);
+        theme.setOutroScreens(themeScreens);
         theme.setSubject(subject);
         theme.setNpcCharacters(npcCharacter);
         theme.setPlayerCharacter(playerCharacter);
