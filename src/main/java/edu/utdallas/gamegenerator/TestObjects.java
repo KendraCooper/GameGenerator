@@ -181,7 +181,7 @@ public class TestObjects {
         screen.setBackground("");
         Map<ButtonLocationType, SharedButton> buttons = new HashMap<ButtonLocationType, SharedButton>();
         Behavior behavior = new Behavior();
-        buttons.put(ButtonLocationType.NEXT, new SharedButton("button intro 1",10, 30, 350, 350, new Behavior()));
+        buttons.put(ButtonLocationType.NEXT, new SharedButton("button intro 1",10, 30, 350, 350, new Behavior(BehaviorType.TRANSITION_BEHAVIOR)));
         screen.setButtons(buttons);
         List<GameObject> gameObjects = getGameObjects();
         screen.setGameObjects(gameObjects);
@@ -219,6 +219,8 @@ public class TestObjects {
         themeStoryScreenIntros.add(screenIntro);
         themeStory.setIntro(themeStoryScreenIntros);
 
+        gameButtons = getGameButtons();
+        gameButtons.get(0).setTransitionType(TransitionType.NEXT_ACT);
         List<ThemeStoryScreenOutro> themeStoryScreenOutros = new ArrayList<ThemeStoryScreenOutro>();
         ThemeStoryScreenOutro themeStoryScreenOutro = new ThemeStoryScreenOutro();
         themeStoryScreenOutro.setCharacters(learningObjectiveCharacters);

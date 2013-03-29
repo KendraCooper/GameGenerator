@@ -29,6 +29,10 @@ public class Behavior {
     public Behavior() {
     }
 
+    public Behavior(BehaviorType behaviorType) {
+        this.behaviorType = behaviorType;
+    }
+
     public Behavior(ObjectMovement movement) {
         startLocationX = movement.getStartX();
         startLocationY = movement.getStartY();

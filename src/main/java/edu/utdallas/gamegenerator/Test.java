@@ -3,9 +3,7 @@ package edu.utdallas.gamegenerator;
 import edu.utdallas.gamegenerator.Characters.NPCCharacter;
 import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
-import edu.utdallas.gamegenerator.Locale.ObjectMovementType;
 import edu.utdallas.gamegenerator.Structure.Scene;
-import edu.utdallas.gamegenerator.Structure.Screen;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -27,28 +25,21 @@ public class Test {
         testObjects.getTheme().getIntro();
         List<ScreenNode> blah2 = testObjects.getTheme().getIntro();
         testObjects.getLocale().getAct(0);
+        testObjects.getStructure().createGame();
 
-        try {
-            createXml(testObjects);
+//        try {
+//            createXml(testObjects);
 //            test();
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
+//        } catch (JAXBException e) {
+//            e.printStackTrace();
+//        }
 
         System.out.println();
     }
 
     private static void test() throws JAXBException {
         Scene scene = new Scene();
-        List<Screen> screens = new ArrayList<Screen>();
-        Screen screen = new Screen();
-        screen.setA(7);
-        screen.setObjectMovementType(ObjectMovementType.WALK_OFF_SCREEN);
-        screens.add(screen);
-        screen = new Screen();
-        screen.setA(8);
-        screen.setObjectMovementType(ObjectMovementType.WALK_ONTO_SCREEN);
-        screens.add(screen);
+        List<ScreenNode> screens = new ArrayList<ScreenNode>();
         scene.setScreens(screens);
 
         JAXBContext jaxbContext = JAXBContext.newInstance(Scene.class);

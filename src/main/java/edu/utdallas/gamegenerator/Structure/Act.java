@@ -8,5 +8,13 @@ import java.util.List;
  * Time: 8:58 PM
  */
 public class Act {
-    List<Scene> scenes;
+    private List<Scene> scenes;
+
+    public List<Scene> getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(List<Scene> scenes) {
+        this.scenes = scenes;
+    }
 }

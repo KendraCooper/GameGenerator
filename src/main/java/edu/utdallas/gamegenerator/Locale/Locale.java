@@ -223,6 +223,9 @@ public class Locale {
                             }
 
                             break;
+                        case NEXT_ACT:
+                            behavior.setTransitionId(null);
+                            break;
                     }
                 }
                 assets.add(asset);
