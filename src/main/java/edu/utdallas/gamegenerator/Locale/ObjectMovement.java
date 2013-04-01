@@ -2,6 +2,8 @@ package edu.utdallas.gamegenerator.Locale;
 
 import edu.utdallas.gamegenerator.Characters.CharacterAssetType;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 
 /**
@@ -34,6 +36,7 @@ public class ObjectMovement {
         return movementType;
     }
 
+    @XmlElement(name = "MovementType")
     public void setMovementType(ObjectMovementType movementType) {
         this.movementType = movementType;
     }
@@ -42,6 +45,7 @@ public class ObjectMovement {
         return startX;
     }
 
+    @XmlElement(name = "StartX")
     public void setStartX(double startX) {
         this.startX = startX;
     }
@@ -50,6 +54,7 @@ public class ObjectMovement {
         return startY;
     }
 
+    @XmlElement(name = "StartY")
     public void setStartY(double startY) {
         this.startY = startY;
     }
@@ -58,6 +63,7 @@ public class ObjectMovement {
         return endX;
     }
 
+    @XmlElement(name = "EndX")
     public void setEndX(double endX) {
         this.endX = endX;
     }
@@ -66,6 +72,7 @@ public class ObjectMovement {
         return endY;
     }
 
+    @XmlElement(name = "EndY")
     public void setEndY(double endY) {
         this.endY = endY;
     }
@@ -74,6 +81,7 @@ public class ObjectMovement {
         return speed;
     }
 
+    @XmlElement(name = "Speed")
     public void setSpeed(double speed) {
         this.speed = speed;
     }
@@ -82,6 +90,8 @@ public class ObjectMovement {
         return animationSequence;
     }
 
+    @XmlElementWrapper(name = "AnimationSequences")
+    @XmlElement(name = "AnimationSequence")
     public void setAnimationSequence(List<CharacterAssetType> animationSequence) {
         this.animationSequence = animationSequence;
     }

@@ -2,6 +2,8 @@ package edu.utdallas.gamegenerator.Theme;
 
 import edu.utdallas.gamegenerator.Shared.*;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 import java.util.Map;
 
@@ -21,6 +23,7 @@ public class ThemeScreen {
         return background;
     }
 
+    @XmlElement(name = "Background")
     public void setBackground(String background) {
         this.background = background;
     }
@@ -29,6 +32,7 @@ public class ThemeScreen {
         return themeCharacters;
     }
 
+    @XmlElementWrapper(name = "ThemeCharacters")
     public void setThemeCharacters(Map<String, SharedCharacter> themeCharacters) {
         this.themeCharacters = themeCharacters;
     }
@@ -37,6 +41,8 @@ public class ThemeScreen {
         return gameObjects;
     }
 
+    @XmlElementWrapper(name = "GameObjects")
+    @XmlElement(name = "GameObject")
     public void setGameObjects(List<GameObject> gameObjects) {
         this.gameObjects = gameObjects;
     }
@@ -45,6 +51,7 @@ public class ThemeScreen {
         return buttons;
     }
 
+    @XmlElementWrapper(name = "ThemeButtons")
     public void setButtons(Map<ButtonLocationType, SharedButton> buttons) {
         this.buttons = buttons;
     }
@@ -53,6 +60,8 @@ public class ThemeScreen {
         return informationBoxes;
     }
 
+    @XmlElementWrapper(name = "InformationBoxes")
+    @XmlElement(name = "InformationBox")
     public void setInformationBoxes(List<SharedInformationBox> informationBoxes) {
         this.informationBoxes = informationBoxes;
     }

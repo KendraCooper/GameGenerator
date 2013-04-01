@@ -4,6 +4,8 @@ import edu.utdallas.gamegenerator.Characters.CharacterAssetType;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 
 /**
@@ -30,6 +32,7 @@ public class SharedCharacter extends GameObject {
         return characterType;
     }
 
+    @XmlElement(name = "CharacterType")
     public void setCharacterType(LearningObjectiveCharacterType characterType) {
         this.characterType = characterType;
     }
@@ -38,6 +41,8 @@ public class SharedCharacter extends GameObject {
         return movements;
     }
 
+    @XmlElementWrapper(name = "Movements")
+    @XmlElement(name = "Movement")
     public void setMovements(List<ObjectMovement> movements) {
         this.movements = movements;
     }
@@ -46,6 +51,7 @@ public class SharedCharacter extends GameObject {
         return characterAssetType;
     }
 
+    @XmlElement(name = "CharacterAssetType")
     public void setCharacterAssetType(CharacterAssetType characterAssetType) {
         this.characterAssetType = characterAssetType;
     }

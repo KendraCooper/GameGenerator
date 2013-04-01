@@ -4,6 +4,9 @@ import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveC
 import edu.utdallas.gamegenerator.LearningObjective.Prop.TextType;
 import edu.utdallas.gamegenerator.Shared.*;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +16,7 @@ import java.util.Map;
  * Date: 3/17/13
  * Time: 9:28 PM
  */
+@XmlRootElement(name = "LocaleScreen")
 public class LocaleScreen {
     private String background;
     private List<GameObject> gameObjects;
@@ -24,6 +28,7 @@ public class LocaleScreen {
         return background;
     }
 
+    @XmlElement(name = "Background")
     public void setBackground(String background) {
         this.background = background;
     }
@@ -32,6 +37,8 @@ public class LocaleScreen {
         return gameObjects;
     }
 
+    @XmlElementWrapper(name = "GameObjects")
+    @XmlElement(name = "GameObject")
     public void setGameObjects(List<GameObject> gameObjects) {
         this.gameObjects = gameObjects;
     }
@@ -40,6 +47,7 @@ public class LocaleScreen {
         return characters;
     }
 
+    @XmlElementWrapper(name = "Characters")
     public void setCharacters(Map<LearningObjectiveCharacterType, SharedCharacter> characters) {
         this.characters = characters;
     }
@@ -48,6 +56,7 @@ public class LocaleScreen {
         return informationBoxes;
     }
 
+    @XmlElementWrapper(name = "InformationBoxes")
     public void setInformationBoxes(Map<TextType, SharedInformationBox> informationBoxes) {
         this.informationBoxes = informationBoxes;
     }
@@ -56,6 +65,7 @@ public class LocaleScreen {
         return buttons;
     }
 
+    @XmlElementWrapper(name = "Buttons")
     public void setButtons(Map<ButtonLocationType, SharedButton> buttons) {
         this.buttons = buttons;
     }

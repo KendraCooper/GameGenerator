@@ -4,6 +4,8 @@ import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveC
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 
 /**
@@ -20,6 +22,8 @@ public abstract class LearningObjectiveScreen implements Cloneable {
         return informationBoxes;
     }
 
+    @XmlElementWrapper(name = "ImformationBoxes")
+    @XmlElement(name = "InformationBox")
     public void setInformationBoxes(List<GameText> informationBoxes) {
         this.informationBoxes = informationBoxes;
     }
@@ -28,6 +32,8 @@ public abstract class LearningObjectiveScreen implements Cloneable {
         return buttons;
     }
 
+    @XmlElementWrapper(name = "Buttons")
+    @XmlElement(name = "Button")
     public void setButtons(List<GameButton> buttons) {
         this.buttons = buttons;
     }
@@ -36,6 +42,8 @@ public abstract class LearningObjectiveScreen implements Cloneable {
         return characters;
     }
 
+    @XmlElementWrapper(name = "Characters")
+    @XmlElement(name = "Character")
     public void setCharacters(List<LearningObjectiveCharacter> characters) {
         this.characters = characters;
     }

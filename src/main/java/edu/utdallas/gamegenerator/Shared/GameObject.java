@@ -1,5 +1,7 @@
 package edu.utdallas.gamegenerator.Shared;
 
+import javax.xml.bind.annotation.XmlElement;
+
 /**
  * User: clocke
  * Date: 2/17/13
@@ -29,6 +31,7 @@ public class GameObject {
         return locX;
     }
 
+    @XmlElement(name = "LocX")
     public void setLocX(int locX) {
         this.locX = locX;
     }
@@ -37,6 +40,7 @@ public class GameObject {
         return locY;
     }
 
+    @XmlElement(name = "LocY")
     public void setLocY(int locY) {
         this.locY = locY;
     }
@@ -45,6 +49,7 @@ public class GameObject {
         return width;
     }
 
+    @XmlElement(name = "Width")
     public void setWidth(int width) {
         this.width = width;
     }
@@ -53,6 +58,7 @@ public class GameObject {
         return height;
     }
 
+    @XmlElement(name = "Height")
     public void setHeight(int height) {
         this.height = height;
     }
@@ -61,6 +67,7 @@ public class GameObject {
         return pathToAsset;
     }
 
+    @XmlElement(name = "PathToAsset")
     public void setPathToAsset(String pathToAsset) {
         this.pathToAsset = pathToAsset;
     }
@@ -69,6 +76,7 @@ public class GameObject {
         return text;
     }
 
+    @XmlElement(name = "Text")
     public void setText(String text) {
         this.text = text;
     }

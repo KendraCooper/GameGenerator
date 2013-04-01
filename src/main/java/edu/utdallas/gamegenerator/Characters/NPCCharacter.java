@@ -34,7 +34,7 @@ public class NPCCharacter {
         return null;
     }
 
-    @XmlElement(name = "Hero")
+    @XmlElement(name = "Hero", required = true)
     public void setHero(GameCharacter hero) {
         this.hero = hero;
     }
@@ -43,7 +43,7 @@ public class NPCCharacter {
         return villain;
     }
 
-    @XmlElement(name = "Villain")
+    @XmlElement(name = "Villain", required = true)
     public void setVillain(GameCharacter villain) {
         this.villain = villain;
     }
@@ -52,7 +52,7 @@ public class NPCCharacter {
         return alt;
     }
 
-    @XmlElement(name = "Alt")
+    @XmlElement(name = "Alt", required = true)
     public void setAlt(GameCharacter alt) {
         this.alt = alt;
     }

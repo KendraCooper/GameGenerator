@@ -4,11 +4,15 @@ import edu.utdallas.gamegenerator.LearningObjective.Challenge.Reward;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Shared.ButtonLocationType;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * User: clocke
  * Date: 2/17/13
  * Time: 3:55 PM
  */
+@XmlRootElement(name = "Button")
 public class GameButton {
     private ButtonLocationType buttonLocationType;
     private String text;
@@ -20,6 +24,7 @@ public class GameButton {
         return buttonLocationType;
     }
 
+    @XmlElement(name = "ButtonLocationType")
     public void setButtonLocationType(ButtonLocationType buttonLocationType) {
         this.buttonLocationType = buttonLocationType;
     }
@@ -28,6 +33,7 @@ public class GameButton {
         return text;
     }
 
+    @XmlElement(name = "Text")
     public void setText(String text) {
         this.text = text;
     }
@@ -36,6 +42,7 @@ public class GameButton {
         return timer;
     }
 
+    @XmlElement(name = "Timer")
     public void setTimer(int timer) {
         this.timer = timer;
     }
@@ -44,6 +51,7 @@ public class GameButton {
         return type;
     }
 
+    @XmlElement(name = "TransitionType")
     public void setTransitionType(TransitionType type) {
         this.type = type;
     }
@@ -52,6 +60,7 @@ public class GameButton {
         return reward;
     }
 
+    @XmlElement(name = "Reward")
     public void setReward(Reward reward) {
         this.reward = reward;
     }

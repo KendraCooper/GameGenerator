@@ -10,6 +10,10 @@ import edu.utdallas.gamegenerator.Shared.SharedCharacter;
 import edu.utdallas.gamegenerator.Shared.SharedInformationBox;
 import edu.utdallas.gamegenerator.Subject.Subject;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +22,7 @@ import java.util.List;
  * Date: 2/17/13
  * Time: 6:04 PM
  */
+@XmlRootElement(name = "Theme")
 public class Theme {
     private Subject subject;
     private PlayerCharacter playerCharacter;
@@ -70,6 +75,7 @@ public class Theme {
         return subject;
     }
 
+    @XmlTransient
     public void setSubject(Subject subject) {
         this.subject = subject;
     }
@@ -78,6 +84,7 @@ public class Theme {
         return playerCharacter;
     }
 
+    @XmlTransient
     public void setPlayerCharacter(PlayerCharacter playerCharacter) {
         this.playerCharacter = playerCharacter;
     }
@@ -86,6 +93,7 @@ public class Theme {
         return npcCharacters;
     }
 
+    @XmlTransient
     public void setNpcCharacters(NPCCharacter npcCharacters) {
         this.npcCharacters = npcCharacters;
     }
@@ -94,6 +102,8 @@ public class Theme {
         return introScreens;
     }
 
+    @XmlElementWrapper(name = "IntroScreens")
+    @XmlElement(name = "IntroScreen")
     public void setIntroScreens(List<ThemeScreen> introScreens) {
         this.introScreens = introScreens;
     }
@@ -102,6 +112,8 @@ public class Theme {
         return outroScreens;
     }
 
+    @XmlElementWrapper(name = "OutroScreens")
+    @XmlElement(name = "OutroScreen")
     public void setOutroScreens(List<ThemeScreen> outroScreens) {
         this.outroScreens = outroScreens;
     }
@@ -110,6 +122,8 @@ public class Theme {
         return themeStories;
     }
 
+    @XmlElementWrapper(name = "ThemeStories")
+    @XmlElement(name = "ThemeStory")
     public void setThemeStories(List<ThemeStory> themeStories) {
         this.themeStories = themeStories;
     }

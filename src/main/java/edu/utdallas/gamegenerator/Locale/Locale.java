@@ -22,6 +22,9 @@ import edu.utdallas.gamegenerator.Shared.*;
 import edu.utdallas.gamegenerator.Theme.Theme;
 import edu.utdallas.gamegenerator.Theme.ThemeStory;
 
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.*;
 
 /**
@@ -29,6 +32,7 @@ import java.util.*;
  * Date: 2/17/13
  * Time: 5:54 PM
  */
+@XmlRootElement(name = "Locale")
 public class Locale {
     private List<LearningObjective> learningObjectives;
     private PlayerCharacter playerCharacter;
@@ -42,6 +46,7 @@ public class Locale {
         return learningObjectives;
     }
 
+    @XmlTransient
     public void setLearningObjectives(List<LearningObjective> learningObjectives) {
         this.learningObjectives = learningObjectives;
     }
@@ -50,6 +55,7 @@ public class Locale {
         return playerCharacter;
     }
 
+    @XmlTransient
     public void setPlayerCharacter(PlayerCharacter playerCharacter) {
         this.playerCharacter = playerCharacter;
     }
@@ -58,6 +64,7 @@ public class Locale {
         return npcCharacters;
     }
 
+    @XmlTransient
     public void setNpcCharacters(NPCCharacter npcCharacters) {
         this.npcCharacters = npcCharacters;
     }
@@ -66,6 +73,7 @@ public class Locale {
         return theme;
     }
 
+    @XmlTransient
     public void setTheme(Theme theme) {
         this.theme = theme;
     }
@@ -252,6 +260,7 @@ public class Locale {
         return localeScreens;
     }
 
+    @XmlElementWrapper(name = "LocaleScreens")
     public void setLocaleScreens(Map<ScreenType, LocaleScreen> localeScreens) {
         this.localeScreens = localeScreens;
     }
@@ -260,6 +269,7 @@ public class Locale {
         return screenTransitions;
     }
 
+    @XmlTransient
     public void setScreenTransitions(Map<TransitionType, UUID> screenTransitions) {
         this.screenTransitions = screenTransitions;
     }
