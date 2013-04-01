@@ -4,17 +4,13 @@
     <list id="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/NPCCharacter.xml" afterPath="$PROJECT_DIR$/xml/NPCCharacter.xml" />
     </list>
-    <list default="true" id="ff25414f-3217-4b0c-b12e-a23734698ecb" name="New changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/TransitionType.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/TransitionType.java" />
+    <list default="true" id="ff25414f-3217-4b0c-b12e-a23734698ecb" name="New changelist" comment="Wiring up structure">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GameGenerator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ScreenNode.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363917795014" ignored="false" />
-    <file path="/fragment.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363573708236" ignored="false" />
+    <file path="/fragment.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364523218086" ignored="false" />
     <file path="/ScreenType.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363140747708" ignored="false" />
     <file path="$PROJECT_DIR$/../GameManager/src/main/java/com/porpoise/gamemanager/web/domain/User.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361035049763" ignored="false" />
     <file path="/User.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361035028953" ignored="false" />
@@ -24,7 +20,7 @@
     <file path="/TextType.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361139505700" ignored="false" />
     <file path="/GameObject.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362367416156" ignored="false" />
     <file path="/GameCharacter.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363223289943" ignored="false" />
-    <file path="/TransitionType.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364174756456" ignored="false" />
+    <file path="/TransitionType.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364527208600" ignored="false" />
     <file path="/Screen.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363138972193" ignored="false" />
     <file path="/LearningObjectScreen.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361141301689" ignored="false" />
     <file path="/GameButton.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363565751552" ignored="false" />
@@ -38,7 +34,7 @@
     <file path="/LearningObjectiveNeutral.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361141350517" ignored="false" />
     <file path="/LearningObjective.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363139725033" ignored="false" />
     <file path="/Lesson.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363139825697" ignored="false" />
-    <file path="/Locale.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364176524485" ignored="false" />
+    <file path="/Locale.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364527270056" ignored="false" />
     <file path="/NPCCharacter.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363223868345" ignored="false" />
     <file path="/PlayerCharacter.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363134772786" ignored="false" />
     <file path="/LocaleCharacter.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362106913721" ignored="false" />
@@ -49,25 +45,25 @@
     <file path="/LearningObjectiveScreen.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363917940340" ignored="false" />
     <file path="/ObjectMovement.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363225284110" ignored="false" />
     <file path="/ObjectMovementType.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363139003355" ignored="false" />
-    <file path="/Structure.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364522714392" ignored="false" />
+    <file path="/Structure.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364526590849" ignored="false" />
     <file path="/Game.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361761093920" ignored="false" />
-    <file path="/Act.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361761109567" ignored="false" />
-    <file path="/Scene.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363137947441" ignored="false" />
-    <file path="/TestObjects.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364177102687" ignored="false" />
+    <file path="/Act.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364523964592" ignored="false" />
+    <file path="/Scene.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364524502997" ignored="false" />
+    <file path="/TestObjects.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364527212320" ignored="false" />
     <file path="/a.dummy" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362107528452" ignored="false" />
     <file path="/*.regexp" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363566646037" ignored="false" />
     <file path="/ThemeScreen.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363226983474" ignored="false" />
     <file path="/Asset.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363576830088" ignored="false" />
     <file path="/Color.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362365942052" ignored="false" />
-    <file path="/Behavior.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363566115104" ignored="false" />
+    <file path="/Behavior.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364526176622" ignored="false" />
     <file path="/Character.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362367226111" ignored="false" />
-    <file path="/Test.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363570778908" ignored="false" />
+    <file path="/Test.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364524251261" ignored="false" />
     <file path="/SharedButton.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363229834910" ignored="false" />
     <file path="/SharedInformationBox.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362711749163" ignored="false" />
     <file path="/SharedCharacter.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363149527311" ignored="false" />
     <file path="/pom.xml" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363566385771" ignored="false" />
     <file path="/NPCCharacter.xml" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363133571397" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364522954646" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364780987557" ignored="false" />
     <file path="$PROJECT_DIR$/../TheGamesDBJavaAPI/.idea/workspace.xml" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363138114965" ignored="false" />
     <file path="/ThemeStory.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363568496375" ignored="false" />
     <file path="/ThemeStoryScreen.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363141735613" ignored="false" />
@@ -97,7 +93,78 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" line="36" class="edu.utdallas.gamegenerator.Test" package="edu.utdallas.gamegenerator">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" line="53" class="edu.utdallas.gamegenerator.Test" package="edu.utdallas.gamegenerator">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" line="25" class="edu.utdallas.gamegenerator.Structure.Structure" package="edu.utdallas.gamegenerator.Structure">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" line="36" class="edu.utdallas.gamegenerator.Structure.Structure" package="edu.utdallas.gamegenerator.Structure">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" line="51" class="edu.utdallas.gamegenerator.Structure.Structure" package="edu.utdallas.gamegenerator.Structure">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -132,78 +199,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" line="37" class="edu.utdallas.gamegenerator.Test" package="edu.utdallas.gamegenerator">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" line="62" class="edu.utdallas.gamegenerator.Test" package="edu.utdallas.gamegenerator">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" line="80" class="edu.utdallas.gamegenerator.Locale.Locale" package="edu.utdallas.gamegenerator.Locale">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" line="74" class="edu.utdallas.gamegenerator.Locale.Locale" package="edu.utdallas.gamegenerator.Locale">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java" line="162" class="edu.utdallas.gamegenerator.TestObjects" package="edu.utdallas.gamegenerator">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -216,19 +212,8 @@
       <file leaf-file-name="Locale.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="39" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1796#1818#0" expanded="true" />
-                <element signature="e#2727#2739#0" expanded="true" />
-                <element signature="e#3471#3483#0" expanded="true" />
-                <element signature="e#4259#4271#0" expanded="true" />
-                <element signature="e#4603#4615#0" expanded="true" />
-                <element signature="e#5724#5736#0" expanded="true" />
-                <element signature="e#6713#6725#0" expanded="true" />
-                <element signature="e#7026#7033#0" expanded="true" />
-                <element signature="e#11027#11039#0" expanded="true" />
-              </folding>
+            <state line="226" column="34" selection-start="10784" selection-end="10784" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -236,7 +221,7 @@
       <file leaf-file-name="Theme.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/Theme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+            <state line="56" column="13" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -245,7 +230,7 @@
       <file leaf-file-name="Act.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Act.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+            <state line="12" column="36" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -254,43 +239,45 @@
       <file leaf-file-name="Scene.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+            <state line="21" column="31" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Screen.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Screen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Structure.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Structure.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.42929292">
+            <state line="34" column="25" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LearningObjectiveFailure.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/LearningObjectiveFailure.java">
+      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+            <state line="12" column="32" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
+            <state line="30" column="37" selection-start="965" selection-end="965" vertical-scroll-proportion="0.543771">
+              <folding>
+                <element signature="e#1248#1260#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestObjects.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="222" column="70" selection-start="11631" selection-end="11631" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -299,16 +286,16 @@
       <file leaf-file-name="TransitionType.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/TransitionType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="33" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
+            <state line="20" column="12" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestObjects.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java">
+      <file leaf-file-name="Behavior.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Behavior.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="54" selection-start="7692" selection-end="7692" vertical-scroll-proportion="0.0">
+            <state line="32" column="18" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -332,11 +319,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Prop/GameButton.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Behavior.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/ThemeStory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Challenge/Reward.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/LocaleScreen.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Asset.java" />
@@ -344,10 +326,15 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Challenge/ChallengeOption.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/ScreenNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/LearningObjectiveScreen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/TransitionType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Act.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Scene.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Behavior.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/TransitionType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" />
       </list>
     </option>
   </component>
@@ -458,6 +445,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -914,8 +903,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -934,9 +921,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -1112,7 +1099,15 @@
       <created>1364174170521</created>
       <updated>1364174170521</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added multiple questions in a challenge">
+      <created>1364522994410</created>
+      <updated>1364522994410</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Wiring up structure">
+      <created>1364527358689</created>
+      <updated>1364527358689</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1136,7 +1131,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32900432" sideWeight="0.49573106" order="7" side_tool="false" content_ui="tabs" />
@@ -1144,7 +1139,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.50053364" order="3" side_tool="false" content_ui="tabs" x="669" y="331" width="788" height="423" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286334" sideWeight="0.50053364" order="3" side_tool="false" content_ui="tabs" x="669" y="331" width="788" height="423" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1156,7 +1151,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670282" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24653149" sideWeight="0.67099565" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24599786" sideWeight="0.67099565" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329718" sideWeight="0.49786553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1205,7 +1200,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added building challenge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wiring up structure" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1221,6 +1216,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added some marshalling and started working on locale getact" />
     <MESSAGE value="Added building challenge" />
+    <MESSAGE value="Added multiple questions in a challenge" />
+    <MESSAGE value="Wiring up structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1230,126 +1227,105 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Asset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="42" selection-start="3051" selection-end="3063" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Prop/GameButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="19" column="0" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Challenge/ChallengeOption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/ScreenNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="30" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="43" column="0" selection-start="1573" selection-end="1573" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/LearningObjectiveScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="9" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/TransitionType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="49" column="9" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/LearningObjectiveFailure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1128" selection-end="1128" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="54" selection-start="7692" selection-end="7692" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="39" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1796#1818#0" expanded="true" />
-            <element signature="e#2727#2739#0" expanded="true" />
-            <element signature="e#3471#3483#0" expanded="true" />
-            <element signature="e#4259#4271#0" expanded="true" />
-            <element signature="e#4603#4615#0" expanded="true" />
-            <element signature="e#5724#5736#0" expanded="true" />
-            <element signature="e#6713#6725#0" expanded="true" />
-            <element signature="e#7026#7033#0" expanded="true" />
-            <element signature="e#11027#11039#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/Theme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="142" selection-end="142" vertical-scroll-proportion="0.17037863">
-          <folding />
-        </state>
+        <state line="10" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0">
+        <state line="15" column="21" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/ScreenNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="32" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+        <state line="21" column="31" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Act.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
+        <state line="12" column="36" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Behavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="18" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/Theme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="13" selection-start="2214" selection-end="2214" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Screen/TransitionType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="12" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="70" selection-start="11631" selection-end="11631" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="226" column="34" selection-start="10784" selection-end="10784" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.42929292">
+        <state line="34" column="25" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="37" selection-start="965" selection-end="965" vertical-scroll-proportion="0.543771">
+          <folding>
+            <element signature="e#1248#1260#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
