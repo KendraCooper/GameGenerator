@@ -21,16 +21,25 @@ import java.util.List;
  * Time: 10:10 PM
  */
 public class Test {
+    private static PlayerCharacter playerCharacter;
+    private static NPCCharacter npcCharacter;
+    private static Subject subject;
+    private static LearningObjective learningObjective;
+    private static Locale locale;
+    private static Theme theme;
+
     public static void main(String[] args) {
         TestObjects testObjects = new TestObjects();
-        testObjects.getTheme().getIntro();
+//        testObjects.getTheme().getIntro();
         List<ScreenNode> blah2 = testObjects.getTheme().getIntro();
-        testObjects.getLocale().getAct(0);
-        testObjects.getStructure().createGame();
+//        testObjects.getLocale().getAct(0);
+//        Game game = testObjects.getStructure().createGame();
 
         try {
-            createXsd();
+            readXml();
+//            createXsd();
 //            createXml(testObjects);
+//            readXmlGenerated();
 //            test();
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,35 +96,103 @@ public class Test {
         System.out.println(scene2);
     }
 
+    private static void readXml() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
+        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        playerCharacter = (PlayerCharacter) unmarshaller.unmarshal(file);
+
+        jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
+        unmarshaller = jaxbContext.createUnmarshaller();
+        npcCharacter = (NPCCharacter) unmarshaller.unmarshal(file);
+
+        jaxbContext = JAXBContext.newInstance(Subject.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Subject.xml");
+        unmarshaller = jaxbContext.createUnmarshaller();
+        subject = (Subject) unmarshaller.unmarshal(file);
+
+        jaxbContext = JAXBContext.newInstance(Theme.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Theme.xml");
+        unmarshaller = jaxbContext.createUnmarshaller();
+        theme = (Theme) unmarshaller.unmarshal(file);
+
+        jaxbContext = JAXBContext.newInstance(Locale.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Locale.xml");
+        unmarshaller = jaxbContext.createUnmarshaller();
+        locale = (Locale) unmarshaller.unmarshal(file);
+
+        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjective.xml");
+        unmarshaller = jaxbContext.createUnmarshaller();
+        learningObjective = (LearningObjective) unmarshaller.unmarshal(file);
+
+        System.out.println();
+    }
+
     private static void createXml(TestObjects testObjects) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
-        marshaller.marshal(testObjects.getNpcCharacter(), file);
-
-        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
-        jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
-        marshaller = jaxbContext.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        marshaller.marshal(testObjects.getPlayerCharacter(), file);
-
-        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjective.xml");
+//        marshaller.marshal(testObjects.getNpcCharacter(), file);
+//
+//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
+//        jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
+//        marshaller = jaxbContext.createMarshaller();
+//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+//        marshaller.marshal(testObjects.getPlayerCharacter(), file);
+//
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjectiveOut.xml");
         jaxbContext = JAXBContext.newInstance(LearningObjective.class);
         marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshaller.marshal(testObjects.getLearningObjective(), file);
 
-        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Theme.xml");
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\ThemeOut.xml");
         jaxbContext = JAXBContext.newInstance(Theme.class);
         marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshaller.marshal(testObjects.getTheme(), file);
 
-        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Locale.xml");
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LocaleOut.xml");
         jaxbContext = JAXBContext.newInstance(Locale.class);
         marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshaller.marshal(testObjects.getLocale(), file);
+    }
+
+    private static void readXmlGenerated() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
+        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+//        playerCharacter = (PlayerCharacter) unmarshaller.unmarshal(file);
+//
+//        jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
+//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
+//        unmarshaller = jaxbContext.createUnmarshaller();
+//        npcCharacter = (NPCCharacter) unmarshaller.unmarshal(file);
+//
+//        jaxbContext = JAXBContext.newInstance(Subject.class);
+//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Subject.xml");
+//        unmarshaller = jaxbContext.createUnmarshaller();
+//        subject = (Subject) unmarshaller.unmarshal(file);
+
+        jaxbContext = JAXBContext.newInstance(Theme.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\ThemeOut.xml");
+        unmarshaller = jaxbContext.createUnmarshaller();
+        theme = (Theme) unmarshaller.unmarshal(file);
+
+//        jaxbContext = JAXBContext.newInstance(Locale.class);
+//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LocaleOut.xml");
+//        unmarshaller = jaxbContext.createUnmarshaller();
+//        locale = (Locale) unmarshaller.unmarshal(file);
+//
+//        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
+//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjectiveOut.xml");
+//        unmarshaller = jaxbContext.createUnmarshaller();
+//        learningObjective = (LearningObjective) unmarshaller.unmarshal(file);
+
+        System.out.println();
     }
 }

@@ -3,9 +3,13 @@ package edu.utdallas.gamegenerator.LearningObjective.Screen;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
+import edu.utdallas.gamegenerator.Theme.ThemeStoryScreenIntro;
+import edu.utdallas.gamegenerator.Theme.ThemeStoryScreenOutro;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 
 /**
@@ -13,6 +17,8 @@ import java.util.List;
  * Date: 2/17/13
  * Time: 3:46 PM
  */
+@XmlTransient
+@XmlSeeAlso({LearningObjectiveFailure.class, ThemeStoryScreenIntro.class, ThemeStoryScreenOutro.class})
 public abstract class LearningObjectiveScreen implements Cloneable {
     private List<GameText> informationBoxes;
     private List<GameButton> buttons;
@@ -22,7 +28,7 @@ public abstract class LearningObjectiveScreen implements Cloneable {
         return informationBoxes;
     }
 
-    @XmlElementWrapper(name = "ImformationBoxes")
+    @XmlElementWrapper(name = "InformationBoxes")
     @XmlElement(name = "InformationBox")
     public void setInformationBoxes(List<GameText> informationBoxes) {
         this.informationBoxes = informationBoxes;

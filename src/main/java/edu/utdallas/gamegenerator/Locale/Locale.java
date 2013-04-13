@@ -119,10 +119,10 @@ public class Locale {
         ThemeStory themeStory = theme.getThemeStories().get(learningObjective);
         List<LearningObjectiveScreen> themeStoryScreen;
         if(screenType.equals(ScreenType.LESSON_STORY_INTRO)) {
-            themeStoryScreen = themeStory.getIntro();
+            themeStoryScreen = new ArrayList<LearningObjectiveScreen>(themeStory.getIntro());
         } else {
             screenTransitions.put(TransitionType.END_OF_STORY, currentScreen);
-            themeStoryScreen = themeStory.getOutro();
+            themeStoryScreen = new ArrayList<LearningObjectiveScreen>(themeStory.getOutro());
         }
 
         for(LearningObjectiveScreen screen : themeStoryScreen) {
@@ -191,7 +191,13 @@ public class Locale {
             }
         }
 
-        List<GameButton> themeGameButtons = themeStoryScreen.getButtons();
+        List<GameButton> themeGameButtons = new ArrayList<GameButton>(themeStoryScreen.getButtons());
+        if(themeStoryScreen instanceof LearningObjectiveChallenge) {
+            LearningObjectiveChallenge challenge = (LearningObjectiveChallenge) themeStoryScreen;
+            if(challenge.getChallengeOptions() != null) {
+                themeGameButtons.addAll(challenge.getChallengeOptions());
+            }
+        }
         Map<ButtonLocationType, SharedButton> localeButtons = localeScreen.getButtons();
         if(themeGameButtons != null) {
             for(GameButton gameButton : themeGameButtons) {

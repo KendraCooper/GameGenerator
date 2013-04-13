@@ -163,10 +163,11 @@ public class TestObjects {
         LearningObjectiveScreen screen1 = screen.clone();
         screen1.getButtons().get(0).setTransitionType(TransitionType.NEXT_CHALLENGE);
         learningObjectiveScreens1.add(screen);
-        List<GameButton> challengeOptions = new ArrayList<GameButton>();
+        List<ChallengeOption> challengeOptions = new ArrayList<ChallengeOption>();
         challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "additional screens", new Reward(), TransitionType.ADDITIONAL, learningObjectiveScreens1, ButtonLocationType.CHALLENGE_1));
         challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "end of story", null, TransitionType.END_OF_STORY, null, ButtonLocationType.CHALLENGE_2));
-        challenge.setButtons(challengeOptions);
+        challenge.setChallengeOptions(challengeOptions);
+        challenge.setButtons(getGameButtons());
         challenges.add(challenge);
         challenges.add(challenge);
         lesson.setLessonChallenges(challenges);
@@ -185,18 +186,18 @@ public class TestObjects {
         screen.setButtons(buttons);
         List<GameObject> gameObjects = getGameObjects();
         screen.setGameObjects(gameObjects);
-        Map<String, SharedCharacter> themeCharacters = new HashMap<String, SharedCharacter>();
+        Map<LearningObjectiveCharacterType, SharedCharacter> themeCharacters = new HashMap<LearningObjectiveCharacterType, SharedCharacter>();
         List<ObjectMovement> movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
-        themeCharacters.put("hero", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
+        themeCharacters.put(LearningObjectiveCharacterType.HERO, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_OFF_SCREEN, 1, 1, 5, 5));
-        themeCharacters.put("villian", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
+        themeCharacters.put(LearningObjectiveCharacterType.VILLIAN, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
-        themeCharacters.put("alt", new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
+        themeCharacters.put(LearningObjectiveCharacterType.ALT, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
                 movements));
         screen.setThemeCharacters(themeCharacters);
         themeScreens.add(screen);

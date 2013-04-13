@@ -1,6 +1,8 @@
 package edu.utdallas.gamegenerator;
 
+import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
+import edu.utdallas.gamegenerator.Locale.ObjectMovementType;
 
 import java.util.UUID;
 
@@ -11,12 +13,12 @@ import java.util.UUID;
  */
 public class Behavior {
     private BehaviorType behaviorType;
-    private String trigger;
+    private TriggerType trigger;
     private int time;
     private String displayName;
     private Integer points;
     private UUID transitionId;
-    private String transition;
+    private TransitionType transition;
     private UUID entityId;
     private String newVisibility;
     private double startLocationX;
@@ -24,6 +26,8 @@ public class Behavior {
     private double endLocationX;
     private double endLocationY;
     private double speed;
+
+    private ObjectMovementType objectMovement;
 
 
     public Behavior() {
@@ -39,7 +43,7 @@ public class Behavior {
         endLocationX = movement.getEndX();
         endLocationY = movement.getEndY();
         speed = movement.getSpeed();
-        transition = movement.getMovementType().toString();
+        objectMovement = movement.getMovementType();
     }
 
     public BehaviorType getBehaviorType() {
@@ -50,11 +54,11 @@ public class Behavior {
         this.behaviorType = behaviorType;
     }
 
-    public String getTrigger() {
+    public TriggerType getTrigger() {
         return trigger;
     }
 
-    public void setTrigger(String trigger) {
+    public void setTrigger(TriggerType trigger) {
         this.trigger = trigger;
     }
 
@@ -90,11 +94,11 @@ public class Behavior {
         this.transitionId = transitionId;
     }
 
-    public String getTransition() {
+    public TransitionType getTransition() {
         return transition;
     }
 
-    public void setTransition(String transition) {
+    public void setTransition(TransitionType transition) {
         this.transition = transition;
     }
 
@@ -152,5 +156,13 @@ public class Behavior {
 
     public void setSpeed(double speed) {
         this.speed = speed;
+    }
+
+    public ObjectMovementType getObjectMovement() {
+        return objectMovement;
+    }
+
+    public void setObjectMovement(ObjectMovementType objectMovement) {
+        this.objectMovement = objectMovement;
     }
 }

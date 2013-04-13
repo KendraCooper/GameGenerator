@@ -8,10 +8,10 @@ import javax.xml.bind.annotation.XmlElement;
  * Time: 3:27 PM
  */
 public class GameObject {
-    private int locX;
-    private int locY;
-    private int width;
-    private int height;
+    private double locX;
+    private double locY;
+    private double width;
+    private double height;
     private String pathToAsset;
     private String text;
 
@@ -19,7 +19,7 @@ public class GameObject {
 
     }
 
-    public GameObject(int locX, int locY, int width, int height, String pathToAsset) {
+    public GameObject(double locX, double locY, double width, double height, String pathToAsset) {
         this.locX = locX;
         this.locY = locY;
         this.width = width;
@@ -27,39 +27,39 @@ public class GameObject {
         this.pathToAsset = pathToAsset;
     }
 
-    public int getLocX() {
+    public double getLocX() {
         return locX;
     }
 
     @XmlElement(name = "LocX")
-    public void setLocX(int locX) {
+    public void setLocX(double locX) {
         this.locX = locX;
     }
 
-    public int getLocY() {
+    public double getLocY() {
         return locY;
     }
 
     @XmlElement(name = "LocY")
-    public void setLocY(int locY) {
+    public void setLocY(double locY) {
         this.locY = locY;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
     @XmlElement(name = "Width")
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
     @XmlElement(name = "Height")
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 

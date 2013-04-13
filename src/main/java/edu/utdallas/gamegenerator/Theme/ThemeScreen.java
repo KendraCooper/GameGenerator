@@ -1,5 +1,6 @@
 package edu.utdallas.gamegenerator.Theme;
 
+import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
 import edu.utdallas.gamegenerator.Shared.*;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -14,7 +15,7 @@ import java.util.Map;
  */
 public class ThemeScreen {
     private String background;
-    private Map<String, SharedCharacter> themeCharacters;
+    private Map<LearningObjectiveCharacterType, SharedCharacter> themeCharacters;
     private List<GameObject> gameObjects;
     private Map<ButtonLocationType, SharedButton> buttons;
     private List<SharedInformationBox> informationBoxes;
@@ -28,12 +29,12 @@ public class ThemeScreen {
         this.background = background;
     }
 
-    public Map<String, SharedCharacter> getThemeCharacters() {
+    public Map<LearningObjectiveCharacterType, SharedCharacter> getThemeCharacters() {
         return themeCharacters;
     }
 
     @XmlElementWrapper(name = "ThemeCharacters")
-    public void setThemeCharacters(Map<String, SharedCharacter> themeCharacters) {
+    public void setThemeCharacters(Map<LearningObjectiveCharacterType, SharedCharacter> themeCharacters) {
         this.themeCharacters = themeCharacters;
     }
 

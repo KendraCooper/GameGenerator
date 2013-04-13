@@ -1,11 +1,8 @@
 package edu.utdallas.gamegenerator.Theme;
 
-import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveScreen;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,14 +15,8 @@ public class ThemeStory {
     private List<ThemeStoryScreenIntro> intro;
     private List<ThemeStoryScreenOutro> outro;
 
-    @XmlElementWrapper(name = "StoryIntroScreens")
-    @XmlElement(name = "StoryIntroScreen")
-    public List<LearningObjectiveScreen> getIntro() {
-        List<LearningObjectiveScreen> screens = new ArrayList<LearningObjectiveScreen>();
-        for(ThemeStoryScreenIntro themeScreen : intro) {
-            screens.add(themeScreen);
-        }
-        return screens;
+    public List<ThemeStoryScreenIntro> getIntro() {
+        return intro;
     }
 
     @XmlElementWrapper(name = "StoryIntroScreens")
@@ -34,14 +25,8 @@ public class ThemeStory {
         this.intro = intro;
     }
 
-    @XmlElementWrapper(name = "StoryOutroScreens")
-    @XmlElement(name = "StoryOutroScreen")
-    public List<LearningObjectiveScreen> getOutro() {
-        List<LearningObjectiveScreen> screens = new ArrayList<LearningObjectiveScreen>();
-        for(ThemeStoryScreenOutro themeScreen : outro) {
-            screens.add(themeScreen);
-        }
-        return screens;
+    public List<ThemeStoryScreenOutro> getOutro() {
+        return outro;
     }
 
     @XmlElementWrapper(name = "StoryOutroScreens")

@@ -34,7 +34,7 @@ public class Structure {
 
         wireUpActs(acts);
         //Generate xml for game
-        return null;
+        return game;
     }
 
     private void wireUpActs(List<Act> acts) {

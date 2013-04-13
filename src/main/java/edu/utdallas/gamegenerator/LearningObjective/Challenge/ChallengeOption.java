@@ -6,6 +6,7 @@ import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Shared.ButtonLocationType;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import java.util.List;
 
 /**
@@ -44,7 +45,8 @@ public class ChallengeOption extends GameButton {
         return additionalScreens;
     }
 
-    @XmlElement(name = "AdditionalScreens")
+    @XmlElementWrapper(name = "AdditionalScreens")
+    @XmlElement(name = "AdditionalScreen")
     public void setAdditionalScreens(List<LearningObjectiveScreen> additionalScreens) {
         this.additionalScreens = additionalScreens;
     }
