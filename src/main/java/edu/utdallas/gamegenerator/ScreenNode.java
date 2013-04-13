@@ -1,5 +1,8 @@
 package edu.utdallas.gamegenerator;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 import java.util.UUID;
 
@@ -8,6 +11,7 @@ import java.util.UUID;
  * Date: 2/15/13
  * Time: 9:44 PM
  */
+@XmlRootElement(name = "Screen")
 public class ScreenNode {
     private UUID id;
     private String background;
@@ -18,6 +22,7 @@ public class ScreenNode {
         id = UUID.randomUUID();
     }
 
+    @XmlElement(name = "ID")
     public UUID getId() {
         return id;
     }
@@ -26,6 +31,7 @@ public class ScreenNode {
         this.id = id;
     }
 
+    @XmlElement(name = "Background")
     public String getBackground() {
         return background;
     }
@@ -34,6 +40,7 @@ public class ScreenNode {
         this.background = background;
     }
 
+    @XmlElement(name = "Name")
     public String getName() {
         return name;
     }
@@ -42,6 +49,8 @@ public class ScreenNode {
         this.name = name;
     }
 
+    @XmlElementWrapper(name = "Assets")
+    @XmlElement(name = "AssetBase")
     public List<Asset> getAssets() {
         return assets;
     }

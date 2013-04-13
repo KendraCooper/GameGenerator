@@ -5,8 +5,12 @@ import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveC
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
-import edu.utdallas.gamegenerator.Shared.*;
+import edu.utdallas.gamegenerator.Shared.GameObject;
+import edu.utdallas.gamegenerator.Shared.SharedButton;
+import edu.utdallas.gamegenerator.Shared.SharedCharacter;
+import edu.utdallas.gamegenerator.Shared.SharedInformationBox;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -16,12 +20,14 @@ import java.util.UUID;
  * Date: 3/3/13
  * Time: 8:50 PM
  */
+@XmlRootElement(name = "AssetBase")
+@XmlSeeAlso({ImageAsset.class, ButtonAsset.class, InformationBoxAsset.class, CharacterAsset.class})
 public class Asset {
     private String type;
     private UUID id;
     private String name;
     private List<Behavior> behaviors;
-    private double opacity;
+    private int opacity = 1;
     private double locX;
     private double locY;
     private double locX2;
@@ -30,8 +36,8 @@ public class Asset {
     private double height;
     private Color backgroundColor;
     private Color foregroundColor;
-    private int fontSize;
-    private int fontFamily;
+    private int fontSize = 15;
+    private String fontFamily = "Comic Sans MS";
     private int experience;
     private int certificates;
     private int promotions;
@@ -42,6 +48,31 @@ public class Asset {
 
     public Asset() {
         id = UUID.randomUUID();
+    }
+
+    public Asset(Asset asset) {
+//        setType(asset.getType());
+        setId(asset.getId());
+        setName(asset.getName());
+        setBehaviors(asset.getBehaviors());
+        setOpacity(asset.getOpacity());
+        setLocX(asset.getLocX());
+        setLocY(asset.getLocY());
+        setLocX2(asset.getLocX2());
+        setLocY2(asset.getLocY2());
+        setWidth(asset.getWidth());
+        setHeight(asset.getHeight());
+        setBackgroundColor(asset.getBackgroundColor());
+        setForegroundColor(asset.getForegroundColor());
+        setFontSize(asset.getFontSize());
+        setFontFamily(asset.getFontFamily());
+        setExperience(asset.getExperience());
+        setCertificates(asset.getCertificates());
+        setPromotions(asset.getPromotions());
+        setTrophies(asset.getTrophies());
+        setPoints(asset.getPoints());
+        setHint(asset.getHint());
+        setDisplayImage(asset.getDisplayImage());
     }
 
     public Asset(GameObject gameObject) {
@@ -75,6 +106,24 @@ public class Asset {
         }
     }
 
+    public Asset(SharedCharacter character, GameCharacter gameCharacter) {
+        id = UUID.randomUUID();
+        type = "CharacterAsset";
+        locX = character.getLocX();
+        locY = character.getLocY();
+        width = character.getWidth();
+        height = character.getHeight();
+        locX2 = locX + width;
+        locY2 = locY + height;
+        displayImage = gameCharacter.getCharacterAsset(character.getCharacterAssetType());
+        behaviors = new ArrayList<Behavior>();
+        if(character.getMovements() != null) {
+            for(ObjectMovement movement : character.getMovements()) {
+                behaviors.add(new Behavior(movement));
+            }
+        }
+    }
+
     public Asset(SharedButton button) {
         this((GameObject)button);
         this.name = button.getName();
@@ -102,6 +151,7 @@ public class Asset {
             Behavior behavior = new Behavior();
             behavior.setBehaviorType(BehaviorType.REWARD_BEHAVIOR);
             behavior.setPoints(gameButton.getReward().getPoints());
+
             behaviors.add(behavior);
         }
         if(gameButton.getTransitionType() != null) {
@@ -119,6 +169,7 @@ public class Asset {
         this.type = type;
     }
 
+    @XmlElement(name = "ID")
     public UUID getId() {
         return id;
     }
@@ -127,6 +178,7 @@ public class Asset {
         this.id = id;
     }
 
+    @XmlElement(name = "Name")
     public String getName() {
         return name;
     }
@@ -135,6 +187,8 @@ public class Asset {
         this.name = name;
     }
 
+    @XmlElementWrapper(name = "BehaviorList")
+    @XmlElement(name = "Behavior")
     public List<Behavior> getBehaviors() {
         return behaviors;
     }
@@ -143,14 +197,16 @@ public class Asset {
         this.behaviors = behaviors;
     }
 
-    public double getOpacity() {
+    @XmlElement(name = "Opacity")
+    public int getOpacity() {
         return opacity;
     }
 
-    public void setOpacity(double opacity) {
+    public void setOpacity(int opacity) {
         this.opacity = opacity;
     }
 
+    @XmlElement(name = "X")
     public double getLocX() {
         return locX;
     }
@@ -159,6 +215,7 @@ public class Asset {
         this.locX = locX;
     }
 
+    @XmlElement(name = "Y")
     public double getLocY() {
         return locY;
     }
@@ -167,6 +224,7 @@ public class Asset {
         this.locY = locY;
     }
 
+    @XmlElement(name = "X2")
     public double getLocX2() {
         return locX2;
     }
@@ -175,6 +233,7 @@ public class Asset {
         this.locX2 = locX2;
     }
 
+    @XmlElement(name = "Y2")
     public double getLocY2() {
         return locY2;
     }
@@ -183,6 +242,7 @@ public class Asset {
         this.locY2 = locY2;
     }
 
+    @XmlElement(name = "Width")
     public double getWidth() {
         return width;
     }
@@ -191,6 +251,7 @@ public class Asset {
         this.width = width;
     }
 
+    @XmlElement(name = "Height")
     public double getHeight() {
         return height;
     }
@@ -199,6 +260,7 @@ public class Asset {
         this.height = height;
     }
 
+    @XmlElement(name = "BackgroundColor")
     public Color getBackgroundColor() {
         return backgroundColor;
     }
@@ -207,6 +269,7 @@ public class Asset {
         this.backgroundColor = backgroundColor;
     }
 
+    @XmlElement(name = "ForegroundColor")
     public Color getForegroundColor() {
         return foregroundColor;
     }
@@ -215,6 +278,7 @@ public class Asset {
         this.foregroundColor = foregroundColor;
     }
 
+    @XmlElement(name = "FontSize")
     public int getFontSize() {
         return fontSize;
     }
@@ -223,14 +287,17 @@ public class Asset {
         this.fontSize = fontSize;
     }
 
-    public int getFontFamily() {
+    @XmlElement(name = "FontFamily")
+    public String getFontFamily() {
         return fontFamily;
     }
 
-    public void setFontFamily(int fontFamily) {
+    public void setFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
     }
 
+//    @XmlElement(name = "Experience")
+    @XmlTransient
     public int getExperience() {
         return experience;
     }
@@ -239,6 +306,8 @@ public class Asset {
         this.experience = experience;
     }
 
+//    @XmlElement(name = "Certificates")
+    @XmlTransient
     public int getCertificates() {
         return certificates;
     }
@@ -247,6 +316,8 @@ public class Asset {
         this.certificates = certificates;
     }
 
+//    @XmlElement(name = "Promotions")
+    @XmlTransient
     public int getPromotions() {
         return promotions;
     }
@@ -255,6 +326,8 @@ public class Asset {
         this.promotions = promotions;
     }
 
+//    @XmlElement(name = "Trophies")
+    @XmlTransient
     public int getTrophies() {
         return trophies;
     }
@@ -263,6 +336,8 @@ public class Asset {
         this.trophies = trophies;
     }
 
+//    @XmlElement(name = "Points")
+    @XmlTransient
     public int getPoints() {
         return points;
     }
@@ -271,6 +346,8 @@ public class Asset {
         this.points = points;
     }
 
+//    @XmlElement(name = "Hint")
+    @XmlTransient
     public int getHint() {
         return hint;
     }
@@ -279,6 +356,7 @@ public class Asset {
         this.hint = hint;
     }
 
+    @XmlElement(name = "DisplayImage")
     public String getDisplayImage() {
         return displayImage;
     }

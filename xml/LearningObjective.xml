@@ -44,7 +44,7 @@
 					</InformationBox>
 					<InformationBox>
 					  <Text>Don't worry! You can try again.</Text>
-					  <TextType>ALT2</TextType>
+					  <TextType>HERO</TextType>
 					  <Timer></Timer>
 					</InformationBox>
 				  </InformationBoxes>
@@ -117,11 +117,9 @@
           <Buttons>
             <Button>
               <ButtonLocationType>NEXT</ButtonLocationType>
-              <Reward>
-              </Reward>
               <Text>Continue</Text>
               <Timer></Timer>
-              <TransitionType>BEGINNING_OF_CHALLENGE</TransitionType>
+              <TransitionType>NEXT_SCREEN</TransitionType>
             </Button>
           </Buttons>
           <Characters>

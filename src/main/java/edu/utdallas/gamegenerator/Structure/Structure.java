@@ -1,10 +1,7 @@
 package edu.utdallas.gamegenerator.Structure;
 
-import edu.utdallas.gamegenerator.Asset;
-import edu.utdallas.gamegenerator.Behavior;
-import edu.utdallas.gamegenerator.BehaviorType;
+import edu.utdallas.gamegenerator.*;
 import edu.utdallas.gamegenerator.Locale.Locale;
-import edu.utdallas.gamegenerator.ScreenNode;
 import edu.utdallas.gamegenerator.Theme.Theme;
 
 import java.util.ArrayList;
@@ -33,7 +30,9 @@ public class Structure {
         game.setActs(acts);
 
         wireUpActs(acts);
-        //Generate xml for game
+        nameEverything();
+        convertImageAssets();
+
         return game;
     }
 
@@ -47,7 +46,8 @@ public class Structure {
                     for(Asset asset : screenNode.getAssets()) {
                         if(asset.getBehaviors() != null) {
                             for(Behavior behavior : asset.getBehaviors()) {
-                                if(BehaviorType.TRANSITION_BEHAVIOR.equals(behavior.getBehaviorType()) &&
+                                if(behavior != null &&
+                                        BehaviorType.TRANSITION_BEHAVIOR.equals(behavior.getBehaviorType()) &&
                                         behavior.getTransitionId() == null) {
                                     behavior.setTransitionId(nextActId);
                                 }
@@ -57,6 +57,65 @@ public class Structure {
                 }
             }
         }
+    }
+
+    private void nameEverything() {
+        game.setName("Game");
+        for(int a = 0; a < game.getActs().size(); a++) {
+            Act act = game.getActs().get(a);
+            act.setName("Act" + a);
+            for(int b = 0; b < act.getScenes().size(); b++) {
+                Scene scene = act.getScenes().get(b);
+                scene.setName("Act" + a + " Scene" + b);
+                for(int c = 0; c < scene.getScreens().size(); c++) {
+                    ScreenNode screen = scene.getScreens().get(c);
+                    screen.setName("Act" + a + " Scene" + b + " Screen" + c);
+                }
+            }
+        }
+    }
+
+    private void convertImageAssets() {
+        for(int a = 0; a < game.getActs().size(); a++) {
+            Act act = game.getActs().get(a);
+            for(int b = 0; b < act.getScenes().size(); b++) {
+                Scene scene = act.getScenes().get(b);
+                for(int c = 0; c < scene.getScreens().size(); c++) {
+                    ScreenNode screen = scene.getScreens().get(c);
+                    for(int d = 0; d < screen.getAssets().size(); d++) {
+                        Asset asset = screen.getAssets().get(d);
+                        Asset newAsset = null;
+                        if("ImageAsset".equals(asset.getType())) {
+                            newAsset = new ImageAsset(asset);
+                        } else if ("ButtonAsset".equals(asset.getType())) {
+                            newAsset = new ButtonAsset(asset);
+                        } else if ("CharacterAsset".equals(asset.getType())) {
+                            newAsset = new CharacterAsset(asset);
+                        } else if ("InformationBoxAsset".equals(asset.getType())) {
+                            newAsset = new InformationBoxAsset(asset);
+                        }
+                        if(newAsset != null) {
+                            screen.getAssets().set(d, newAsset);
+                        }
+                        if(newAsset.getBehaviors() != null) {
+                            for(int e = 0; e < newAsset.getBehaviors().size(); e++) {
+                                Behavior behavior = newAsset.getBehaviors().get(e);
+                                Behavior newBehavior = null;
+                                if(BehaviorType.TRANSITION_BEHAVIOR == behavior.getBehaviorType()) {
+                                    newBehavior = new TransitionBehavior(behavior);
+                                } else if (BehaviorType.END_GAME_BEHAVIOR == behavior.getBehaviorType()) {
+                                    newBehavior = new EndGameBehavior(behavior);
+                                }
+                                if(newBehavior != null) {
+                                    newAsset.getBehaviors().set(e, newBehavior);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     private Act createActFromScreens(List<ScreenNode> screenNodes) {

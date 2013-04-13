@@ -16,79 +16,12 @@
             <behavior>
               <behaviorType>TRANSITION_BEHAVIOR</behaviorType>
               <displayName>Transition Behavior</displayName>
-<!--              <endLocationX>-1.7976931348623157E+308</endLocationX>
-              <endLocationY>-1.7976931348623157E+308</endLocationY>
-              <entityId>entityId2</entityId>
-              <newVisibility>newVisibility2</newVisibility>
-              <points>-2147483647</points>
-              <speed>-1.7976931348623157E+308</speed>
-              <startLocationX>-1.7976931348623157E+308</startLocationX>
-              <startLocationY>-1.7976931348623157E+308</startLocationY>
-              <time>-2147483647</time>
-			  -->
-              <transition>NEXT_SCREEN</transition>
+              <Transition>NEXT_SCREEN</Transition>
               <trigger>Click</trigger>
             </behavior>
             <name>Next</name>
           </value>
         </entry>
-<!--        <entry>
-          <key>BACK</key>
-          <value>
-            <Height>-2147483647</Height>
-            <LocX>-2147483647</LocX>
-            <LocY>-2147483647</LocY>
-            <PathToAsset>PathToAsset2</PathToAsset>
-            <Text>Text2</Text>
-            <Width>-2147483647</Width>
-            <behavior>
-              <behaviorType>TRANSITION_BEHAVIOR</behaviorType>
-              <displayName>displayName2</displayName>
-              <endLocationX>-1.7976931348623157E+308</endLocationX>
-              <endLocationY>-1.7976931348623157E+308</endLocationY>
-              <entityId>entityId2</entityId>
-              <newVisibility>newVisibility2</newVisibility>
-              <points>-2147483647</points>
-              <speed>-1.7976931348623157E+308</speed>
-              <startLocationX>-1.7976931348623157E+308</startLocationX>
-              <startLocationY>-1.7976931348623157E+308</startLocationY>
-              <time>-2147483647</time>
-              <transition>transition2</transition>
-              <transitionId>transitionId2</transitionId>
-              <trigger>trigger2</trigger>
-            </behavior>
-            <name>name2</name>
-          </value>
-        </entry>
-        <entry>
-          <key>CHALLENGE_1</key>
-          <value>
-            <Height>2147483647</Height>
-            <LocX>2147483647</LocX>
-            <LocY>2147483647</LocY>
-            <PathToAsset>PathToAsset3</PathToAsset>
-            <Text>Text3</Text>
-            <Width>2147483647</Width>
-            <behavior>
-              <behaviorType>VISIBILITY_BEHAVIOR</behaviorType>
-              <displayName>displayName3</displayName>
-              <endLocationX>1.7976931348623157E+308</endLocationX>
-              <endLocationY>1.7976931348623157E+308</endLocationY>
-              <entityId>entityId3</entityId>
-              <newVisibility>newVisibility3</newVisibility>
-              <points>2147483647</points>
-              <speed>1.7976931348623157E+308</speed>
-              <startLocationX>1.7976931348623157E+308</startLocationX>
-              <startLocationY>1.7976931348623157E+308</startLocationY>
-              <time>2147483647</time>
-              <transition>transition3</transition>
-              <transitionId>transitionId3</transitionId>
-              <trigger>trigger3</trigger>
-            </behavior>
-            <name>name3</name>
-          </value>
-        </entry>
-		-->
       </ThemeButtons>
       <GameObjects>
         <GameObject>
@@ -116,25 +49,10 @@
             <Height>292.91667175292969</Height>
             <LocX>209.36663818359375</LocX>
             <LocY>130.48335266113281</LocY>
-            <PathToAsset>PathToAsset1</PathToAsset>
             <Text></Text>
             <Width>171.433349609375</Width>
             <CharacterAssetType>WALK_RIGHT_BEHIND</CharacterAssetType>
             <CharacterType>PLAYER</CharacterType>
-            <Movements>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>1</EndX>
-                <EndY>1</EndY>
-                <MovementType>WALK_ONTO_SCREEN</MovementType>
-                <Speed>1</Speed>
-                <StartX>1</StartX>
-                <StartY>1</StartY>
-              </Movement>
-            </Movements>
           </value>
         </entry>
       </ThemeCharacters>
@@ -142,17 +60,6 @@
     <IntroScreen>
       <Background>Backdrops\FaceingPC.png</Background>
       <ThemeButtons>
-        <entry>
-          <key>BACK</key>
-          <value>
-            <Height>37</Height>
-            <LocX>419.64999389648438</LocX>
-            <LocY>223.60000610351563</LocY>
-            <Text>Search</Text>
-            <Width>98.666656494140625</Width>
-            <name>Search</name>
-          </value>
-        </entry>
 		<entry>
           <key>NEXT</key>
           <value>
@@ -164,7 +71,7 @@
             <behavior>
               <behaviorType>TRANSITION_BEHAVIOR</behaviorType>
               <displayName>Transition Behavior</displayName>
-              <transition>NEXT_SCREEN</transition>
+              <Transition>NEXT_SCREEN</Transition>
               <trigger>Click</trigger>
             </behavior>
             <name>View</name>
@@ -199,170 +106,7 @@
           <name>Algebra Adventures</name>
         </InformationBox>
       </InformationBoxes>
-      <ThemeCharacters>
-        <entry>
-          <key>key4</key>
-          <value>
-            <Height>0</Height>
-            <LocX>0</LocX>
-            <LocY>0</LocY>
-            <PathToAsset>PathToAsset4</PathToAsset>
-            <Text>Text4</Text>
-            <Width>0</Width>
-            <CharacterAssetType>STAND_SMILE_CLOSED</CharacterAssetType>
-            <CharacterType>ALT</CharacterType>
-            <Movements>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>-1.7976931348623157E+308</EndX>
-                <EndY>-1.7976931348623157E+308</EndY>
-                <MovementType>WALK_OFF_SCREEN</MovementType>
-                <Speed>-1.7976931348623157E+308</Speed>
-                <StartX>-1.7976931348623157E+308</StartX>
-                <StartY>-1.7976931348623157E+308</StartY>
-              </Movement>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>1.7976931348623157E+308</EndX>
-                <EndY>1.7976931348623157E+308</EndY>
-                <MovementType>WALK_ONTO_SCREEN</MovementType>
-                <Speed>1.7976931348623157E+308</Speed>
-                <StartX>1.7976931348623157E+308</StartX>
-                <StartY>1.7976931348623157E+308</StartY>
-              </Movement>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>-2.3000000715255737</EndX>
-                <EndY>-2.3000000715255737</EndY>
-                <MovementType>WALK_OFF_SCREEN</MovementType>
-                <Speed>-2.3000000715255737</Speed>
-                <StartX>-2.3000000715255737</StartX>
-                <StartY>-2.3000000715255737</StartY>
-              </Movement>
-            </Movements>
-          </value>
-        </entry>
-        <entry>
-          <key>key5</key>
-          <value>
-            <Height>2</Height>
-            <LocX>2</LocX>
-            <LocY>2</LocY>
-            <PathToAsset>PathToAsset5</PathToAsset>
-            <Text>Text5</Text>
-            <Width>2</Width>
-            <CharacterAssetType>STAND_SMILE_CLOSED</CharacterAssetType>
-            <CharacterType>PLAYER</CharacterType>
-            <Movements>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>4.3000000715255737</EndX>
-                <EndY>4.3000000715255737</EndY>
-                <MovementType>WALK_ONTO_SCREEN</MovementType>
-                <Speed>4.3000000715255737</Speed>
-                <StartX>4.3000000715255737</StartX>
-                <StartY>4.3000000715255737</StartY>
-              </Movement>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>-1.7976931348623157E+308</EndX>
-                <EndY>-1.7976931348623157E+308</EndY>
-                <MovementType>WALK_OFF_SCREEN</MovementType>
-                <Speed>-1.7976931348623157E+308</Speed>
-                <StartX>-1.7976931348623157E+308</StartX>
-                <StartY>-1.7976931348623157E+308</StartY>
-              </Movement>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>1.7976931348623157E+308</EndX>
-                <EndY>1.7976931348623157E+308</EndY>
-                <MovementType>WALK_ONTO_SCREEN</MovementType>
-                <Speed>1.7976931348623157E+308</Speed>
-                <StartX>1.7976931348623157E+308</StartX>
-                <StartY>1.7976931348623157E+308</StartY>
-              </Movement>
-            </Movements>
-          </value>
-        </entry>
-        <entry>
-          <key>key6</key>
-          <value>
-            <Height>-2147483646</Height>
-            <LocX>-2147483646</LocX>
-            <LocY>-2147483646</LocY>
-            <PathToAsset>PathToAsset6</PathToAsset>
-            <Text>Text6</Text>
-            <Width>-2147483646</Width>
-            <CharacterAssetType>STAND_SMILE_CLOSED</CharacterAssetType>
-            <CharacterType>HERO</CharacterType>
-            <Movements>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>-3.4000000953674316</EndX>
-                <EndY>-3.4000000953674316</EndY>
-                <MovementType>WALK_OFF_SCREEN</MovementType>
-                <Speed>-3.4000000953674316</Speed>
-                <StartX>-3.4000000953674316</StartX>
-                <StartY>-3.4000000953674316</StartY>
-              </Movement>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>5.4000000953674316</EndX>
-                <EndY>5.4000000953674316</EndY>
-                <MovementType>WALK_ONTO_SCREEN</MovementType>
-                <Speed>5.4000000953674316</Speed>
-                <StartX>5.4000000953674316</StartX>
-                <StartY>5.4000000953674316</StartY>
-              </Movement>
-              <Movement>
-                <AnimationSequences>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                  <AnimationSequence>STAND_SMILE_CLOSED</AnimationSequence>
-                </AnimationSequences>
-                <EndX>-1.7976931348623157E+308</EndX>
-                <EndY>-1.7976931348623157E+308</EndY>
-                <MovementType>WALK_OFF_SCREEN</MovementType>
-                <Speed>-1.7976931348623157E+308</Speed>
-                <StartX>-1.7976931348623157E+308</StartX>
-                <StartY>-1.7976931348623157E+308</StartY>
-              </Movement>
-            </Movements>
-          </value>
-        </entry>
-      </ThemeCharacters>
+      <ThemeCharacters />
     </IntroScreen>
     <IntroScreen>
       <Background>Backdrops\FaceingPC _Warping.png</Background>
@@ -379,18 +123,15 @@
               <behaviorType>TRANSITION_BEHAVIOR</behaviorType>
               <displayName>Transition Behavior</displayName>
               <transition>NEXT_ACT</transition>
-              <trigger>CLICK</trigger>
+              <trigger>Click</trigger>
             </behavior>
             <name>Continue</name>
           </value>
         </entry>
       </ThemeButtons>
-      <GameObjects>
-      </GameObjects>
-      <InformationBoxes>
-      </InformationBoxes>
-      <ThemeCharacters>
-      </ThemeCharacters>
+      <GameObjects />
+      <InformationBoxes />
+      <ThemeCharacters />
     </IntroScreen>
   </IntroScreens>
   <OutroScreens>
@@ -458,9 +199,6 @@
 		  <Buttons>
 		    <Button>
 		      <ButtonLocationType>NEXT</ButtonLocationType>
-			  <Reward>
-			    <Points />
-			  </Reward>
 			  <Text>Continue</Text>
 			  <Timer></Timer>
 			  <TransitionType>NEXT_SCREEN</TransitionType>
@@ -502,9 +240,6 @@
 		  <Buttons>
 		    <Button>
 		      <ButtonLocationType>NEXT</ButtonLocationType>
-			  <Reward>
-			    <Points />
-			  </Reward>
 			  <Text>Warp!</Text>
 			  <Timer></Timer>
 			  <TransitionType>NEXT_ACT</TransitionType>

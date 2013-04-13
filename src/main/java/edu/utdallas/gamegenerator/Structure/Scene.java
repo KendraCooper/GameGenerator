@@ -5,6 +5,7 @@ import edu.utdallas.gamegenerator.Behavior;
 import edu.utdallas.gamegenerator.ScreenNode;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 import java.util.UUID;
@@ -27,11 +28,13 @@ public class Scene {
         return screens;
     }
 
-    @XmlElement(name = "Screens")
+    @XmlElementWrapper(name = "Screens")
+    @XmlElement(name = "Screen")
     public void setScreens(List<ScreenNode> screens) {
         this.screens = screens;
     }
 
+    @XmlElement(name = "Background")
     public String getBackground() {
         return background;
     }
@@ -40,6 +43,7 @@ public class Scene {
         this.background = background;
     }
 
+    @XmlElement(name = "Name")
     public String getName() {
         return name;
     }
@@ -48,6 +52,7 @@ public class Scene {
         this.name = name;
     }
 
+    @XmlElement(name = "ID")
     public UUID getId() {
         return id;
     }
@@ -56,6 +61,7 @@ public class Scene {
         this.id = id;
     }
 
+    @XmlElement
     public List<Behavior> getBehaviorList() {
         return behaviorList;
     }
@@ -64,6 +70,8 @@ public class Scene {
         this.behaviorList = behaviorList;
     }
 
+    @XmlElementWrapper(name = "Assets")
+    @XmlElement(name = "Asset")
     public List<Asset> getAssets() {
         return assets;
     }

@@ -4,6 +4,9 @@ import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
 import edu.utdallas.gamegenerator.Locale.ObjectMovementType;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import java.util.UUID;
 
 /**
@@ -11,6 +14,8 @@ import java.util.UUID;
  * Date: 3/3/13
  * Time: 8:59 PM
  */
+@XmlRootElement(name = "Behavior")
+@XmlSeeAlso({TransitionBehavior.class, EndGameBehavior.class})
 public class Behavior {
     private BehaviorType behaviorType;
     private TriggerType trigger;
@@ -31,6 +36,22 @@ public class Behavior {
 
 
     public Behavior() {
+    }
+
+    public Behavior(Behavior behavior) {
+        trigger = TriggerType.Click;
+        time = behavior.getTime();
+        displayName = behavior.getDisplayName();
+        points = behavior.getPoints();
+        transitionId = behavior.getTransitionId();
+        transition = behavior.getTransition();
+        entityId = behavior.getEntityId();
+        newVisibility = behavior.getNewVisibility();
+        startLocationY = behavior.getStartLocationY();
+        startLocationX = behavior.getStartLocationX();
+        endLocationY = behavior.getEndLocationY();
+        endLocationX = behavior.getEndLocationX();
+        speed = behavior.getSpeed();
     }
 
     public Behavior(BehaviorType behaviorType) {
@@ -54,6 +75,7 @@ public class Behavior {
         this.behaviorType = behaviorType;
     }
 
+    @XmlElement(name = "Trigger")
     public TriggerType getTrigger() {
         return trigger;
     }
@@ -62,6 +84,7 @@ public class Behavior {
         this.trigger = trigger;
     }
 
+    @XmlElement(name = "Time")
     public int getTime() {
         return time;
     }
@@ -70,6 +93,7 @@ public class Behavior {
         this.time = time;
     }
 
+    @XmlElement(name = "DisplayName")
     public String getDisplayName() {
         return displayName;
     }
@@ -78,6 +102,7 @@ public class Behavior {
         this.displayName = displayName;
     }
 
+    @XmlElement(name = "Points")
     public Integer getPoints() {
         return points;
     }
@@ -86,6 +111,7 @@ public class Behavior {
         this.points = points;
     }
 
+    @XmlElement(name = "TransitionID")
     public UUID getTransitionId() {
         return transitionId;
     }
@@ -94,6 +120,7 @@ public class Behavior {
         this.transitionId = transitionId;
     }
 
+    @XmlElement(name = "Transition")
     public TransitionType getTransition() {
         return transition;
     }
@@ -102,6 +129,7 @@ public class Behavior {
         this.transition = transition;
     }
 
+    @XmlElement(name = "EntityID")
     public UUID getEntityId() {
         return entityId;
     }
@@ -110,6 +138,7 @@ public class Behavior {
         this.entityId = entityId;
     }
 
+    @XmlElement(name = "NewVisibility")
     public String getNewVisibility() {
         return newVisibility;
     }
@@ -118,6 +147,7 @@ public class Behavior {
         this.newVisibility = newVisibility;
     }
 
+    @XmlElement(name = "StartLocationX")
     public double getStartLocationX() {
         return startLocationX;
     }
@@ -126,6 +156,7 @@ public class Behavior {
         this.startLocationX = startLocationX;
     }
 
+    @XmlElement(name = "StartLocationY")
     public double getStartLocationY() {
         return startLocationY;
     }
@@ -134,6 +165,7 @@ public class Behavior {
         this.startLocationY = startLocationY;
     }
 
+    @XmlElement(name = "EndLocationX")
     public double getEndLocationX() {
         return endLocationX;
     }
@@ -142,6 +174,7 @@ public class Behavior {
         this.endLocationX = endLocationX;
     }
 
+    @XmlElement(name = "EndLocationY")
     public double getEndLocationY() {
         return endLocationY;
     }
@@ -150,6 +183,7 @@ public class Behavior {
         this.endLocationY = endLocationY;
     }
 
+    @XmlElement(name = "Speed")
     public double getSpeed() {
         return speed;
     }
@@ -158,6 +192,7 @@ public class Behavior {
         this.speed = speed;
     }
 
+    @XmlElement(name = "ObjectMovement")
     public ObjectMovementType getObjectMovement() {
         return objectMovement;
     }

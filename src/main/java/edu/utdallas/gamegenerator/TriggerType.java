@@ -6,16 +6,17 @@ package edu.utdallas.gamegenerator;
  * Time: 8:34 PM
  */
 public enum TriggerType {
-    SINGLE_CLICK("Click"),
-    DOUBLE_CLICK("Double Click");
-
-    private String value;
-
-    TriggerType(String value) {
-        this.value = value;
-    }
-
-    public String toString() {
-        return value;
-    }
+    Click;
+//    SINGLE_CLICK("Click"),
+//    DOUBLE_CLICK("Double Click");
+//
+//    private String value;
+//
+//    TriggerType(String value) {
+//        this.value = value;
+//    }
+//
+//    public String toString() {
+//        return value;
+//    }
 }

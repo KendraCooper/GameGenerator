@@ -4,7 +4,9 @@ import edu.utdallas.gamegenerator.Characters.NPCCharacter;
 import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
 import edu.utdallas.gamegenerator.Locale.Locale;
+import edu.utdallas.gamegenerator.Structure.Game;
 import edu.utdallas.gamegenerator.Structure.Scene;
+import edu.utdallas.gamegenerator.Structure.Structure;
 import edu.utdallas.gamegenerator.Subject.Subject;
 import edu.utdallas.gamegenerator.Theme.Theme;
 
@@ -27,11 +29,13 @@ public class Test {
     private static LearningObjective learningObjective;
     private static Locale locale;
     private static Theme theme;
+    private static Structure structure = new Structure();
+    private static Game game;
 
     public static void main(String[] args) {
-        TestObjects testObjects = new TestObjects();
+//        TestObjects testObjects = new TestObjects();
 //        testObjects.getTheme().getIntro();
-        List<ScreenNode> blah2 = testObjects.getTheme().getIntro();
+//        List<ScreenNode> blah2 = testObjects.getTheme().getIntro();
 //        testObjects.getLocale().getAct(0);
 //        Game game = testObjects.getStructure().createGame();
 
@@ -45,7 +49,41 @@ public class Test {
             e.printStackTrace();
         }
 
+        theme.setNpcCharacters(npcCharacter);
+        theme.setPlayerCharacter(playerCharacter);
+        theme.setSubject(subject);
+
+        List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
+        learningObjectives.add(learningObjective);
+
+        locale.setNpcCharacters(npcCharacter);
+        locale.setLearningObjectives(learningObjectives);
+        locale.setTheme(theme);
+        locale.setPlayerCharacter(playerCharacter);
+
+        structure.setTheme(theme);
+        structure.setLocale(locale);
+        game = structure.createGame();
+
+        try {
+            writeGameXml();
+//            createXsd();
+//            createXml(testObjects);
+//            readXmlGenerated();
+//            test();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         System.out.println();
+    }
+
+    private static void writeGameXml() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(Game.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        File file = new File("C:\\Users\\Terminus Est\\Dropbox\\SimSYS Development Platform\\IntSemi-automatedGameGenerationComponent\\Layer xsds\\Sample Game XMLs\\Game.xml");
+        marshaller.marshal(game, file);
+
     }
 
     private static void createXsd() throws JAXBException, IOException {
@@ -133,9 +171,9 @@ public class Test {
     private static void createXml(TestObjects testObjects) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
-//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
-//        marshaller.marshal(testObjects.getNpcCharacter(), file);
+        marshaller.marshal(testObjects.getNpcCharacter(), file);
 //
 //        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
 //        jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);

@@ -3,6 +3,7 @@ package edu.utdallas.gamegenerator.Locale;
 import edu.utdallas.gamegenerator.Asset;
 import edu.utdallas.gamegenerator.Behavior;
 import edu.utdallas.gamegenerator.BehaviorType;
+import edu.utdallas.gamegenerator.Characters.GameCharacter;
 import edu.utdallas.gamegenerator.Characters.NPCCharacter;
 import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOption;
@@ -178,8 +179,13 @@ public class Locale {
             for(LearningObjectiveCharacter themeCharacter : themeCharacters) {
                 LearningObjectiveCharacterType characterType = themeCharacter.getCharacterType();
                 SharedCharacter localeCharacter = localeScreen.getCharacters().get(characterType);
-                assets.add(new Asset(localeCharacter, npcCharacters.getCharacter(characterType),
-                        themeCharacter));
+                GameCharacter gameCharacter = null;
+                if(characterType == LearningObjectiveCharacterType.PLAYER) {
+                    gameCharacter = playerCharacter;
+                } else {
+                    gameCharacter = npcCharacters.getCharacter(characterType);
+                }
+                assets.add(new Asset(localeCharacter, gameCharacter, themeCharacter));
             }
         }
 
