@@ -1,0 +1,80 @@
+package edu.utdallas.gamegenerator;
+
+import edu.utdallas.gamegenerator.Characters.Characters;
+import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
+import edu.utdallas.gamegenerator.Locale.Locale;
+import edu.utdallas.gamegenerator.Structure.Structure;
+import edu.utdallas.gamegenerator.Subject.Subject;
+import edu.utdallas.gamegenerator.Theme.Theme;
+
+import java.util.List;
+
+/**
+ * Company: Porpoise Software
+ * User: Terminus Est
+ * Date: 4/15/13
+ * Time: 8:59 PM
+ */
+public class Layers {
+    public static String CHARACTERS = "Characters";
+    public static String LEARNING_OBJECTIVE = "LearningObjective";
+    public static String LOCALE = "Locale";
+    public static String SUBJECT = "Subject";
+    public static String THEME = "Theme";
+    public static String STRUCTURE = "Structure";
+
+    private Characters characters;
+    private List<LearningObjective> learningObjectives;
+    private Locale locale;
+    private Subject subject;
+    private Structure structure;
+    private Theme theme;
+
+    public Characters getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(Characters characters) {
+        this.characters = characters;
+    }
+
+    public List<LearningObjective> getLearningObjectives() {
+        return learningObjectives;
+    }
+
+    public void setLearningObjectives(List<LearningObjective> learningObjectives) {
+        this.learningObjectives = learningObjectives;
+    }
+
+    public Locale getLocale() {
+        return locale;
+    }
+
+    public void setLocale(Locale locale) {
+        this.locale = locale;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
+
+    public Structure getStructure() {
+        return structure;
+    }
+
+    public void setStructure(Structure structure) {
+        this.structure = structure;
+    }
+
+    public Theme getTheme() {
+        return theme;
+    }
+
+    public void setTheme(Theme theme) {
+        this.theme = theme;
+    }
+}

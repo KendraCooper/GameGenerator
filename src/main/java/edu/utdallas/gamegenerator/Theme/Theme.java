@@ -3,9 +3,8 @@ package edu.utdallas.gamegenerator.Theme;
 import edu.utdallas.gamegenerator.Asset;
 import edu.utdallas.gamegenerator.Behavior;
 import edu.utdallas.gamegenerator.BehaviorType;
+import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.Characters.GameCharacter;
-import edu.utdallas.gamegenerator.Characters.NPCCharacter;
-import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.ScreenNode;
@@ -31,8 +30,7 @@ import java.util.UUID;
 @XmlRootElement(name = "Theme")
 public class Theme {
     private Subject subject;
-    private PlayerCharacter playerCharacter;
-    private NPCCharacter npcCharacters;
+    private Characters characters;
     private List<ThemeScreen> introScreens;
     private List<ThemeScreen> outroScreens;
     private List<ThemeStory> themeStories;
@@ -61,14 +59,8 @@ public class Theme {
             }
             if(screen.getThemeCharacters() != null) {
                 for(SharedCharacter character : screen.getThemeCharacters().values()) {
-                    GameCharacter gameCharacter = null;
                     LearningObjectiveCharacterType characterType = character.getCharacterType();
-                    if(characterType == LearningObjectiveCharacterType.PLAYER) {
-                        gameCharacter = playerCharacter;
-                    } else {
-                        gameCharacter = npcCharacters.getCharacter(characterType);
-                    }
-
+                    GameCharacter gameCharacter = characters.getCharacter(characterType);
                     assets.add(new Asset(character, gameCharacter));
                 }
             }
@@ -108,22 +100,13 @@ public class Theme {
         this.subject = subject;
     }
 
-    public PlayerCharacter getPlayerCharacter() {
-        return playerCharacter;
+    public Characters getCharacters() {
+        return characters;
     }
 
     @XmlTransient
-    public void setPlayerCharacter(PlayerCharacter playerCharacter) {
-        this.playerCharacter = playerCharacter;
-    }
-
-    public NPCCharacter getNpcCharacters() {
-        return npcCharacters;
-    }
-
-    @XmlTransient
-    public void setNpcCharacters(NPCCharacter npcCharacters) {
-        this.npcCharacters = npcCharacters;
+    public void setCharacters(Characters characters) {
+        this.characters = characters;
     }
 
     public List<ThemeScreen> getIntroScreens() {

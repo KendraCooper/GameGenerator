@@ -1,7 +1,6 @@
 package edu.utdallas.gamegenerator;
 
-import edu.utdallas.gamegenerator.Characters.NPCCharacter;
-import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
+import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
 import edu.utdallas.gamegenerator.Locale.Locale;
 import edu.utdallas.gamegenerator.Structure.Game;
@@ -23,8 +22,7 @@ import java.util.List;
  * Time: 10:10 PM
  */
 public class Test {
-    private static PlayerCharacter playerCharacter;
-    private static NPCCharacter npcCharacter;
+    private static Characters characters;
     private static Subject subject;
     private static LearningObjective learningObjective;
     private static Locale locale;
@@ -49,17 +47,15 @@ public class Test {
             e.printStackTrace();
         }
 
-        theme.setNpcCharacters(npcCharacter);
-        theme.setPlayerCharacter(playerCharacter);
+        theme.setCharacters(characters);
         theme.setSubject(subject);
 
         List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
         learningObjectives.add(learningObjective);
 
-        locale.setNpcCharacters(npcCharacter);
+        locale.setCharacters(characters);
         locale.setLearningObjectives(learningObjectives);
         locale.setTheme(theme);
-        locale.setPlayerCharacter(playerCharacter);
 
         structure.setTheme(theme);
         structure.setLocale(locale);
@@ -87,12 +83,8 @@ public class Test {
     }
 
     private static void createXsd() throws JAXBException, IOException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
-        SchemaOutputResolver sor = new MySchemaOutputResolver("NPCCharacter.xsd");
-        jaxbContext.generateSchema(sor);
-
-        jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
-        sor = new MySchemaOutputResolver("PlayerCharacter.xsd");
+        JAXBContext jaxbContext = JAXBContext.newInstance(Characters.class);
+        SchemaOutputResolver sor = new MySchemaOutputResolver("Characters.xsd");
         jaxbContext.generateSchema(sor);
 
         jaxbContext = JAXBContext.newInstance(Theme.class);
@@ -110,10 +102,6 @@ public class Test {
         jaxbContext = JAXBContext.newInstance(Subject.class);
         sor = new MySchemaOutputResolver("Subject.xsd");
         jaxbContext.generateSchema(sor);
-
-//        jaxbContext = JAXBContext.newInstance(Structure.class);
-//        sor = new MySchemaOutputResolver("PlayerCharacter.xsd");
-//        jaxbContext.generateSchema(sor);
 
     }
 
@@ -135,15 +123,14 @@ public class Test {
     }
 
     private static void readXml() throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
-        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
-        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-        playerCharacter = (PlayerCharacter) unmarshaller.unmarshal(file);
+        JAXBContext jaxbContext = null;
+        File file = null;
+        Unmarshaller unmarshaller = null;
 
-        jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
-        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
+        jaxbContext = JAXBContext.newInstance(Characters.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Characters.xml");
         unmarshaller = jaxbContext.createUnmarshaller();
-        npcCharacter = (NPCCharacter) unmarshaller.unmarshal(file);
+        characters = (Characters) unmarshaller.unmarshal(file);
 
         jaxbContext = JAXBContext.newInstance(Subject.class);
         file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Subject.xml");
@@ -169,11 +156,11 @@ public class Test {
     }
 
     private static void createXml(TestObjects testObjects) throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
+        JAXBContext jaxbContext = JAXBContext.newInstance(Characters.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
-        marshaller.marshal(testObjects.getNpcCharacter(), file);
+        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Characters.xml");
+        marshaller.marshal(testObjects.getCharacters(), file);
 //
 //        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
 //        jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
@@ -201,24 +188,19 @@ public class Test {
     }
 
     private static void readXmlGenerated() throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
-        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
-        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-//        playerCharacter = (PlayerCharacter) unmarshaller.unmarshal(file);
-//
-//        jaxbContext = JAXBContext.newInstance(NPCCharacter.class);
-//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\NPCCharacter.xml");
+//        jaxbContext = JAXBContext.newInstance(Characters.class);
+//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Characters.xml");
 //        unmarshaller = jaxbContext.createUnmarshaller();
-//        npcCharacter = (NPCCharacter) unmarshaller.unmarshal(file);
+//        characters = (Characters) unmarshaller.unmarshal(file);
 //
 //        jaxbContext = JAXBContext.newInstance(Subject.class);
 //        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Subject.xml");
 //        unmarshaller = jaxbContext.createUnmarshaller();
 //        subject = (Subject) unmarshaller.unmarshal(file);
 
-        jaxbContext = JAXBContext.newInstance(Theme.class);
-        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\ThemeOut.xml");
-        unmarshaller = jaxbContext.createUnmarshaller();
+        JAXBContext jaxbContext = JAXBContext.newInstance(Theme.class);
+        File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\ThemeOut.xml");
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
         theme = (Theme) unmarshaller.unmarshal(file);
 
 //        jaxbContext = JAXBContext.newInstance(Locale.class);

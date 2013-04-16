@@ -1,9 +1,7 @@
 package edu.utdallas.gamegenerator;
 
-import edu.utdallas.gamegenerator.Characters.CharacterAssetType;
-import edu.utdallas.gamegenerator.Characters.GameCharacter;
-import edu.utdallas.gamegenerator.Characters.NPCCharacter;
-import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
+import edu.utdallas.gamegenerator.Characters.*;
+import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOption;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOptionType;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.Reward;
@@ -35,8 +33,7 @@ import java.util.Map;
  * Time: 7:56 PM
  */
 public class TestObjects {
-    private PlayerCharacter playerCharacter;
-    private NPCCharacter npcCharacter;
+    private Characters characters;
     private LearningObjective learningObjective;
     private Locale locale;
     private Structure structure;
@@ -44,7 +41,6 @@ public class TestObjects {
     private Theme theme;
 
     public TestObjects() {
-        createPlayer();
         createNPC();
         createLearningObjective();
         createSubject();
@@ -114,8 +110,7 @@ public class TestObjects {
         informationBoxMap.put(TextType.HERO, informationBox);
 
 
-        locale.setNpcCharacters(npcCharacter);
-        locale.setPlayerCharacter(playerCharacter);
+        locale.setCharacters(characters);
         locale.setTheme(theme);
 
         localeScreen.setButtons(buttonButtons);
@@ -235,8 +230,7 @@ public class TestObjects {
         theme.setIntroScreens(themeScreens);
         theme.setOutroScreens(themeScreens);
         theme.setSubject(subject);
-        theme.setNpcCharacters(npcCharacter);
-        theme.setPlayerCharacter(playerCharacter);
+        theme.setCharacters(characters);
     }
 
     private List<GameText> getGameTexts() {
@@ -278,7 +272,7 @@ public class TestObjects {
     }
 
     private void createNPC() {
-        npcCharacter = new NPCCharacter();
+        characters = new Characters();
         GameCharacter hero = new GameCharacter();
         hero.setName("Sir Solvesalot");
         hero.setDirectory("character_22");
@@ -297,17 +291,9 @@ public class TestObjects {
         alt.setPrefix("char15");
         alt.getCharacterAsset(CharacterAssetType.STAND_SMILE_CLOSED);
 
-        npcCharacter.setHero(hero);
-        npcCharacter.setVillain(villian);
-        npcCharacter.setAlt(alt);
-    }
-
-    private void createPlayer() {
-        playerCharacter = new PlayerCharacter();
-        playerCharacter.setName("Ric");
-        playerCharacter.setDirectory("character_1");
-        playerCharacter.setPrefix("char1");
-        playerCharacter.getCharacterAsset(CharacterAssetType.STAND_SMILE_CLOSED);
+        characters.setHero(hero);
+        characters.setVillain(villian);
+        characters.setAlt(alt);
     }
 
     private void createSubject() {
@@ -316,20 +302,12 @@ public class TestObjects {
         subject.setIntroText("Algebra Adventure");
     }
 
-    public PlayerCharacter getPlayerCharacter() {
-        return playerCharacter;
+    public Characters getCharacters() {
+        return characters;
     }
 
-    public void setPlayerCharacter(PlayerCharacter playerCharacter) {
-        this.playerCharacter = playerCharacter;
-    }
-
-    public NPCCharacter getNpcCharacter() {
-        return npcCharacter;
-    }
-
-    public void setNpcCharacter(NPCCharacter npcCharacter) {
-        this.npcCharacter = npcCharacter;
+    public void setCharacters(Characters characters) {
+        this.characters = characters;
     }
 
     public LearningObjective getLearningObjective() {

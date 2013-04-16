@@ -10,11 +10,12 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Date: 2/17/13
  * Time: 6:04 PM
  */
-@XmlRootElement(name = "NPCCharacter")
-public class NPCCharacter {
+@XmlRootElement(name = "Characters")
+public class Characters {
     private GameCharacter hero;
     private GameCharacter villain;
     private GameCharacter alt;
+    private GameCharacter player;
 
     public GameCharacter getHero() {
         return hero;
@@ -28,6 +29,8 @@ public class NPCCharacter {
                 return alt;
             case VILLIAN:
                 return villain;
+            case PLAYER:
+                return player;
             default:
                 break;
         }
@@ -55,5 +58,14 @@ public class NPCCharacter {
     @XmlElement(name = "Alt", required = true)
     public void setAlt(GameCharacter alt) {
         this.alt = alt;
+    }
+
+    public GameCharacter getPlayer() {
+        return player;
+    }
+
+    @XmlElement(name = "Player", required = true)
+    public void setPlayer(GameCharacter player) {
+        this.player = player;
     }
 }

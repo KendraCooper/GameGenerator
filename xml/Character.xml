@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<NPCCharacter>
+<Characters>
   <Alt>
     <Directory>character_1</Directory>
     <Name>Chareeeesa</Name>
@@ -20,4 +20,4 @@
     <Name>Siva</Name>
     <Prefix>char15</Prefix>
   </Player>
-</NPCCharacter>
+</Characters>

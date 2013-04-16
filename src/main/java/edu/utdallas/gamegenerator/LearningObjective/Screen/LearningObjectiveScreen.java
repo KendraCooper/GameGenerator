@@ -49,7 +49,7 @@ public abstract class LearningObjectiveScreen implements Cloneable {
     }
 
     @XmlElementWrapper(name = "Characters")
-    @XmlElement(name = "Character")
+    @XmlElement(name = "Characters")
     public void setCharacters(List<LearningObjectiveCharacter> characters) {
         this.characters = characters;
     }

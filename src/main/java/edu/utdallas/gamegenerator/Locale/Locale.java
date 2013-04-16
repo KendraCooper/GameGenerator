@@ -4,8 +4,7 @@ import edu.utdallas.gamegenerator.Asset;
 import edu.utdallas.gamegenerator.Behavior;
 import edu.utdallas.gamegenerator.BehaviorType;
 import edu.utdallas.gamegenerator.Characters.GameCharacter;
-import edu.utdallas.gamegenerator.Characters.NPCCharacter;
-import edu.utdallas.gamegenerator.Characters.PlayerCharacter;
+import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOption;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
@@ -36,8 +35,7 @@ import java.util.*;
 @XmlRootElement(name = "Locale")
 public class Locale {
     private List<LearningObjective> learningObjectives;
-    private PlayerCharacter playerCharacter;
-    private NPCCharacter npcCharacters;
+    private Characters characters;
     private Theme theme;
     private Map<ScreenType, LocaleScreen> localeScreens;
 
@@ -52,22 +50,13 @@ public class Locale {
         this.learningObjectives = learningObjectives;
     }
 
-    public PlayerCharacter getPlayerCharacter() {
-        return playerCharacter;
+    public Characters getCharacters() {
+        return characters;
     }
 
     @XmlTransient
-    public void setPlayerCharacter(PlayerCharacter playerCharacter) {
-        this.playerCharacter = playerCharacter;
-    }
-
-    public NPCCharacter getNpcCharacters() {
-        return npcCharacters;
-    }
-
-    @XmlTransient
-    public void setNpcCharacters(NPCCharacter npcCharacters) {
-        this.npcCharacters = npcCharacters;
+    public void setCharacters(Characters characters) {
+        this.characters = characters;
     }
 
     public Theme getTheme() {
@@ -179,12 +168,7 @@ public class Locale {
             for(LearningObjectiveCharacter themeCharacter : themeCharacters) {
                 LearningObjectiveCharacterType characterType = themeCharacter.getCharacterType();
                 SharedCharacter localeCharacter = localeScreen.getCharacters().get(characterType);
-                GameCharacter gameCharacter = null;
-                if(characterType == LearningObjectiveCharacterType.PLAYER) {
-                    gameCharacter = playerCharacter;
-                } else {
-                    gameCharacter = npcCharacters.getCharacter(characterType);
-                }
+                GameCharacter gameCharacter = characters.getCharacter(characterType);
                 assets.add(new Asset(localeCharacter, gameCharacter, themeCharacter));
             }
         }
