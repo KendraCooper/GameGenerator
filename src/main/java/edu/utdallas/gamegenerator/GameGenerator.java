@@ -21,8 +21,7 @@ import java.util.Map;
 import static edu.utdallas.gamegenerator.Layers.*;
 
 /**
- * Company: Porpoise Software
- * User: Terminus Est
+ * User: clocke
  * Date: 4/15/13
  * Time: 8:55 PM
  */
@@ -38,10 +37,12 @@ public class GameGenerator {
 
             GameGenerator gameGenerator = new GameGenerator();
 
+            String exportFilename = "C:\\Users\\Terminus Est\\Dropbox\\SimSYS Development Platform\\IntSemi-automatedGameGenerationComponent\\Layer xsds\\Sample Game XMLs\\Game.xml";
+
             try {
                 Layers layers = gameGenerator.loadXmlComponents(xmlFiles);
                 Game game = gameGenerator.buildGame(layers);
-                gameGenerator.exportGame(game);
+                gameGenerator.exportGame(game, exportFilename);
             } catch (JAXBException e) {
                 e.printStackTrace();
             }
@@ -52,18 +53,34 @@ public class GameGenerator {
         }
     }
 
-    public void exportGame(Game game) throws JAXBException {
+    /**
+     * Exports the Game object to xml
+     * @param game the Game object containing the game
+     * @throws JAXBException
+     */
+    public void exportGame(Game game, String exportFilename) throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(Game.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        File file = new File("C:\\Users\\Terminus Est\\Dropbox\\SimSYS Development Platform\\IntSemi-automatedGameGenerationComponent\\Layer xsds\\Sample Game XMLs\\Game.xml");
+        File file = new File(exportFilename);
         marshaller.marshal(game, file);
     }
 
+    /**
+     * Builds the Game object from the layers
+     * @param layers a Layer object containing all game layers
+     * @return a Game object built from the layers
+     */
     public Game buildGame(Layers layers) {
         return layers.getStructure().createGame();
     }
 
+    /**
+     * Loads the xml for each layer from a map of filenames
+     * @param xmlFiles a map of layer constants to filenames
+     * @return Layers object containing the loaded xml
+     * @throws JAXBException
+     */
     public Layers loadXmlComponents(Map<String, String> xmlFiles) throws JAXBException {
         Layers layers = new Layers();
 
@@ -109,6 +126,10 @@ public class GameGenerator {
         return layers;
     }
 
+    /**
+     * Injects dependent layers into each other
+     * @param layers a Layers object with all layers populated
+     */
     private void wireUpLayers(Layers layers) {
         layers.getLocale().setTheme(layers.getTheme());
         layers.getLocale().setLearningObjectives(layers.getLearningObjectives());

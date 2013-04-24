@@ -35,14 +35,29 @@ public class Theme {
     private List<ThemeScreen> outroScreens;
     private List<ThemeStory> themeStories;
 
+    /**
+     * Returns a list of ScreenNode built from the intro screens.
+     * If there are no intro screens it will return an empty list
+     * @return the list of intro screens
+     */
     public List<ScreenNode> getIntro() {
         return (introScreens != null ? getScreens(introScreens) : new ArrayList<ScreenNode>());
     }
 
+    /**
+     * Returns a list of ScreenNode built from the outro screens.
+     * If there are no outro screens it will return an empty list
+     * @return the list of outro screens
+     */
     public List<ScreenNode> getOutro() {
         return (outroScreens != null ? getScreens(outroScreens) : new ArrayList<ScreenNode>());
     }
 
+    /**
+     * Returns a list of ScreenNode built from the passed list of ThemeScreen
+     * @param screens a list of ThemeScreen
+     * @return a list of ScreenNode
+     */
     private List<ScreenNode> getScreens(List<ThemeScreen> screens) {
         List<ScreenNode> screenNodes = new ArrayList<ScreenNode>();
         UUID currentScreen = UUID.randomUUID();

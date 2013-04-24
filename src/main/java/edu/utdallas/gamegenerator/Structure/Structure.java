@@ -19,6 +19,10 @@ public class Structure {
     private List<Act> acts;
     private Game game;
 
+    /**
+     * Builds the game from the injected layers
+     * @return a Game object representing the created game
+     */
     public Game createGame() {
         acts = new ArrayList<Act>();
         acts.add(createActFromScreens(theme.getIntro()));
@@ -31,11 +35,17 @@ public class Structure {
 
         wireUpActs(acts);
         nameEverything();
-        convertImageAssets();
+        convertAssetsAndBehaviors();
 
         return game;
     }
 
+    /**
+     * Wires the transition behaviors between acts together.
+     * It will search for transition behaviors with a null transitionId and set it to
+     * the next act's first scene's first screen's id
+     * @param acts a list of Acts
+     */
     private void wireUpActs(List<Act> acts) {
         for(int i = 0; i < acts.size() - 1; i++) {
             Act act = acts.get(i);
@@ -59,6 +69,9 @@ public class Structure {
         }
     }
 
+    /**
+     * Names all acts, scenes, and screens in the game
+     */
     private void nameEverything() {
         game.setName("Game");
         for(int a = 0; a < game.getActs().size(); a++) {
@@ -75,7 +88,10 @@ public class Structure {
         }
     }
 
-    private void convertImageAssets() {
+    /**
+     * Converts every asset into it a new object of the correct type
+     */
+    private void convertAssetsAndBehaviors() {
         for(int a = 0; a < game.getActs().size(); a++) {
             Act act = game.getActs().get(a);
             for(int b = 0; b < act.getScenes().size(); b++) {
@@ -118,6 +134,11 @@ public class Structure {
 
     }
 
+    /**
+     * Creates an Act object from a list of ScreenNode
+     * @param screenNodes a list of ScreenNode
+     * @return an Act object containing all ScreenNodes from the list
+     */
     private Act createActFromScreens(List<ScreenNode> screenNodes) {
         Act act = new Act();
         List<Scene> scenes = new ArrayList<Scene>();
