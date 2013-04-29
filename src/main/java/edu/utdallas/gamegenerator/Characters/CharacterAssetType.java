@@ -1,8 +1,7 @@
 package edu.utdallas.gamegenerator.Characters;
 
 /**
- * Company: Porpoise Software
- * User: Terminus Est
+ * User: clocke
  * Date: 3/12/13
  * Time: 11:15 PM
  */

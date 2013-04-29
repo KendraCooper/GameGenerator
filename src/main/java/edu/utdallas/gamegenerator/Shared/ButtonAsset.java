@@ -1,10 +1,9 @@
-package edu.utdallas.gamegenerator;
+package edu.utdallas.gamegenerator.Shared;
 
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Company: Porpoise Software
- * User: Terminus Est
+ * User: clocke
  * Date: 4/13/13
  * Time: 4:22 PM
  */

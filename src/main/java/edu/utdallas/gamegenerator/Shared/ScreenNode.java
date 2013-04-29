@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator;
+package edu.utdallas.gamegenerator.Shared;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;

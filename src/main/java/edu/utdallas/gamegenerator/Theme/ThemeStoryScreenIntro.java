@@ -6,8 +6,7 @@ import edu.utdallas.gamegenerator.LearningObjective.Screen.ScreenType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * Company: Porpoise Software
- * User: Terminus Est
+ * User: clocke
  * Date: 3/12/13
  * Time: 9:26 PM
  */

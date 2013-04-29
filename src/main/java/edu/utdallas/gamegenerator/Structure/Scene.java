@@ -1,8 +1,8 @@
 package edu.utdallas.gamegenerator.Structure;
 
-import edu.utdallas.gamegenerator.Asset;
-import edu.utdallas.gamegenerator.Behavior;
-import edu.utdallas.gamegenerator.ScreenNode;
+import edu.utdallas.gamegenerator.Shared.Asset;
+import edu.utdallas.gamegenerator.Shared.Behavior;
+import edu.utdallas.gamegenerator.Shared.ScreenNode;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;

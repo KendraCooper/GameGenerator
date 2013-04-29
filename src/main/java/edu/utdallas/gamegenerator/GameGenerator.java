@@ -1,7 +1,10 @@
 package edu.utdallas.gamegenerator;
 
+import edu.utdallas.gamegenerator.Challenge.Challenge;
 import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
+import edu.utdallas.gamegenerator.LearningObjective.LessonAct;
+import edu.utdallas.gamegenerator.Lesson.Lesson;
 import edu.utdallas.gamegenerator.Locale.Locale;
 import edu.utdallas.gamegenerator.Structure.Game;
 import edu.utdallas.gamegenerator.Structure.Structure;
@@ -27,17 +30,18 @@ import static edu.utdallas.gamegenerator.Layers.*;
  */
 public class GameGenerator {
     public static void main(String[] args) {
-        if(args.length == 5) {
+        if(args.length == 6) {
             Map<String, String> xmlFiles = new HashMap<String, String>();
             xmlFiles.put(CHARACTERS, args[0]);
-            xmlFiles.put(LEARNING_OBJECTIVE, args[1]);
-            xmlFiles.put(LOCALE, args[2]);
-            xmlFiles.put(SUBJECT, args[3]);
-            xmlFiles.put(THEME, args[4]);
+            xmlFiles.put(LESSONS, args[1]);
+            xmlFiles.put(CHALLENGES, args[2]);
+            xmlFiles.put(LOCALE, args[3]);
+            xmlFiles.put(SUBJECT, args[4]);
+            xmlFiles.put(THEME, args[5]);
 
             GameGenerator gameGenerator = new GameGenerator();
 
-            String exportFilename = "C:\\Users\\Terminus Est\\Dropbox\\SimSYS Development Platform\\IntSemi-automatedGameGenerationComponent\\Layer xsds\\Sample Game XMLs\\Game.xml";
+            String exportFilename = "C:\\Users\\Terminus Est\\Dropbox\\SimSYS Development Platform\\IntSemi-automatedGameGenerationComponent\\Samples\\Sample Game XMLs\\Game.xml";
 
             try {
                 Layers layers = gameGenerator.loadXmlComponents(xmlFiles);
@@ -49,7 +53,7 @@ public class GameGenerator {
         } else {
             System.out.println("Please enter the file names of the layers:\n");
             System.out.println(
-                    "\tie: GameGenerator characters.xml learningobjective.xml locale.xml subject.xml, theme.xml\n\n");
+                    "\tie: GameGenerator characters.xml lesson1.xml,lesson2xml challenge1.xml,challenge2.xml locale.xml subject.xml, theme.xml\n\n");
         }
     }
 
@@ -108,16 +112,40 @@ public class GameGenerator {
         unmarshaller = jaxbContext.createUnmarshaller();
         layers.setLocale((Locale) unmarshaller.unmarshal(file));
 
-        String[] learningObjectiveFiles = xmlFiles.get(LEARNING_OBJECTIVE).split(",");
+        String[] lessonFiles = xmlFiles.get(LESSONS).split(",");
 
-        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
+        jaxbContext = JAXBContext.newInstance(Lesson.class);
         unmarshaller = jaxbContext.createUnmarshaller();
+        List<Lesson> lessons = new ArrayList<Lesson>();
+        for(int i = 0; i < lessonFiles.length; i++) {
+            file = new File(lessonFiles[i]);
+            Lesson lesson = ((Lesson) unmarshaller.unmarshal(file));
+            lessons.add(lesson);
+        }
+
+        String[] challengeFiles = xmlFiles.get(CHALLENGES).split(",");
+
+        jaxbContext = JAXBContext.newInstance(Challenge.class);
+        unmarshaller = jaxbContext.createUnmarshaller();
+        List<Challenge> challenges = new ArrayList<Challenge>();
+        for(int i = 0; i < challengeFiles.length; i++) {
+            file = new File(challengeFiles[i]);
+            Challenge challenge = ((Challenge) unmarshaller.unmarshal(file));
+            challenges.add(challenge);
+        }
+
         List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
-        for(int i = 0; i < learningObjectiveFiles.length; i++) {
-            file = new File(learningObjectiveFiles[i]);
-            LearningObjective learningObjective = ((LearningObjective) unmarshaller.unmarshal(file));
+        for(int i = 0; i < lessons.size(); i++) {
+            LearningObjective learningObjective = new LearningObjective();
+            List<LessonAct> lessonActs = new ArrayList<LessonAct>();
+            LessonAct lessonAct = new LessonAct();
+            lessonAct.setLessonScreens(lessons.get(i).getLessonScreens());
+            lessonAct.setLessonChallenges(challenges.get(i).getLessonChallenges());
+            lessonActs.add(lessonAct);
+            learningObjective.setLessonActs(lessonActs);
             learningObjectives.add(learningObjective);
         }
+
         layers.setLearningObjectives(learningObjectives);
 
         layers.setStructure(new Structure());

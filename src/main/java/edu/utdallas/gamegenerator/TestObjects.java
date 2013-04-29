@@ -8,7 +8,7 @@ import edu.utdallas.gamegenerator.LearningObjective.Challenge.Reward;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
-import edu.utdallas.gamegenerator.LearningObjective.Lesson;
+import edu.utdallas.gamegenerator.LearningObjective.LessonAct;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.TextType;
@@ -131,8 +131,8 @@ public class TestObjects {
 
     private void createLearningObjective() {
         learningObjective = new LearningObjective();
-        List<Lesson> lessons = new ArrayList<Lesson>();
-        Lesson lesson = new Lesson();
+        List<LessonAct> lessonActs = new ArrayList<LessonAct>();
+        LessonAct lessonAct = new LessonAct();
         List<LearningObjectiveLesson> learningObjectiveScreens = new ArrayList<LearningObjectiveLesson>();
         LearningObjectiveLesson learningObjectiveLesson = new LearningObjectiveLesson();
         learningObjectiveLesson.setInformationBoxes(getGameTexts());
@@ -140,8 +140,8 @@ public class TestObjects {
         learningObjectiveLesson.setCharacters(getLearningObjectiveCharacters());
         learningObjectiveScreens.add(learningObjectiveLesson);
         learningObjectiveScreens.add(learningObjectiveLesson);
-        lesson.setLessonScreens(learningObjectiveScreens);
-        lessons.add(lesson);
+        lessonAct.setLessonScreens(learningObjectiveScreens);
+        lessonActs.add(lessonAct);
 
         List<LearningObjectiveChallenge> challenges = new ArrayList<LearningObjectiveChallenge>();
         LearningObjectiveChallenge challenge = new LearningObjectiveChallenge();
@@ -165,8 +165,8 @@ public class TestObjects {
         challenge.setButtons(getGameButtons());
         challenges.add(challenge);
         challenges.add(challenge);
-        lesson.setLessonChallenges(challenges);
-        learningObjective.setLessons(lessons);
+        lessonAct.setLessonChallenges(challenges);
+        learningObjective.setLessonActs(lessonActs);
 
     }
 

@@ -1,15 +1,15 @@
 package edu.utdallas.gamegenerator.Locale;
 
-import edu.utdallas.gamegenerator.Asset;
-import edu.utdallas.gamegenerator.Behavior;
-import edu.utdallas.gamegenerator.BehaviorType;
+import edu.utdallas.gamegenerator.LearningObjective.LessonAct;
+import edu.utdallas.gamegenerator.Shared.Asset;
+import edu.utdallas.gamegenerator.Shared.Behavior;
+import edu.utdallas.gamegenerator.Shared.BehaviorType;
 import edu.utdallas.gamegenerator.Characters.GameCharacter;
 import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOption;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
-import edu.utdallas.gamegenerator.LearningObjective.Lesson;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.TextType;
@@ -17,7 +17,7 @@ import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveChal
 import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveScreen;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.ScreenType;
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
-import edu.utdallas.gamegenerator.ScreenNode;
+import edu.utdallas.gamegenerator.Shared.ScreenNode;
 import edu.utdallas.gamegenerator.Shared.*;
 import edu.utdallas.gamegenerator.Theme.Theme;
 import edu.utdallas.gamegenerator.Theme.ThemeStory;
@@ -90,9 +90,9 @@ public class Locale {
      */
     private List<ScreenNode> buildChallenges(int learningObjectiveId) {
         UUID currentScreen = screenTransitions.get(TransitionType.BEGINNING_OF_CHALLENGE);
-        Lesson lesson = learningObjectives.get(learningObjectiveId).getLessons().get(0);
+        LessonAct lessonAct = learningObjectives.get(learningObjectiveId).getLessonActs().get(0);
         List<ScreenNode> screenNodes = new ArrayList<ScreenNode>();
-        List<LearningObjectiveChallenge> challenges = lesson.getLessonChallenges();
+        List<LearningObjectiveChallenge> challenges = lessonAct.getLessonChallenges();
         for(LearningObjectiveChallenge challenge : challenges) {
             UUID nextChallenge = UUID.randomUUID();
             screenTransitions.put(TransitionType.NEXT_CHALLENGE, nextChallenge);
@@ -161,8 +161,8 @@ public class Locale {
         List<ScreenNode> lessonScreens = new ArrayList<ScreenNode>();
         UUID currentScreen = screenTransitions.get(TransitionType.BEGINNING_OF_LESSON);
         UUID nextScreen = null;
-        Lesson lesson = learningObjectives.get(learningObjectiveId).getLessons().get(0);
-        List<? extends LearningObjectiveScreen> screens = lesson.getLessonScreens();
+        LessonAct lessonAct = learningObjectives.get(learningObjectiveId).getLessonActs().get(0);
+        List<? extends LearningObjectiveScreen> screens = lessonAct.getLessonScreens();
         for(LearningObjectiveScreen screen : screens) {
             nextScreen = UUID.randomUUID();
             lessonScreens.addAll(buildScreen(learningObjectiveId, screen,

@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator;
+package edu.utdallas.gamegenerator.Shared;
 
 import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;

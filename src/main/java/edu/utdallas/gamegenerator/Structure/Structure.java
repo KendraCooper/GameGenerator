@@ -1,7 +1,7 @@
 package edu.utdallas.gamegenerator.Structure;
 
-import edu.utdallas.gamegenerator.*;
 import edu.utdallas.gamegenerator.Locale.Locale;
+import edu.utdallas.gamegenerator.Shared.*;
 import edu.utdallas.gamegenerator.Theme.Theme;
 
 import java.util.ArrayList;

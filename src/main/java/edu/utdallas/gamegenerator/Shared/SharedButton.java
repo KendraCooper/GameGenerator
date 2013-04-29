@@ -1,7 +1,5 @@
 package edu.utdallas.gamegenerator.Shared;
 
-import edu.utdallas.gamegenerator.Behavior;
-
 /**
  * User: clocke
  * Date: 3/3/13

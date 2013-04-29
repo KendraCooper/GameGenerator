@@ -3,6 +3,7 @@ package edu.utdallas.gamegenerator;
 import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
 import edu.utdallas.gamegenerator.Locale.Locale;
+import edu.utdallas.gamegenerator.Shared.ScreenNode;
 import edu.utdallas.gamegenerator.Structure.Game;
 import edu.utdallas.gamegenerator.Structure.Scene;
 import edu.utdallas.gamegenerator.Structure.Structure;
@@ -16,8 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Company: Porpoise Software
- * User: Terminus Est
+ * User: clocke
  * Date: 3/3/13
  * Time: 10:10 PM
  */
@@ -38,8 +38,8 @@ public class Test {
 //        Game game = testObjects.getStructure().createGame();
 
         try {
-            readXml();
-//            createXsd();
+//            readXml();
+            createXsd();
 //            createXml(testObjects);
 //            readXmlGenerated();
 //            test();
@@ -47,29 +47,29 @@ public class Test {
             e.printStackTrace();
         }
 
-        theme.setCharacters(characters);
-        theme.setSubject(subject);
-
-        List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
-        learningObjectives.add(learningObjective);
-
-        locale.setCharacters(characters);
-        locale.setLearningObjectives(learningObjectives);
-        locale.setTheme(theme);
-
-        structure.setTheme(theme);
-        structure.setLocale(locale);
-        game = structure.createGame();
-
-        try {
-            writeGameXml();
+//        theme.setCharacters(characters);
+//        theme.setSubject(subject);
+//
+//        List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
+//        learningObjectives.add(learningObjective);
+//
+//        locale.setCharacters(characters);
+//        locale.setLearningObjectives(learningObjectives);
+//        locale.setTheme(theme);
+//
+//        structure.setTheme(theme);
+//        structure.setLocale(locale);
+//        game = structure.createGame();
+//
+//        try {
+//            writeGameXml();
 //            createXsd();
 //            createXml(testObjects);
 //            readXmlGenerated();
 //            test();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         System.out.println();
     }
 

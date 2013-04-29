@@ -10,18 +10,19 @@ import edu.utdallas.gamegenerator.Theme.Theme;
 import java.util.List;
 
 /**
- * Company: Porpoise Software
- * User: Terminus Est
+ * User: clocke
  * Date: 4/15/13
  * Time: 8:59 PM
  */
 public class Layers {
     public static String CHARACTERS = "Characters";
-    public static String LEARNING_OBJECTIVE = "LearningObjective";
+    public static String LEARNING_OBJECTIVES = "LearningObjective";
     public static String LOCALE = "Locale";
     public static String SUBJECT = "Subject";
     public static String THEME = "Theme";
     public static String STRUCTURE = "Structure";
+    public static String LESSONS = "Lessons";
+    public static String CHALLENGES = "Challenges";
 
     private Characters characters;
     private List<LearningObjective> learningObjectives;

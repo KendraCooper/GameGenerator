@@ -4,8 +4,7 @@ import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveScre
 import edu.utdallas.gamegenerator.LearningObjective.Screen.ScreenType;
 
 /**
- * Company: Porpoise Software
- * User: Terminus Est
+ * User: clocke
  * Date: 3/12/13
  * Time: 9:29 PM
  */

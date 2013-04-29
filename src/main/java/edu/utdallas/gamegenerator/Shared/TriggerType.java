@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator;
+package edu.utdallas.gamegenerator.Shared;
 
 /**
  * User: clocke

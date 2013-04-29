@@ -1,14 +1,10 @@
-package edu.utdallas.gamegenerator;
+package edu.utdallas.gamegenerator.Shared;
 
 import edu.utdallas.gamegenerator.Characters.GameCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
 import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
-import edu.utdallas.gamegenerator.Shared.GameObject;
-import edu.utdallas.gamegenerator.Shared.SharedButton;
-import edu.utdallas.gamegenerator.Shared.SharedCharacter;
-import edu.utdallas.gamegenerator.Shared.SharedInformationBox;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;

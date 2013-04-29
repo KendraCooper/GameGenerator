@@ -12,15 +12,15 @@ import java.util.List;
  */
 @XmlRootElement(name = "LearningObjective")
 public class LearningObjective {
-    private List<Lesson> lessons;
+    private List<LessonAct> lessonActs;
 
-    public List<Lesson> getLessons() {
-        return lessons;
+    public List<LessonAct> getLessonActs() {
+        return lessonActs;
     }
 
     @XmlElementWrapper(name = "Lessons")
-    @XmlElement(name = "Lesson")
-    public void setLessons(List<Lesson> lessons) {
-        this.lessons = lessons;
+    @XmlElement(name = "LessonAct")
+    public void setLessonActs(List<LessonAct> lessonActs) {
+        this.lessonActs = lessonActs;
     }
 }
