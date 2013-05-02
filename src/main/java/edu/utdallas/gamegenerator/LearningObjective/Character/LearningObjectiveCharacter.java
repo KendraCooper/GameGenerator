@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Date: 2/17/13
  * Time: 3:29 PM
  */
-@XmlRootElement(name = "Characters")
+@XmlRootElement(name = "LOCharacters")
 public class LearningObjectiveCharacter extends GameObject {
     private LearningObjectiveCharacterType characterType;
     private ObjectMovementType movementType;

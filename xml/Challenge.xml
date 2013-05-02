@@ -23,7 +23,7 @@
 			  <TransitionType>CURRENT_CHALLENGE</TransitionType>
 			</Button>
 		  </Buttons>
-		  <Characters>
+		  <LOCharacters>
 			<Character>
 			  <CharacterType>VILLIAN</CharacterType>
 			  <Timer></Timer>
@@ -32,7 +32,7 @@
 			  <CharacterType>HERO</CharacterType>
 			  <Timer></Timer>
 			</Character>
-		  </Characters>
+		  </LOCharacters>
 		  <InformationBoxes>
 			<InformationBox>
 			  <Text>You answered incorrectly!</Text>
@@ -82,13 +82,13 @@
             <TransitionType>BEGINNING_OF_LESSON</TransitionType>
           </ChallengeOption>
   </ChallengeOptions>
-        <Characters>
+        <LOCharacters>
           <Character>
             <CharacterType>HERO</CharacterType>
             <MovementType></MovementType>
             <Timer></Timer>
           </Character>
-        </Characters>
+        </LOCharacters>
         <InformationBoxes>
           <InformationBox>
             <Text>You can do it!!</Text>

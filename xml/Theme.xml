@@ -204,7 +204,7 @@
 			  <TransitionType>NEXT_SCREEN</TransitionType>
 			</Button>
 		  </Buttons>
-		  <Characters>
+		  <LOCharacters>
 		    <Character>
 			  <CharacterType>PLAYER</CharacterType>
 			  <MovementType></MovementType>
@@ -215,7 +215,7 @@
 			  <MovementType></MovementType>
 			  <Timer></Timer>
 			</Character>
-		  </Characters>
+		  </LOCharacters>
 		  <InformationBoxes>
 		    <InformationBox>
 			  <TextType>PLAYER</TextType>
@@ -245,13 +245,13 @@
 			  <TransitionType>NEXT_ACT</TransitionType>
 			</Button>
 		  </Buttons>
-		  <Characters>
+		  <LOCharacters>
 		    <Character>
 			  <CharacterType>HERO</CharacterType>
 			  <MovementType></MovementType>
 			  <Timer></Timer>
 			</Character>
-		  </Characters>
+		  </LOCharacters>
 		  <InformationBoxes>
 		    <InformationBox>
 			  <TextType>HERO</TextType>
