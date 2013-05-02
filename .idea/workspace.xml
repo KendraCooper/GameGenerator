@@ -1,48 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff25414f-3217-4b0c-b12e-a23734698ecb" name="New changelist" comment="Added controller and javadoc comments as well as name refactoring">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Challenge/Challenge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/Challenge.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Lesson/Lesson.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xml/Lesson.xml" />
-      <change type="DELETED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\Structure\Screen.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/ButtonLocationType.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/ButtonLocationType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Characters/CharacterAssetType.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Characters/CharacterAssetType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/GameGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/GameGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Layers.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Layers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/LearningObjective.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/LearningObjective.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/LocaleScreen.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/LocaleScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Scene.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Scene.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/SharedButton.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/SharedButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/SharedInformationBox.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/SharedInformationBox.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/TestObjects.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/Theme.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/Theme.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/Theme.xml" afterPath="$PROJECT_DIR$/xml/Theme.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/ThemeStoryScreenIntro.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/ThemeStoryScreenIntro.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/ThemeStoryScreenOutro.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/ThemeStoryScreenOutro.java" />
+    <list default="true" id="ff25414f-3217-4b0c-b12e-a23734698ecb" name="New changelist" comment="Refactoring and split learning objective into two layers (lesson and challenge) for import only">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\Asset.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/Asset.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\Behavior.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/Behavior.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\BehaviorType.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/BehaviorType.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\ButtonAsset.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/ButtonAsset.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\CharacterAsset.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/CharacterAsset.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\Color.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/Color.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\EndGameBehavior.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/EndGameBehavior.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\ImageAsset.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/ImageAsset.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\InformationBoxAsset.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/InformationBoxAsset.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\LearningObjective\Lesson.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/LessonAct.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\ScreenNode.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/ScreenNode.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\TransitionBehavior.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/TransitionBehavior.java" />
-      <change type="MOVED" beforePath="E:\Development\Java\GameGenerator\src\main\java\edu\utdallas\gamegenerator\TriggerType.java" afterPath="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/TriggerType.java" />
     </list>
     <ignored path="GameGenerator.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ScreenNode.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1365884143247" ignored="false" />
-    <file path="/fragment.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1367197522700" ignored="false" />
+    <file path="/fragment.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1367454571699" ignored="false" />
     <file path="/ScreenType.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363140747708" ignored="false" />
     <file path="$PROJECT_DIR$/../GameManager/src/main/java/com/porpoise/gamemanager/web/domain/User.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361035049763" ignored="false" />
     <file path="/User.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1361035028953" ignored="false" />
@@ -89,13 +54,13 @@
     <file path="/Color.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362365942052" ignored="false" />
     <file path="/Behavior.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1365893230348" ignored="false" />
     <file path="/Character.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1366077633570" ignored="false" />
-    <file path="/Test.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1366077030883" ignored="false" />
+    <file path="/Test.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1367453636518" ignored="false" />
     <file path="/SharedButton.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363229834910" ignored="false" />
     <file path="/SharedInformationBox.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1362711749163" ignored="false" />
     <file path="/SharedCharacter.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364783669481" ignored="false" />
     <file path="/pom.xml" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1363566385771" ignored="false" />
     <file path="/NPCCharacter.xml" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1366076544122" ignored="false" />
-    <file path="/Dummy.txt" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1367196444583" ignored="false" />
+    <file path="/Dummy.txt" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1367453814771" ignored="false" />
     <file path="$PROJECT_DIR$/../TheGamesDBJavaAPI/.idea/workspace.xml" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363138114965" ignored="false" />
     <file path="/ThemeStory.java" changelist="ff25414f-3217-4b0c-b12e-a23734698ecb" time="1364784140484" ignored="false" />
     <file path="/ThemeStoryScreen.java" changelist="ae160c5c-7d43-4b07-9781-fd4e4e88fd38" time="1363141735613" ignored="false" />
@@ -147,8 +112,9 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" line="85" class="edu.utdallas.gamegenerator.Test" package="edu.utdallas.gamegenerator">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" line="87" class="edu.utdallas.gamegenerator.Test" package="edu.utdallas.gamegenerator">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -177,7 +143,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -221,53 +186,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LearningObjective.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/LearningObjective.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LessonAct.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/LessonAct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="488" selection-end="1212" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Challenge.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Challenge/Challenge.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="14" column="35" selection-start="363" selection-end="398" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameGenerator.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameGenerator.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/GameGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="16" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#4680#4688#0" expanded="true" />
-                <element signature="e#5147#5158#0" expanded="true" />
-                <element signature="e#5461#5480#0" expanded="true" />
-                <element signature="e#5663#5674#0" expanded="true" />
-              </folding>
+            <state line="47" column="40" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.4890017">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Theme.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Test.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="46" selection-start="3609" selection-end="3609" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lesson.xsd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lesson.xsd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="26" selection-start="265" selection-end="271" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Theme.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Theme.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="24" selection-start="4132" selection-end="4132" vertical-scroll-proportion="0.21864407">
+            <state line="113" column="27" selection-start="4604" selection-end="4604" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -277,10 +235,7 @@
         <entry file="file://$PROJECT_DIR$/xml/LearningObjective.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="140" column="0" selection-start="3797" selection-end="4695" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="tag#LessonChallenges#0;tag#Lesson#0;tag#Lessons#0;tag#LearningObjective#0" expanded="false" />
-                <element signature="tag#LessonScreens#0;tag#Lesson#0;tag#Lessons#0;tag#LearningObjective#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -289,12 +244,7 @@
         <entry file="file://$PROJECT_DIR$/xml/Challenge.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="110" column="15" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="tag#ChallengeOptions#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-                <element signature="tag#Characters#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-                <element signature="tag#InformationBoxes#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-                <element signature="tag#InformationBox#0;tag#InformationBoxes#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -311,18 +261,16 @@
       <file leaf-file-name="Lesson.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Lesson/Lesson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="30" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="15" column="13" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Layers.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Layers.java">
+      <file leaf-file-name="Challenge.xsd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Challenge.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="51" selection-start="871" selection-end="871" vertical-scroll-proportion="0.0">
+            <state line="23" column="2" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -350,7 +298,6 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Theme/Theme.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Act.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/Lesson.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/LessonAct.java" />
@@ -362,6 +309,7 @@
         <option value="$PROJECT_DIR$/xml/Lesson.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/GameGenerator.java" />
         <option value="$PROJECT_DIR$/Theme.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java" />
       </list>
     </option>
   </component>
@@ -473,6 +421,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -505,265 +454,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamegenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamegenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Structure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamegenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Shared" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamegenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Locale" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamegenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamegenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LearningObjective" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamegenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Challenge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameGenerator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -784,9 +476,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -841,7 +533,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="edu.utdallas.gamegenerator.GameGenerator" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="E:\Development\Java\GameGenerator\xml\Character.xml E:\Development\Java\GameGenerator\xml\Lesson.xml E:\Development\Java\GameGenerator\xml\Challenge.xml E:\Development\Java\GameGenerator\xml\Locale.xml E:\Development\Java\GameGenerator\xml\Subject.xml E:\Development\Java\GameGenerator\xml\Theme.xml" />
+      <option name="PROGRAM_PARAMETERS" value="xml\Character.xml xml\Lesson.xml xml\Challenge.xml xml\Locale.xml xml\Subject.xml xml\Theme.xml" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -1035,7 +727,15 @@
       <created>1366766245344</created>
       <updated>1366766245344</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactoring and split learning objective into two layers (lesson and challenge) for import only">
+      <created>1367198587164</created>
+      <updated>1367198587164</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Updated test.java to create new xsds for lesson and challenge layers">
+      <created>1367453821301</created>
+      <updated>1367453821301</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1062,10 +762,9 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33188722" sideWeight="0.9989827" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3308026" sideWeight="0.9989827" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286334" sideWeight="0.48719317" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286334" sideWeight="0.50053364" order="3" side_tool="false" content_ui="tabs" x="669" y="331" width="788" height="423" />
@@ -1081,10 +780,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670282" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24279615" sideWeight="0.6681128" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24226254" sideWeight="0.6691974" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329718" sideWeight="0.49786553" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286334" sideWeight="0.48719317" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.670282" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991323" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1128,7 +828,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added controller and javadoc comments as well as name refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated test.java to create new xsds for lesson and challenge layers" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1154,6 +854,8 @@
     <MESSAGE value="Fixing NPC Character xml" />
     <MESSAGE value="Merged Character layers, added 2 layer architecture" />
     <MESSAGE value="Added controller and javadoc comments as well as name refactoring" />
+    <MESSAGE value="Refactoring and split learning objective into two layers (lesson and challenge) for import only" />
+    <MESSAGE value="Updated test.java to create new xsds for lesson and challenge layers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1163,32 +865,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/ScreenNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Structure/Structure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="51" selection-start="3453" selection-end="3454" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/CharacterAsset.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Shared/Asset.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="13" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Locale/Locale.java">
@@ -1200,9 +879,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Characters/CharacterAssetType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/LearningObjective/LessonAct.java">
@@ -1229,40 +906,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Challenge/Challenge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="35" selection-start="363" selection-end="398" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Lesson/Lesson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="30" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xml/Challenge.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="15" selection-start="3496" selection-end="3496" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#ChallengeOptions#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-            <element signature="tag#Characters#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-            <element signature="tag#InformationBoxes#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-            <element signature="tag#InformationBox#0;tag#InformationBoxes#0;tag#LessonChallenge#0;tag#LessonChallenges#0;tag#Challenge#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xml/LearningObjective.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="140" column="0" selection-start="3797" selection-end="4695" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#LessonChallenges#0;tag#Lesson#0;tag#Lessons#0;tag#LearningObjective#0" expanded="false" />
-            <element signature="tag#LessonScreens#0;tag#Lesson#0;tag#Lessons#0;tag#LearningObjective#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1273,21 +931,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/GameGenerator.java">
+    <entry file="file://$PROJECT_DIR$/Theme.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="16" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#4680#4688#0" expanded="true" />
-            <element signature="e#5147#5158#0" expanded="true" />
-            <element signature="e#5461#5480#0" expanded="true" />
-            <element signature="e#5663#5674#0" expanded="true" />
-          </folding>
+        <state line="113" column="27" selection-start="4604" selection-end="4604" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Theme.xml">
+    <entry file="file://$PROJECT_DIR$/Lesson.xsd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="24" selection-start="4132" selection-end="4132" vertical-scroll-proportion="0.21864407">
+        <state line="7" column="26" selection-start="265" selection-end="271" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="46" selection-start="3609" selection-end="3609" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/Lesson/Lesson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Challenge.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="2" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/utdallas/gamegenerator/GameGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="40" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.4890017">
           <folding />
         </state>
       </provider>
