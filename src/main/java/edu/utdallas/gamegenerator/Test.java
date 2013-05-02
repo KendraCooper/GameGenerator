@@ -1,7 +1,9 @@
 package edu.utdallas.gamegenerator;
 
+import edu.utdallas.gamegenerator.Challenge.Challenge;
 import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
+import edu.utdallas.gamegenerator.Lesson.Lesson;
 import edu.utdallas.gamegenerator.Locale.Locale;
 import edu.utdallas.gamegenerator.Shared.ScreenNode;
 import edu.utdallas.gamegenerator.Structure.Game;
@@ -91,8 +93,16 @@ public class Test {
         sor = new MySchemaOutputResolver("Theme.xsd");
         jaxbContext.generateSchema(sor);
 
-        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
-        sor = new MySchemaOutputResolver("LearningObjective.xsd");
+//        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
+//        sor = new MySchemaOutputResolver("LearningObjective.xsd");
+//        jaxbContext.generateSchema(sor);
+
+        jaxbContext = JAXBContext.newInstance(Lesson.class);
+        sor = new MySchemaOutputResolver("Lesson.xsd");
+        jaxbContext.generateSchema(sor);
+
+        jaxbContext = JAXBContext.newInstance(Challenge.class);
+        sor = new MySchemaOutputResolver("Challenge.xsd");
         jaxbContext.generateSchema(sor);
 
         jaxbContext = JAXBContext.newInstance(Locale.class);
