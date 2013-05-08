@@ -1,6 +1,6 @@
-package edu.utdallas.gamegenerator.LearningObjective.Screen;
+package edu.utdallas.gamegenerator.LearningAct.Screen;
 
-import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOption;
+import edu.utdallas.gamegenerator.LearningAct.Challenge.ChallengeOption;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
@@ -13,7 +13,7 @@ import java.util.List;
  * Time: 4:12 PM
  */
 @XmlRootElement(name = "LessonChallenge")
-public class LearningObjectiveChallenge extends LearningObjectiveScreen {
+public class ChallengeScreen extends BaseScreen {
     private int timer;
     private List<ChallengeOption> challengeOptions;
 

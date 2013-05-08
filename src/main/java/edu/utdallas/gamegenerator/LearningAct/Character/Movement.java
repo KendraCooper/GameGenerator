@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator.LearningObjective.Character;
+package edu.utdallas.gamegenerator.LearningAct.Character;
 
 /**
  * User: clocke

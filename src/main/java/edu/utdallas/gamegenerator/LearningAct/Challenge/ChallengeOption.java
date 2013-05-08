@@ -1,8 +1,8 @@
-package edu.utdallas.gamegenerator.LearningObjective.Challenge;
+package edu.utdallas.gamegenerator.LearningAct.Challenge;
 
-import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
-import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveScreen;
-import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
+import edu.utdallas.gamegenerator.LearningAct.Prop.GameButton;
+import edu.utdallas.gamegenerator.LearningAct.Screen.BaseScreen;
+import edu.utdallas.gamegenerator.LearningAct.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Shared.ButtonLocationType;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -16,13 +16,13 @@ import java.util.List;
  */
 public class ChallengeOption extends GameButton {
     private ChallengeOptionType challengeOptionType;
-    private List<LearningObjectiveScreen> additionalScreens;
+    private List<BaseScreen> additionalScreens;
 
     public ChallengeOption() {
     }
 
     public ChallengeOption(ChallengeOptionType challengeOptionType, String text, Reward reward,
-                           TransitionType transitionType, List<LearningObjectiveScreen> additionalScreens,
+                           TransitionType transitionType, List<BaseScreen> additionalScreens,
                            ButtonLocationType buttonLocationType) {
         this.challengeOptionType = challengeOptionType;
         setText(text);
@@ -41,13 +41,13 @@ public class ChallengeOption extends GameButton {
         this.challengeOptionType = challengeOptionType;
     }
 
-    public List<LearningObjectiveScreen> getAdditionalScreens() {
+    public List<BaseScreen> getAdditionalScreens() {
         return additionalScreens;
     }
 
     @XmlElementWrapper(name = "AdditionalScreens")
     @XmlElement(name = "AdditionalScreen")
-    public void setAdditionalScreens(List<LearningObjectiveScreen> additionalScreens) {
+    public void setAdditionalScreens(List<BaseScreen> additionalScreens) {
         this.additionalScreens = additionalScreens;
     }
 }

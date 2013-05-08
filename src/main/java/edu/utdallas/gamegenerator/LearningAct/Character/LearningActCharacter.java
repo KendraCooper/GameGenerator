@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator.LearningObjective.Character;
+package edu.utdallas.gamegenerator.LearningAct.Character;
 
 import edu.utdallas.gamegenerator.Locale.ObjectMovementType;
 import edu.utdallas.gamegenerator.Shared.GameObject;
@@ -12,17 +12,17 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Time: 3:29 PM
  */
 @XmlRootElement(name = "LOCharacters")
-public class LearningObjectiveCharacter extends GameObject {
-    private LearningObjectiveCharacterType characterType;
+public class LearningActCharacter extends GameObject {
+    private LearningActCharacterType characterType;
     private ObjectMovementType movementType;
     private int timer;
 
-    public LearningObjectiveCharacterType getCharacterType() {
+    public LearningActCharacterType getCharacterType() {
         return characterType;
     }
 
     @XmlElement(name = "CharacterType")
-    public void setCharacterType(LearningObjectiveCharacterType characterType) {
+    public void setCharacterType(LearningActCharacterType characterType) {
         this.characterType = characterType;
     }
 

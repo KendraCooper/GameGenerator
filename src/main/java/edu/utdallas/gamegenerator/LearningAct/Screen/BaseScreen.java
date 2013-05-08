@@ -1,8 +1,8 @@
-package edu.utdallas.gamegenerator.LearningObjective.Screen;
+package edu.utdallas.gamegenerator.LearningAct.Screen;
 
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacter;
+import edu.utdallas.gamegenerator.LearningAct.Prop.GameButton;
+import edu.utdallas.gamegenerator.LearningAct.Prop.GameText;
 import edu.utdallas.gamegenerator.Theme.ThemeStoryScreenIntro;
 import edu.utdallas.gamegenerator.Theme.ThemeStoryScreenOutro;
 
@@ -18,11 +18,11 @@ import java.util.List;
  * Time: 3:46 PM
  */
 @XmlTransient
-@XmlSeeAlso({LearningObjectiveFailure.class, ThemeStoryScreenIntro.class, ThemeStoryScreenOutro.class})
-public abstract class LearningObjectiveScreen implements Cloneable {
+@XmlSeeAlso({FailureScreen.class, ThemeStoryScreenIntro.class, ThemeStoryScreenOutro.class})
+public abstract class BaseScreen implements Cloneable {
     private List<GameText> informationBoxes;
     private List<GameButton> buttons;
-    private List<LearningObjectiveCharacter> characters;
+    private List<LearningActCharacter> characters;
 
     public List<GameText> getInformationBoxes() {
         return informationBoxes;
@@ -44,21 +44,21 @@ public abstract class LearningObjectiveScreen implements Cloneable {
         this.buttons = buttons;
     }
 
-    public List<LearningObjectiveCharacter> getCharacters() {
+    public List<LearningActCharacter> getCharacters() {
         return characters;
     }
 
     @XmlElementWrapper(name = "LOCharacters")
     @XmlElement(name = "Character")
-    public void setCharacters(List<LearningObjectiveCharacter> characters) {
+    public void setCharacters(List<LearningActCharacter> characters) {
         this.characters = characters;
     }
 
     public abstract ScreenType getType();
 
-    public LearningObjectiveScreen clone() {
+    public BaseScreen clone() {
         try {
-            return (LearningObjectiveScreen) super.clone();
+            return (BaseScreen) super.clone();
         } catch (CloneNotSupportedException e) {
 
         }

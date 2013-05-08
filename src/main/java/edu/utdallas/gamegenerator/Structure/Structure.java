@@ -26,7 +26,7 @@ public class Structure {
     public Game createGame() {
         acts = new ArrayList<Act>();
         acts.add(createActFromScreens(theme.getIntro()));
-        for(int i = 0; i < locale.getLearningObjectives().size(); i++) {
+        for(int i = 0; i < locale.getLearningActs().size(); i++) {
             acts.add(createActFromScreens(locale.getAct(i)));
         }
         acts.add(createActFromScreens(theme.getOutro()));

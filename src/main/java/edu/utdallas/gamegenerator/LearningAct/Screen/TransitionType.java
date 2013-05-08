@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator.LearningObjective.Screen;
+package edu.utdallas.gamegenerator.LearningAct.Screen;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;

@@ -1,6 +1,6 @@
 package edu.utdallas.gamegenerator.Characters;
 
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacterType;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -21,7 +21,7 @@ public class Characters {
         return hero;
     }
 
-    public GameCharacter getCharacter(LearningObjectiveCharacterType characterType) {
+    public GameCharacter getCharacter(LearningActCharacterType characterType) {
         switch (characterType) {
             case HERO:
                 return hero;

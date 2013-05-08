@@ -2,7 +2,7 @@ package edu.utdallas.gamegenerator;
 
 import edu.utdallas.gamegenerator.Challenge.Challenge;
 import edu.utdallas.gamegenerator.Characters.Characters;
-import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
+import edu.utdallas.gamegenerator.LearningAct.LearningAct;
 import edu.utdallas.gamegenerator.Lesson.Lesson;
 import edu.utdallas.gamegenerator.Locale.Locale;
 import edu.utdallas.gamegenerator.Shared.ScreenNode;
@@ -26,7 +26,7 @@ import java.util.List;
 public class Test {
     private static Characters characters;
     private static Subject subject;
-    private static LearningObjective learningObjective;
+    private static LearningAct learningAct;
     private static Locale locale;
     private static Theme theme;
     private static Structure structure = new Structure();
@@ -52,11 +52,11 @@ public class Test {
 //        theme.setCharacters(characters);
 //        theme.setSubject(subject);
 //
-//        List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
-//        learningObjectives.add(learningObjective);
+//        List<LearningAct> learningObjectives = new ArrayList<LearningAct>();
+//        learningObjectives.add(learningAct);
 //
 //        locale.setCharacters(characters);
-//        locale.setLearningObjectives(learningObjectives);
+//        locale.setLearningActs(learningObjectives);
 //        locale.setTheme(theme);
 //
 //        structure.setTheme(theme);
@@ -93,8 +93,8 @@ public class Test {
         sor = new MySchemaOutputResolver("Theme.xsd");
         jaxbContext.generateSchema(sor);
 
-//        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
-//        sor = new MySchemaOutputResolver("LearningObjective.xsd");
+//        jaxbContext = JAXBContext.newInstance(LearningAct.class);
+//        sor = new MySchemaOutputResolver("LearningAct.xsd");
 //        jaxbContext.generateSchema(sor);
 
         jaxbContext = JAXBContext.newInstance(Lesson.class);
@@ -157,10 +157,10 @@ public class Test {
         unmarshaller = jaxbContext.createUnmarshaller();
         locale = (Locale) unmarshaller.unmarshal(file);
 
-        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
-        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjective.xml");
+        jaxbContext = JAXBContext.newInstance(LearningAct.class);
+        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningAct.xml");
         unmarshaller = jaxbContext.createUnmarshaller();
-        learningObjective = (LearningObjective) unmarshaller.unmarshal(file);
+        learningAct = (LearningAct) unmarshaller.unmarshal(file);
 
         System.out.println();
     }
@@ -173,10 +173,10 @@ public class Test {
         marshaller.marshal(testObjects.getCharacters(), file);
 
         file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjectiveOut.xml");
-        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
+        jaxbContext = JAXBContext.newInstance(LearningAct.class);
         marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        marshaller.marshal(testObjects.getLearningObjective(), file);
+        marshaller.marshal(testObjects.getLearningAct(), file);
 
         file = new File("E:\\Development\\Java\\GameGenerator\\xml\\ThemeOut.xml");
         jaxbContext = JAXBContext.newInstance(Theme.class);
@@ -212,10 +212,10 @@ public class Test {
 //        unmarshaller = jaxbContext.createUnmarshaller();
 //        locale = (Locale) unmarshaller.unmarshal(file);
 //
-//        jaxbContext = JAXBContext.newInstance(LearningObjective.class);
+//        jaxbContext = JAXBContext.newInstance(LearningAct.class);
 //        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjectiveOut.xml");
 //        unmarshaller = jaxbContext.createUnmarshaller();
-//        learningObjective = (LearningObjective) unmarshaller.unmarshal(file);
+//        learningAct = (LearningAct) unmarshaller.unmarshal(file);
 
         System.out.println();
     }

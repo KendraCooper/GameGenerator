@@ -1,6 +1,6 @@
 package edu.utdallas.gamegenerator.Challenge;
 
-import edu.utdallas.gamegenerator.LearningObjective.Screen.LearningObjectiveChallenge;
+import edu.utdallas.gamegenerator.LearningAct.Screen.ChallengeScreen;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
@@ -14,15 +14,15 @@ import java.util.List;
  */
 @XmlRootElement(name = "Challenge")
 public class Challenge {
-    private List<LearningObjectiveChallenge> lessonChallenges;
+    private List<ChallengeScreen> lessonChallenges;
 
-    public List<LearningObjectiveChallenge> getLessonChallenges() {
+    public List<ChallengeScreen> getLessonChallenges() {
         return lessonChallenges;
     }
 
     @XmlElementWrapper(name = "LessonChallenges")
     @XmlElement(name = "LessonChallenge")
-    public void setLessonChallenges(List<LearningObjectiveChallenge> lessonChallenges) {
+    public void setLessonChallenges(List<ChallengeScreen> lessonChallenges) {
         this.lessonChallenges = lessonChallenges;
     }
 }

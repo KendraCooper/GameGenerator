@@ -2,8 +2,8 @@ package edu.utdallas.gamegenerator;
 
 import edu.utdallas.gamegenerator.Challenge.Challenge;
 import edu.utdallas.gamegenerator.Characters.Characters;
-import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
-import edu.utdallas.gamegenerator.LearningObjective.LessonAct;
+import edu.utdallas.gamegenerator.LearningAct.LearningAct;
+import edu.utdallas.gamegenerator.LearningAct.LessonAct;
 import edu.utdallas.gamegenerator.Lesson.Lesson;
 import edu.utdallas.gamegenerator.Locale.Locale;
 import edu.utdallas.gamegenerator.Structure.Game;
@@ -134,19 +134,19 @@ public class GameGenerator {
             challenges.add(challenge);
         }
 
-        List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
+        List<LearningAct> learningActs = new ArrayList<LearningAct>();
         for(int i = 0; i < lessons.size(); i++) {
-            LearningObjective learningObjective = new LearningObjective();
+            LearningAct learningAct = new LearningAct();
             List<LessonAct> lessonActs = new ArrayList<LessonAct>();
             LessonAct lessonAct = new LessonAct();
             lessonAct.setLessonScreens(lessons.get(i).getLessonScreens());
             lessonAct.setLessonChallenges(challenges.get(i).getLessonChallenges());
             lessonActs.add(lessonAct);
-            learningObjective.setLessonActs(lessonActs);
-            learningObjectives.add(learningObjective);
+            learningAct.setLessonActs(lessonActs);
+            learningActs.add(learningAct);
         }
 
-        layers.setLearningObjectives(learningObjectives);
+        layers.setLearningActs(learningActs);
 
         layers.setStructure(new Structure());
         wireUpLayers(layers);
@@ -160,7 +160,7 @@ public class GameGenerator {
      */
     private void wireUpLayers(Layers layers) {
         layers.getLocale().setTheme(layers.getTheme());
-        layers.getLocale().setLearningObjectives(layers.getLearningObjectives());
+        layers.getLocale().setLearningActs(layers.getLearningActs());
         layers.getLocale().setCharacters(layers.getCharacters());
         layers.getTheme().setSubject(layers.getSubject());
         layers.getTheme().setCharacters(layers.getCharacters());

@@ -2,17 +2,17 @@ package edu.utdallas.gamegenerator;
 
 import edu.utdallas.gamegenerator.Characters.*;
 import edu.utdallas.gamegenerator.Characters.Characters;
-import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOption;
-import edu.utdallas.gamegenerator.LearningObjective.Challenge.ChallengeOptionType;
-import edu.utdallas.gamegenerator.LearningObjective.Challenge.Reward;
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
-import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
-import edu.utdallas.gamegenerator.LearningObjective.LessonAct;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.TextType;
-import edu.utdallas.gamegenerator.LearningObjective.Screen.*;
+import edu.utdallas.gamegenerator.LearningAct.Challenge.ChallengeOption;
+import edu.utdallas.gamegenerator.LearningAct.Challenge.ChallengeOptionType;
+import edu.utdallas.gamegenerator.LearningAct.Challenge.Reward;
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacter;
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacterType;
+import edu.utdallas.gamegenerator.LearningAct.LearningAct;
+import edu.utdallas.gamegenerator.LearningAct.LessonAct;
+import edu.utdallas.gamegenerator.LearningAct.Prop.GameButton;
+import edu.utdallas.gamegenerator.LearningAct.Prop.GameText;
+import edu.utdallas.gamegenerator.LearningAct.Prop.TextType;
+import edu.utdallas.gamegenerator.LearningAct.Screen.*;
 import edu.utdallas.gamegenerator.Locale.Locale;
 import edu.utdallas.gamegenerator.Locale.LocaleScreen;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
@@ -34,7 +34,7 @@ import java.util.Map;
  */
 public class TestObjects {
     private Characters characters;
-    private LearningObjective learningObjective;
+    private LearningAct learningAct;
     private Locale locale;
     private Structure structure;
     private Subject subject;
@@ -85,23 +85,23 @@ public class TestObjects {
         gameObjectsMap.put(ScreenType.CHALLENGE, gameObjects);
 
 
-        List<LearningObjective> learningObjectives = new ArrayList<LearningObjective>();
-        learningObjectives.add(learningObjective);
-        locale.setLearningObjectives(learningObjectives);
+        List<LearningAct> learningActs = new ArrayList<LearningAct>();
+        learningActs.add(learningAct);
+        locale.setLearningActs(learningActs);
 
-        Map<ScreenType, Map<LearningObjectiveCharacterType, SharedCharacter>> localeCharactersMap = new HashMap<ScreenType, Map<LearningObjectiveCharacterType, SharedCharacter>>();
-        Map<LearningObjectiveCharacterType, SharedCharacter> localeCharacters = new HashMap<LearningObjectiveCharacterType, SharedCharacter>();
+        Map<ScreenType, Map<LearningActCharacterType, SharedCharacter>> localeCharactersMap = new HashMap<ScreenType, Map<LearningActCharacterType, SharedCharacter>>();
+        Map<LearningActCharacterType, SharedCharacter> localeCharacters = new HashMap<LearningActCharacterType, SharedCharacter>();
         List<ObjectMovement> movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
-        localeCharacters.put(LearningObjectiveCharacterType.HERO, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
+        localeCharacters.put(LearningActCharacterType.HERO, new SharedCharacter(200, 200, 100, 100, null, LearningActCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
-        localeCharacters.put(LearningObjectiveCharacterType.VILLIAN, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.VILLIAN,
+        localeCharacters.put(LearningActCharacterType.VILLIAN, new SharedCharacter(200, 200, 100, 100, null, LearningActCharacterType.VILLIAN,
                 movements));
         movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
-        localeCharacters.put(LearningObjectiveCharacterType.ALT, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.ALT,
+        localeCharacters.put(LearningActCharacterType.ALT, new SharedCharacter(200, 200, 100, 100, null, LearningActCharacterType.ALT,
                 movements));
         localeCharactersMap.put(ScreenType.LESSON, localeCharacters);
 
@@ -130,11 +130,11 @@ public class TestObjects {
     }
 
     private void createLearningObjective() {
-        learningObjective = new LearningObjective();
+        learningAct = new LearningAct();
         List<LessonAct> lessonActs = new ArrayList<LessonAct>();
         LessonAct lessonAct = new LessonAct();
-        List<LearningObjectiveLesson> learningObjectiveScreens = new ArrayList<LearningObjectiveLesson>();
-        LearningObjectiveLesson learningObjectiveLesson = new LearningObjectiveLesson();
+        List<LessonScreen> learningObjectiveScreens = new ArrayList<LessonScreen>();
+        LessonScreen learningObjectiveLesson = new LessonScreen();
         learningObjectiveLesson.setInformationBoxes(getGameTexts());
         learningObjectiveLesson.setButtons(getGameButtons());
         learningObjectiveLesson.setCharacters(getLearningObjectiveCharacters());
@@ -143,30 +143,30 @@ public class TestObjects {
         lessonAct.setLessonScreens(learningObjectiveScreens);
         lessonActs.add(lessonAct);
 
-        List<LearningObjectiveChallenge> challenges = new ArrayList<LearningObjectiveChallenge>();
-        LearningObjectiveChallenge challenge = new LearningObjectiveChallenge();
+        List<ChallengeScreen> challenges = new ArrayList<ChallengeScreen>();
+        ChallengeScreen challenge = new ChallengeScreen();
         challenge.setButtons(null);
         challenge.setCharacters(getLearningObjectiveCharacters());
         challenge.setInformationBoxes(getGameTexts());
         challenge.setTimer(0);
-        LearningObjectiveScreen screen = new LearningObjectiveFailure();
+        BaseScreen screen = new FailureScreen();
         screen.setCharacters(getLearningObjectiveCharacters());
         screen.setButtons(getGameButtons());
         screen.setInformationBoxes(getGameTexts());
-        List<LearningObjectiveScreen> learningObjectiveScreens1 = new ArrayList<LearningObjectiveScreen>();
-        learningObjectiveScreens1.add(screen);
-        LearningObjectiveScreen screen1 = screen.clone();
+        List<BaseScreen> baseScreens1 = new ArrayList<BaseScreen>();
+        baseScreens1.add(screen);
+        BaseScreen screen1 = screen.clone();
         screen1.getButtons().get(0).setTransitionType(TransitionType.NEXT_CHALLENGE);
-        learningObjectiveScreens1.add(screen);
+        baseScreens1.add(screen);
         List<ChallengeOption> challengeOptions = new ArrayList<ChallengeOption>();
-        challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "additional screens", new Reward(), TransitionType.ADDITIONAL, learningObjectiveScreens1, ButtonLocationType.CHALLENGE_1));
+        challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "additional screens", new Reward(), TransitionType.ADDITIONAL, baseScreens1, ButtonLocationType.CHALLENGE_1));
         challengeOptions.add(new ChallengeOption(ChallengeOptionType.BUTTON, "end of story", null, TransitionType.END_OF_STORY, null, ButtonLocationType.CHALLENGE_2));
         challenge.setChallengeOptions(challengeOptions);
         challenge.setButtons(getGameButtons());
         challenges.add(challenge);
         challenges.add(challenge);
         lessonAct.setLessonChallenges(challenges);
-        learningObjective.setLessonActs(lessonActs);
+        learningAct.setLessonActs(lessonActs);
 
     }
 
@@ -181,18 +181,18 @@ public class TestObjects {
         screen.setButtons(buttons);
         List<GameObject> gameObjects = getGameObjects();
         screen.setGameObjects(gameObjects);
-        Map<LearningObjectiveCharacterType, SharedCharacter> themeCharacters = new HashMap<LearningObjectiveCharacterType, SharedCharacter>();
+        Map<LearningActCharacterType, SharedCharacter> themeCharacters = new HashMap<LearningActCharacterType, SharedCharacter>();
         List<ObjectMovement> movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
-        themeCharacters.put(LearningObjectiveCharacterType.HERO, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
+        themeCharacters.put(LearningActCharacterType.HERO, new SharedCharacter(200, 200, 100, 100, null, LearningActCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_OFF_SCREEN, 1, 1, 5, 5));
-        themeCharacters.put(LearningObjectiveCharacterType.VILLIAN, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
+        themeCharacters.put(LearningActCharacterType.VILLIAN, new SharedCharacter(200, 200, 100, 100, null, LearningActCharacterType.HERO,
                 movements));
         movements = new ArrayList<ObjectMovement>();
         movements.add(new ObjectMovement(ObjectMovementType.WALK_ONTO_SCREEN, 1, 1, 5, 5));
-        themeCharacters.put(LearningObjectiveCharacterType.ALT, new SharedCharacter(200, 200, 100, 100, null, LearningObjectiveCharacterType.HERO,
+        themeCharacters.put(LearningActCharacterType.ALT, new SharedCharacter(200, 200, 100, 100, null, LearningActCharacterType.HERO,
                 movements));
         screen.setThemeCharacters(themeCharacters);
         themeScreens.add(screen);
@@ -202,8 +202,8 @@ public class TestObjects {
         List<ThemeStoryScreenIntro> themeStoryScreenIntros = new ArrayList<ThemeStoryScreenIntro>();
         ThemeStoryScreenIntro screenIntro = new ThemeStoryScreenIntro();
 
-        List<LearningObjectiveCharacter> learningObjectiveCharacters = getLearningObjectiveCharacters();
-        screenIntro.setCharacters(learningObjectiveCharacters);
+        List<LearningActCharacter> learningActCharacters = getLearningObjectiveCharacters();
+        screenIntro.setCharacters(learningActCharacters);
 
         List<GameButton> gameButtons = getGameButtons();
         screenIntro.setButtons(gameButtons);
@@ -219,7 +219,7 @@ public class TestObjects {
         gameButtons.get(0).setTransitionType(TransitionType.NEXT_ACT);
         List<ThemeStoryScreenOutro> themeStoryScreenOutros = new ArrayList<ThemeStoryScreenOutro>();
         ThemeStoryScreenOutro themeStoryScreenOutro = new ThemeStoryScreenOutro();
-        themeStoryScreenOutro.setCharacters(learningObjectiveCharacters);
+        themeStoryScreenOutro.setCharacters(learningActCharacters);
         themeStoryScreenOutro.setButtons(gameButtons);
         themeStoryScreenOutro.setInformationBoxes(gameTexts);
         themeStoryScreenOutros.add(themeStoryScreenOutro);
@@ -255,14 +255,14 @@ public class TestObjects {
         return gameButtons;
     }
 
-    private List<LearningObjectiveCharacter> getLearningObjectiveCharacters() {
-        List<LearningObjectiveCharacter> learningObjectiveCharacters = new ArrayList<LearningObjectiveCharacter>();
-        LearningObjectiveCharacter character = new LearningObjectiveCharacter();
-        character.setCharacterType(LearningObjectiveCharacterType.HERO);
+    private List<LearningActCharacter> getLearningObjectiveCharacters() {
+        List<LearningActCharacter> learningActCharacters = new ArrayList<LearningActCharacter>();
+        LearningActCharacter character = new LearningActCharacter();
+        character.setCharacterType(LearningActCharacterType.HERO);
         character.setMovementType(ObjectMovementType.WALK_ONTO_SCREEN);
         character.setTimer(100);
-        learningObjectiveCharacters.add(character);
-        return learningObjectiveCharacters;
+        learningActCharacters.add(character);
+        return learningActCharacters;
     }
 
     private void createStructure() {
@@ -310,12 +310,12 @@ public class TestObjects {
         this.characters = characters;
     }
 
-    public LearningObjective getLearningObjective() {
-        return learningObjective;
+    public LearningAct getLearningAct() {
+        return learningAct;
     }
 
-    public void setLearningObjective(LearningObjective learningObjective) {
-        this.learningObjective = learningObjective;
+    public void setLearningAct(LearningAct learningAct) {
+        this.learningAct = learningAct;
     }
 
     public Locale getLocale() {

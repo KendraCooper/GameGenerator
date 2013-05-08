@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator.LearningObjective.Prop;
+package edu.utdallas.gamegenerator.LearningAct.Prop;
 
 import javax.xml.bind.annotation.XmlElement;
 

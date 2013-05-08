@@ -14,7 +14,7 @@
 	  <Timer></Timer>
 	  <TransitionType>ADDITIONAL</TransitionType>
 	  <AdditionalScreens>
-		<AdditionalScreen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="learningObjectiveFailure">
+		<AdditionalScreen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="failureScreen">
 		  <Buttons>
 			<Button>
 			  <ButtonLocationType>NEXT</ButtonLocationType>

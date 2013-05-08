@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator.LearningObjective;
+package edu.utdallas.gamegenerator.LearningAct;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
@@ -10,8 +10,8 @@ import java.util.List;
  * Date: 2/17/13
  * Time: 4:58 PM
  */
-@XmlRootElement(name = "LearningObjective")
-public class LearningObjective {
+@XmlRootElement(name = "LearningAct")
+public class LearningAct {
     private List<LessonAct> lessonActs;
 
     public List<LessonAct> getLessonActs() {

@@ -1,12 +1,12 @@
 package edu.utdallas.gamegenerator.Theme;
 
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacterType;
 import edu.utdallas.gamegenerator.Shared.Asset;
 import edu.utdallas.gamegenerator.Shared.Behavior;
 import edu.utdallas.gamegenerator.Shared.BehaviorType;
 import edu.utdallas.gamegenerator.Characters.Characters;
 import edu.utdallas.gamegenerator.Characters.GameCharacter;
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
-import edu.utdallas.gamegenerator.LearningObjective.Screen.TransitionType;
+import edu.utdallas.gamegenerator.LearningAct.Screen.TransitionType;
 import edu.utdallas.gamegenerator.Shared.ScreenNode;
 import edu.utdallas.gamegenerator.Shared.GameObject;
 import edu.utdallas.gamegenerator.Shared.SharedButton;
@@ -74,7 +74,7 @@ public class Theme {
             }
             if(screen.getThemeCharacters() != null) {
                 for(SharedCharacter character : screen.getThemeCharacters().values()) {
-                    LearningObjectiveCharacterType characterType = character.getCharacterType();
+                    LearningActCharacterType characterType = character.getCharacterType();
                     GameCharacter gameCharacter = characters.getCharacter(characterType);
                     assets.add(new Asset(character, gameCharacter));
                 }

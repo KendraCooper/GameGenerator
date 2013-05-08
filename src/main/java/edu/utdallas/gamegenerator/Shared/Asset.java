@@ -1,9 +1,9 @@
 package edu.utdallas.gamegenerator.Shared;
 
 import edu.utdallas.gamegenerator.Characters.GameCharacter;
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacter;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.GameButton;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.GameText;
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacter;
+import edu.utdallas.gamegenerator.LearningAct.Prop.GameButton;
+import edu.utdallas.gamegenerator.LearningAct.Prop.GameText;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
 
 import javax.xml.bind.annotation.*;
@@ -84,7 +84,7 @@ public class Asset {
     }
 
     public Asset(SharedCharacter character, GameCharacter gameCharacter,
-                 LearningObjectiveCharacter learningObjectiveCharacter) {
+                 LearningActCharacter learningActCharacter) {
         id = UUID.randomUUID();
         type = "CharacterAsset";
         locX = character.getLocX();
@@ -96,7 +96,7 @@ public class Asset {
         displayImage = gameCharacter.getCharacterAsset(character.getCharacterAssetType());
         behaviors = new ArrayList<Behavior>();
         for(ObjectMovement movement : character.getMovements()) {
-            if(learningObjectiveCharacter.getMovementType() == movement.getMovementType()) {
+            if(learningActCharacter.getMovementType() == movement.getMovementType()) {
                 behaviors.add(new Behavior(movement));
             }
         }

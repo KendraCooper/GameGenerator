@@ -1,7 +1,7 @@
 package edu.utdallas.gamegenerator.Locale;
 
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
-import edu.utdallas.gamegenerator.LearningObjective.Prop.TextType;
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacterType;
+import edu.utdallas.gamegenerator.LearningAct.Prop.TextType;
 import edu.utdallas.gamegenerator.Shared.*;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class LocaleScreen {
     private String background;
     private List<GameObject> gameObjects;
-    private Map<LearningObjectiveCharacterType, SharedCharacter> characters;
+    private Map<LearningActCharacterType, SharedCharacter> characters;
     private Map<TextType, SharedInformationBox> informationBoxes;
     private Map<ButtonLocationType, SharedButton> buttons;
 
@@ -42,12 +42,12 @@ public class LocaleScreen {
         this.gameObjects = gameObjects;
     }
 
-    public Map<LearningObjectiveCharacterType, SharedCharacter> getCharacters() {
+    public Map<LearningActCharacterType, SharedCharacter> getCharacters() {
         return characters;
     }
 
     @XmlElementWrapper(name = "Characters")
-    public void setCharacters(Map<LearningObjectiveCharacterType, SharedCharacter> characters) {
+    public void setCharacters(Map<LearningActCharacterType, SharedCharacter> characters) {
         this.characters = characters;
     }
 

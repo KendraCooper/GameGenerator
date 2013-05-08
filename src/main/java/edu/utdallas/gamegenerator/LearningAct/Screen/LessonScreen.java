@@ -1,4 +1,4 @@
-package edu.utdallas.gamegenerator.LearningObjective.Screen;
+package edu.utdallas.gamegenerator.LearningAct.Screen;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * Time: 4:37 PM
  */
 @XmlRootElement(name = "LessonScreen")
-public class LearningObjectiveLesson extends LearningObjectiveScreen {
+public class LessonScreen extends BaseScreen {
     @Override
     public ScreenType getType() {
         return ScreenType.LESSON;

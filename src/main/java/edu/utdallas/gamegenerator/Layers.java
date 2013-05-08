@@ -1,7 +1,7 @@
 package edu.utdallas.gamegenerator;
 
 import edu.utdallas.gamegenerator.Characters.Characters;
-import edu.utdallas.gamegenerator.LearningObjective.LearningObjective;
+import edu.utdallas.gamegenerator.LearningAct.LearningAct;
 import edu.utdallas.gamegenerator.Locale.Locale;
 import edu.utdallas.gamegenerator.Structure.Structure;
 import edu.utdallas.gamegenerator.Subject.Subject;
@@ -16,7 +16,6 @@ import java.util.List;
  */
 public class Layers {
     public static String CHARACTERS = "Characters";
-    public static String LEARNING_OBJECTIVES = "LearningObjective";
     public static String LOCALE = "Locale";
     public static String SUBJECT = "Subject";
     public static String THEME = "Theme";
@@ -25,7 +24,7 @@ public class Layers {
     public static String CHALLENGES = "Challenges";
 
     private Characters characters;
-    private List<LearningObjective> learningObjectives;
+    private List<LearningAct> learningActs;
     private Locale locale;
     private Subject subject;
     private Structure structure;
@@ -39,12 +38,12 @@ public class Layers {
         this.characters = characters;
     }
 
-    public List<LearningObjective> getLearningObjectives() {
-        return learningObjectives;
+    public List<LearningAct> getLearningActs() {
+        return learningActs;
     }
 
-    public void setLearningObjectives(List<LearningObjective> learningObjectives) {
-        this.learningObjectives = learningObjectives;
+    public void setLearningActs(List<LearningAct> learningActs) {
+        this.learningActs = learningActs;
     }
 
     public Locale getLocale() {

@@ -1,7 +1,7 @@
 package edu.utdallas.gamegenerator.Shared;
 
 import edu.utdallas.gamegenerator.Characters.CharacterAssetType;
-import edu.utdallas.gamegenerator.LearningObjective.Character.LearningObjectiveCharacterType;
+import edu.utdallas.gamegenerator.LearningAct.Character.LearningActCharacterType;
 import edu.utdallas.gamegenerator.Locale.ObjectMovement;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -14,7 +14,7 @@ import java.util.List;
  * Time: 6:30 PM
  */
 public class SharedCharacter extends GameObject {
-    private LearningObjectiveCharacterType characterType;
+    private LearningActCharacterType characterType;
     private List<ObjectMovement> movements;
     private CharacterAssetType characterAssetType;
 
@@ -22,18 +22,18 @@ public class SharedCharacter extends GameObject {
         super();
     }
 
-    public SharedCharacter(int locX, int locY, int width, int height, String pathToAsset, LearningObjectiveCharacterType characterType, List<ObjectMovement> movements) {
+    public SharedCharacter(int locX, int locY, int width, int height, String pathToAsset, LearningActCharacterType characterType, List<ObjectMovement> movements) {
         super(locX, locY, width, height, pathToAsset);
         this.characterType = characterType;
         this.movements = movements;
     }
 
-    public LearningObjectiveCharacterType getCharacterType() {
+    public LearningActCharacterType getCharacterType() {
         return characterType;
     }
 
     @XmlElement(name = "CharacterType")
-    public void setCharacterType(LearningObjectiveCharacterType characterType) {
+    public void setCharacterType(LearningActCharacterType characterType) {
         this.characterType = characterType;
     }
 
