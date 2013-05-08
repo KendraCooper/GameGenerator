@@ -171,13 +171,7 @@ public class Test {
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         File file = new File("E:\\Development\\Java\\GameGenerator\\xml\\Characters.xml");
         marshaller.marshal(testObjects.getCharacters(), file);
-//
-//        file = new File("E:\\Development\\Java\\GameGenerator\\xml\\PlayerCharacter.xml");
-//        jaxbContext = JAXBContext.newInstance(PlayerCharacter.class);
-//        marshaller = jaxbContext.createMarshaller();
-//        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-//        marshaller.marshal(testObjects.getPlayerCharacter(), file);
-//
+
         file = new File("E:\\Development\\Java\\GameGenerator\\xml\\LearningObjectiveOut.xml");
         jaxbContext = JAXBContext.newInstance(LearningObjective.class);
         marshaller = jaxbContext.createMarshaller();
